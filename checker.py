@@ -135,12 +135,15 @@ def check_browser(store, base, bottles):
                     continue
                 if matches(bottle, text):
                     seen.add(t["href"])
+                    price = re.search(r"\$\d[\d,]*\.\d\d", text)
+                    size = re.search(r"\b\d+(?:\.\d+)?\s?(?:mL|L|oz)\b", text)
                     hits.append({
                         "bottle": bottle,
                         "title": text[:100],
                         "url": t["href"],
                         "in_stock": not SOLD_OUT.search(text),
-                        "price": "",
+                        "price": price.group(0) if price else "",
+                        "size": size.group(0) if size else "",
                     })
             if not seen:
                 shown = [" ".join((t["text"] or "").split())[:70] for t in tiles][:6]
@@ -149,16 +152,35 @@ def check_browser(store, base, bottles):
     return hits
 
 
-def send_email(lines):
-    body = "In stock now:\n\n" + "\n\n".join(lines)
+def send_email(alerts):
     user = os.environ.get("SMTP_USER")
     pw = os.environ.get("SMTP_PASS")
     to = os.environ.get("ALERT_TO", user)
+
+    first = alerts[0]
+    price = f" ({first['price']})" if first["price"] else ""
+    if len(alerts) == 1:
+        subject = f"In stock: {first['bottle']}{price} at {first['store']}"
+    else:
+        subject = f"In stock: {first['bottle']} + {len(alerts) - 1} more"
+
+    blocks = []
+    for a in alerts:
+        lines = [a["bottle"]]
+        detail = " | ".join(x for x in (a["price"], a["size"], a["store"]) if x)
+        if detail:
+            lines.append(detail)
+        lines.append(a["url"])
+        blocks.append("\n".join(lines))
+    intro = "Good news. This just came into stock:" if len(alerts) == 1 \
+        else "Good news. These just came into stock:"
+    body = intro + "\n\n" + "\n\n".join(blocks) + "\n\nMove fast, allocated bottles go quickly.\n"
+
     if not (user and pw):
-        print("No SMTP creds; would send:\n" + body)
+        print(f"No SMTP creds; would send:\nSubject: {subject}\n\n{body}")
         return
     msg = EmailMessage()
-    msg["Subject"] = f"Bottle alert: {len(lines)} in stock"
+    msg["Subject"] = subject
     msg["From"], msg["To"] = user, to
     msg.set_content(body)
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
@@ -201,7 +223,10 @@ def main():
             new[key] = h["in_stock"]
             print(f"[{name}] {h['title']}: {'IN' if h['in_stock'] else 'out'}")
             if h["in_stock"] and not was:
-                alerts.append(f"{h['title']} {h['price']}\n{name}\n{h['url']}")
+                alerts.append({
+                    "bottle": h["bottle"], "store": name, "url": h["url"],
+                    "price": h["price"], "size": h.get("size", ""),
+                })
         # anything previously tracked for this store but no longer listed -> out
         for key in list(new):
             if key.startswith(f"{name}|") and key not in seen:
@@ -214,4 +239,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
