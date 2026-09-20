@@ -26,8 +26,8 @@ stores:
       - Maker's Mark Cellar Aged 2026
 
 - name: Rockton Spirits
-    url: https://rocktonspirits.com
-    render: true
-    product_href: /product
-    search_url: https://rocktonspirits.com/shop?ch-query={q}
-    bottles: *bottles
+  url: https://rocktonspirits.com
+  render: true
+  product_href: /product
+  search_url: https://rocktonspirits.com/shop?ch-query={q}
+  bottles: *bottles
