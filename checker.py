@@ -201,3 +201,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+      - name: Save state
+        run: |
+          git config user.name "bottle-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state.json
+          git diff --staged --quiet || (git commit -m "update state" && git pull --rebase -X theirs && git push)
