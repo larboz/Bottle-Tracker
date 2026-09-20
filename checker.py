@@ -1,3 +1,4 @@
+import datetime
 import html
 import json
 import os
@@ -12,6 +13,7 @@ import yaml
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; BottleWatch/1.0)"}
 STATE_FILE = Path("state.json")
+DATA_FILE = Path("data.json")
 SOLD_OUT = re.compile(r"sold out|out of stock|unavailable", re.I)
 
 
@@ -69,6 +71,14 @@ def exclude_set(store):
     return set(tokens(" ".join(store.get("exclude", DEFAULT_EXCLUDE))))
 
 
+def name_from_href(href):
+    parts = urllib.parse.urlparse(href).path.rstrip("/").split("/")
+    if not parts or not parts[-1]:
+        return ""
+    slug = parts[-2] if len(parts) >= 2 and re.fullmatch(r"[0-9a-f]{24}", parts[-1]) else parts[-1]
+    return slug.replace("-", " ").title()
+
+
 def base_url(url):
     p = urllib.parse.urlparse(url)
     return f"{p.scheme}://{p.netloc}"
@@ -100,9 +110,12 @@ def check_shopify(base, bottles, products, store):
                 variants = p.get("variants", [])
                 in_stock = any(v.get("available") for v in variants)
                 prices = [float(v["price"]) for v in variants if v.get("price")]
+                imgs = p.get("images") or []
                 hits.append({
                     "bottle": bottle,
                     "title": p["title"],
+                    "name": p["title"],
+                    "image": imgs[0].get("src", "") if imgs else "",
                     "url": f"{base}/products/{p['handle']}",
                     "in_stock": in_stock,
                     "price": f"${min(prices):.2f}" if prices else "",
@@ -146,7 +159,12 @@ TILE_JS = """
     }
     const alts = [...tile.querySelectorAll('img')].map(i => i.alt).join(' ');
     const label = (a.getAttribute('aria-label') || '') + ' ' + (a.title || '');
-    return {href: a.href, text: (tile.innerText || '') + ' ' + alts + ' ' + label};
+    const imgs = [...tile.querySelectorAll('img')]
+      .map(i => i.currentSrc || i.src || i.getAttribute('data-src') || '')
+      .filter(Boolean);
+    const image = imgs.find(u => u.includes('/products/')) || imgs[0] || '';
+    return {href: a.href, image: image,
+            text: (tile.innerText || '') + ' ' + alts + ' ' + label};
   });
 }
 """
@@ -186,6 +204,8 @@ def check_browser(store, base, bottles):
                     hits.append({
                         "bottle": display,
                         "title": text[:100],
+                        "name": name_from_href(t["href"]) or display,
+                        "image": t.get("image", ""),
                         "url": t["href"],
                         "in_stock": not SOLD_OUT.search(text),
                         "price": price.group(0) if price else "",
@@ -239,6 +259,16 @@ def main():
     old = json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
     new = dict(old)
     alerts = []
+    now_iso = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    old_items = []
+    if DATA_FILE.exists():
+        try:
+            old_items = json.loads(DATA_FILE.read_text()).get("items", [])
+        except ValueError:
+            old_items = []
+    since = {(i["store"], i["url"]): i.get("since", now_iso) for i in old_items}
+    items = {}
+    ok_stores = set()
 
     for store in cfg["stores"]:
         name, base = store["name"], base_url(store["url"])
@@ -261,8 +291,17 @@ def main():
             print(f"[{name}] error: {e}")
             continue  # keep old state for this store
 
+        ok_stores.add(name)
         seen = set()
         for h in hits:
+            if h["in_stock"]:
+                items[(name, h["url"])] = {
+                    "name": h.get("name") or h["bottle"],
+                    "bottle": h["bottle"], "store": name, "url": h["url"],
+                    "image": h.get("image", ""), "price": h["price"],
+                    "size": h.get("size", ""),
+                    "since": since.get((name, h["url"]), now_iso),
+                }
             key = f"{name}|{h['url']}"
             seen.add(key)
             was = old.get(key, False)
@@ -278,9 +317,16 @@ def main():
             if key.startswith(f"{name}|") and key not in seen:
                 new[key] = False
 
+    # keep last known items for any store that errored this run
+    for i in old_items:
+        if i["store"] not in ok_stores:
+            items[(i["store"], i["url"])] = i
     if alerts:
         send_email(alerts)
     STATE_FILE.write_text(json.dumps(new, indent=2, sort_keys=True))
+    DATA_FILE.write_text(json.dumps(
+        {"updated": now_iso, "items": sorted(items.values(), key=lambda x: x["name"])},
+        indent=2))
 
 
 if __name__ == "__main__":
