@@ -1,20 +1,26 @@
-# Add stores and the bottles you want at each one.
 stores:
-  # Non-Shopify store: add a search_url ({q} = bottle name). Best effort.
-  # - name: Other Store
-  #   url: https://other-store.com
-  #   search_url: https://other-store.com/search?q={q}
-  #   bottles:
-  #     - Old Forester 1920
-
-  # Gold Eagle (City Hive, needs a browser).
-  # If the first run says "no product links", copy the sample links from the
-  # log and set product_href to the part they share.
   - name: Gold Eagle
     url: https://goldeaglewine.com
     render: true
     product_href: /product
     search_url: https://goldeaglewine.com/shop?ch-query={q}
     bottles:
+      - Weller Single Barrel
+      - Weller CYPB | Weller Craft Your Perfect Bourbon
+      - William Larue Weller
+      - Eagle Rare 12
+      - Eagle Rare 17
+      - Eagle Rare 25
+      - Rock Hill Farms
+      - Taylor Single Barrel
+      - Taylor Cured Oak
+      - Jack Daniel's 10 Year
+      - Jack Daniel's 12 Year
+      - Jack Daniel's 14 Year
+      - Redwood Empire Hyperion
+      - Ten Pin
+      - Tanager Cigar Blend
+      - George Stagg
+      - Thomas Handy
+      - Sazerac 18 Year
       - Maker's Mark Cellar Aged 2026
-      - Makers 46
