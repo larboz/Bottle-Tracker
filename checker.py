@@ -17,12 +17,56 @@ SOLD_OUT = re.compile(r"sold out|out of stock|unavailable", re.I)
 
 def tokens(s):
     s = s.lower().replace("'", "").replace("\u2019", "")
+    s = re.sub(r"(?<=[a-z])\.", "", s)
     return re.findall(r"[a-z0-9]+", s)
 
 
-def matches(bottle, title):
-    have = set(tokens(title))
-    return all(w in have for w in tokens(bottle))
+DEFAULT_EXCLUDE = ["cigar", "cigars", "rum", "rums", "glass", "glasses",
+                   "glassware", "taster", "gift", "shirt", "hat", "candle"]
+
+
+def min_window(words, need):
+    """Length of the shortest run of words containing every word in need."""
+    best = None
+    counts = {}
+    have = 0
+    left = 0
+    for right, w in enumerate(words):
+        if w in need:
+            counts[w] = counts.get(w, 0) + 1
+            if counts[w] == 1:
+                have += 1
+        while have == len(need):
+            span = right - left + 1
+            best = span if best is None else min(best, span)
+            lw = words[left]
+            if lw in need:
+                counts[lw] -= 1
+                if counts[lw] == 0:
+                    have -= 1
+            left += 1
+    return best
+
+
+def matches(bottle, title, exclude=None):
+    """True if the bottle's words appear close together in the title.
+    Words can be in any order but must sit within one word of each other
+    (so 'Weller Single Barrel' will not match 'Single Barrel Cigar Co Weller')."""
+    words = tokens(title)
+    if exclude is not None and any(w in exclude for w in words):
+        return False
+    for alt in bottle.split("|"):
+        need = set(tokens(alt))
+        if not need:
+            continue
+        span = min_window(words, need)
+        if span is not None and span <= len(need) + 1:
+            return True
+    return False
+
+
+def exclude_set(store):
+    return set(tokens(" ".join(store.get("exclude", DEFAULT_EXCLUDE))))
 
 
 def base_url(url):
@@ -48,11 +92,11 @@ def shopify_products(base):
     return out
 
 
-def check_shopify(base, bottles, products):
+def check_shopify(base, bottles, products, store):
     hits = []
     for bottle in bottles:
         for p in products:
-            if matches(bottle, p["title"]):
+            if matches(bottle, p["title"], exclude_set(store)):
                 variants = p.get("variants", [])
                 in_stock = any(v.get("available") for v in variants)
                 prices = [float(v["price"]) for v in variants if v.get("price")]
@@ -77,7 +121,7 @@ def check_search(store, base, bottles):
             href, inner = m.groups()
             text = html.unescape(re.sub(r"<[^>]+>", " ", inner))
             text = " ".join(text.split())
-            if text and matches(bottle, text):
+            if text and matches(bottle, text, exclude_set(store)):
                 after = re.sub(r"<[^>]+>", " ", r.text[m.end():m.end() + 500])
                 hits.append({
                     "bottle": bottle,
@@ -117,7 +161,9 @@ def check_browser(store, base, bottles):
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         page = browser.new_page(user_agent=UA["User-Agent"])
-        for bottle in bottles:
+        queries = [(b.split("|")[0].strip(), a.strip())
+                   for b in bottles for a in b.split("|") if a.strip()]
+        for display, bottle in queries:
             url = store["search_url"].format(q=urllib.parse.quote_plus(bottle))
             page.goto(url, wait_until="networkidle", timeout=60000)
             page.wait_for_timeout(4000)
@@ -133,12 +179,12 @@ def check_browser(store, base, bottles):
                 text = " ".join((t["text"] or "").split())
                 if t["href"] in seen:
                     continue
-                if matches(bottle, text):
+                if matches(bottle, text, exclude_set(store)):
                     seen.add(t["href"])
                     price = re.search(r"\$\d[\d,]*\.\d\d", text)
                     size = re.search(r"\b\d+(?:\.\d+)?\s?(?:mL|L|oz)\b", text)
                     hits.append({
-                        "bottle": bottle,
+                        "bottle": display,
                         "title": text[:100],
                         "url": t["href"],
                         "in_stock": not SOLD_OUT.search(text),
@@ -205,7 +251,7 @@ def main():
             if store.get("render"):
                 pass
             elif products is not None:
-                hits = check_shopify(base, store["bottles"], products)
+                hits = check_shopify(base, store["bottles"], products, store)
             elif store.get("search_url"):
                 hits = check_search(store, base, store["bottles"])
             else:
