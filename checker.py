@@ -113,6 +113,8 @@ def check_browser(store, base, bottles):
                     f"no product links for '{bottle}' (page not loaded, or "
                     f"product_href wrong). Sample links: {sample}")
             seen = set()
+            n_products = sum(1 for l in links if marker in l["href"])
+            print(f"[{store['name']}] '{bottle}': {n_products} product links on page")
             for l in links:
                 text = " ".join((l["text"] or "").split())
                 if l["href"] in seen or marker not in l["href"]:
@@ -126,6 +128,10 @@ def check_browser(store, base, bottles):
                         "in_stock": not SOLD_OUT.search(text),
                         "price": "",
                     })
+            if not seen:
+                shown = [" ".join((l["text"] or "").split())[:60]
+                         for l in links if marker in l["href"]][:5]
+                print(f"[{store['name']}] '{bottle}': NOT LISTED. Closest shown: {shown}")
         browser.close()
     return hits
 
