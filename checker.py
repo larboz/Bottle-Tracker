@@ -89,6 +89,25 @@ def check_search(store, base, bottles):
     return hits
 
 
+TILE_JS = """
+(els, m) => {
+  const prod = els.filter(e => e.href.includes(m));
+  return prod.map(a => {
+    let tile = a;
+    for (let depth = 0; depth < 6 && tile.parentElement; depth++) {
+      const p = tile.parentElement;
+      const other = prod.some(e => e.href !== a.href && p.contains(e));
+      if (other) break;
+      tile = p;
+    }
+    const alts = [...tile.querySelectorAll('img')].map(i => i.alt).join(' ');
+    const label = (a.getAttribute('aria-label') || '') + ' ' + (a.title || '');
+    return {href: a.href, text: (tile.innerText || '') + ' ' + alts + ' ' + label};
+  });
+}
+"""
+
+
 def check_browser(store, base, bottles):
     """For JS-rendered stores (e.g. City Hive). Uses a headless browser."""
     from playwright.sync_api import sync_playwright
@@ -102,36 +121,30 @@ def check_browser(store, base, bottles):
             url = store["search_url"].format(q=urllib.parse.quote_plus(bottle))
             page.goto(url, wait_until="networkidle", timeout=60000)
             page.wait_for_timeout(4000)
-            links = page.eval_on_selector_all(
-                "a", "els => els.map(e => ({href: e.href, text: e.innerText}))")
+            tiles = page.eval_on_selector_all("a", TILE_JS, marker)
             # The site always returns close matches, so a good page has
-            # product links. None = page didn't load right; skip this run.
-            if not any(marker in l["href"] for l in links):
-                sample = [l["href"] for l in links][:25]
+            # product tiles. None = page didn't load right; skip this run.
+            if not tiles:
                 browser.close()
-                raise RuntimeError(
-                    f"no product links for '{bottle}' (page not loaded, or "
-                    f"product_href wrong). Sample links: {sample}")
+                raise RuntimeError(f"no product tiles for '{bottle}' (page not loaded, or product_href wrong)")
+            print(f"[{store['name']}] '{bottle}': {len(tiles)} product tiles on page")
             seen = set()
-            n_products = sum(1 for l in links if marker in l["href"])
-            print(f"[{store['name']}] '{bottle}': {n_products} product links on page")
-            for l in links:
-                text = " ".join((l["text"] or "").split())
-                if l["href"] in seen or marker not in l["href"]:
+            for t in tiles:
+                text = " ".join((t["text"] or "").split())
+                if t["href"] in seen:
                     continue
-                if text and matches(bottle, text):
-                    seen.add(l["href"])
+                if matches(bottle, text):
+                    seen.add(t["href"])
                     hits.append({
                         "bottle": bottle,
                         "title": text[:100],
-                        "url": l["href"],
+                        "url": t["href"],
                         "in_stock": not SOLD_OUT.search(text),
                         "price": "",
                     })
             if not seen:
-                shown = [" ".join((l["text"] or "").split())[:60]
-                         for l in links if marker in l["href"]][:5]
-                print(f"[{store['name']}] '{bottle}': NOT LISTED. Closest shown: {shown}")
+                shown = [" ".join((t["text"] or "").split())[:70] for t in tiles][:6]
+                print(f"[{store['name']}] '{bottle}': NOT LISTED. Tiles shown: {shown}")
         browser.close()
     return hits
 
@@ -201,3 +214,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
