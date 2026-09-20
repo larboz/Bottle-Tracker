@@ -4,13 +4,17 @@ stores:
     render: true
     product_href: /product
     search_url: https://goldeaglewine.com/shop?ch-query={q}
-    bottles:
+    # One shared bottle list. Edit here and both stores use it.
+    bottles: &bottles
       - Weller Single Barrel
       - Weller CYPB | Weller Craft Your Perfect Bourbon
       - William Larue Weller
       - Eagle Rare 12
       - Eagle Rare 17
       - Eagle Rare 25
+      - George Stagg
+      - Thomas Handy
+      - Sazerac 18 Year
       - Rock Hill Farms
       - Taylor Single Barrel
       - Taylor Cured Oak
@@ -20,7 +24,32 @@ stores:
       - Redwood Empire Hyperion
       - Ten Pin
       - Tanager Cigar Blend
-      - George Stagg
-      - Thomas Handy
-      - Sazerac 18 Year
       - Maker's Mark Cellar Aged 2026
+
+  - name: Rockton Spirits
+    url: https://rocktonspirits.com
+    render: true
+    product_href: /product
+    search_url: https://rocktonspirits.com/shop?ch-query={q}
+    bottles: *bottles
+
+  - name: Hi Proof
+    url: https://www.hiproof.com
+    bottles: *bottles
+    # Skips bundles, multi-packs and gift sets on top of the default list.
+    exclude_extra:
+      - bundle
+      - bundles
+      - combo
+      - pack
+      - packs
+      - set
+      - kit
+      - sampler
+      - flight
+      - trio
+      - duo
+      - pair
+      - gift
+      - "re:\\d*pk"
+      - "re:\\d+pack"

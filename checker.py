@@ -55,8 +55,11 @@ def matches(bottle, title, exclude=None):
     Words can be in any order but must sit within one word of each other
     (so 'Weller Single Barrel' will not match 'Single Barrel Cigar Co Weller')."""
     words = tokens(title)
-    if exclude is not None and any(w in exclude for w in words):
-        return False
+    if exclude is not None:
+        bad_words, bad_patterns = exclude
+        for w in words:
+            if w in bad_words or any(p.fullmatch(w) for p in bad_patterns):
+                return False
     for alt in bottle.split("|"):
         need = set(tokens(alt))
         if not need:
@@ -68,7 +71,16 @@ def matches(bottle, title, exclude=None):
 
 
 def exclude_set(store):
-    return set(tokens(" ".join(store.get("exclude", DEFAULT_EXCLUDE))))
+    """Words (and optional 're:' patterns) that disqualify a product.
+    Defaults plus anything in the store's exclude_extra list."""
+    entries = list(store.get("exclude", DEFAULT_EXCLUDE)) + list(store.get("exclude_extra", []))
+    words, patterns = set(), []
+    for e in entries:
+        if str(e).startswith("re:"):
+            patterns.append(re.compile(str(e)[3:]))
+        else:
+            words.update(tokens(str(e)))
+    return words, patterns
 
 
 def name_from_href(href):
@@ -86,7 +98,7 @@ def base_url(url):
 
 def shopify_products(base):
     out = []
-    for page in range(1, 21):
+    for page in range(1, 41):
         r = requests.get(f"{base}/products.json",
                          params={"limit": 250, "page": page},
                          headers=UA, timeout=30)
@@ -111,7 +123,9 @@ def check_shopify(base, bottles, products, store):
                 in_stock = any(v.get("available") for v in variants)
                 prices = [float(v["price"]) for v in variants if v.get("price")]
                 imgs = p.get("images") or []
+                size = re.search(r"\b\d+(?:\.\d+)?\s?(?:ml|l)\b", p["title"], re.I)
                 hits.append({
+                    "size": size.group(0) if size else "",
                     "bottle": bottle,
                     "title": p["title"],
                     "name": p["title"],
