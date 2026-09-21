@@ -51,5 +51,9 @@ stores:
       - duo
       - pair
       - gift
+      # conditional promos, e.g. "SPEND $300 on Sazerac, get it $99.99"
+      - spend
+      - qualified
+      - offer
       - "re:\\d*pk"
       - "re:\\d+pack"
