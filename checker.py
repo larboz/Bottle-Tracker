@@ -24,7 +24,10 @@ def tokens(s):
 
 
 DEFAULT_EXCLUDE = ["cigar", "cigars", "rum", "rums", "glass", "glasses",
-                   "glassware", "taster", "gift", "shirt", "hat", "candle"]
+                   "glassware", "taster", "gift", "shirt", "hat", "candle",
+                   # tequila/mezcal/etc. aged in whiskey barrels use the brand names
+                   "tequila", "reposado", "anejo", "re:ejo", "blanco", "cristalino",
+                   "mezcal", "vodka", "gin", "cognac"]
 
 
 def min_window(words, need):
