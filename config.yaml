@@ -46,6 +46,27 @@ stores:
     search_url: https://royalfoodliquor.com/shop?ch-query={q}
     bottles: *bottles
 
+  - name: Greene Valley
+    url: https://greenevalleyws.com
+    render: true
+    product_href: /product
+    search_url: https://greenevalleyws.com/shop?ch-query={q}
+    bottles: *bottles
+
+  - name: Garfield's Beverage
+    url: https://garfieldsbeverage.com
+    render: true
+    product_href: /product
+    search_url: https://garfieldsbeverage.com/shop?ch-query={q}
+    bottles: *bottles
+
+  - name: Joe's Beverage
+    url: https://joesbev.com
+    render: true
+    product_href: /product
+    search_url: https://joesbev.com/shop?ch-query={q}
+    bottles: *bottles
+
   - name: Hi Proof
     url: https://www.hiproof.com
     bottles: *bottles

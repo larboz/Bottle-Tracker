@@ -15,6 +15,7 @@ UA = {"User-Agent": "Mozilla/5.0 (compatible; BottleWatch/1.0)"}
 STATE_FILE = Path("state.json")
 DATA_FILE = Path("data.json")
 SOLD_OUT = re.compile(r"sold out|out of stock|unavailable", re.I)
+NO_RESULTS = re.compile(r"couldn.t find any results", re.I)
 
 
 def tokens(s):
@@ -203,8 +204,12 @@ def check_browser(store, base, bottles):
             page.goto(url, wait_until="networkidle", timeout=60000)
             page.wait_for_timeout(4000)
             tiles = page.eval_on_selector_all("a", TILE_JS, marker)
-            # The site always returns close matches, so a good page has
-            # product tiles. None = page didn't load right; skip this run.
+            # Big stores always return close matches, so a good page has
+            # product tiles. Smaller ones may say "couldn't find any results".
+            # No tiles and no such message = page didn't load right; skip this run.
+            if not tiles and NO_RESULTS.search(page.inner_text("body")):
+                print(f"[{store['name']}] '{bottle}': no search results")
+                continue
             if not tiles:
                 browser.close()
                 raise RuntimeError(f"no product tiles for '{bottle}' (page not loaded, or product_href wrong)")
