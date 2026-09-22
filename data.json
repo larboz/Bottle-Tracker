@@ -1,1 +1,25 @@
-{"updated": "2026-09-20T00:00:00Z", "items": []}
+{
+  "updated": "2026-09-22T21:56:09Z",
+  "items": [
+    {
+      "name": "E.H. Taylor Cured Oak Bourbon 2026 Release 750ml",
+      "bottle": "Taylor Cured Oak",
+      "store": "Hi Proof",
+      "url": "https://www.hiproof.com/products/e-h-taylor-cured-oak-bourbon-2026-release-750ml",
+      "image": "https://cdn.shopify.com/s/files/1/0851/0272/3373/files/eh-taylor-cured-oak-bourbon-2026-release-750ml-3345017.jpg?v=1784155208",
+      "price": "$359.99",
+      "size": "750ml",
+      "since": "2026-09-22T21:56:09Z"
+    },
+    {
+      "name": "Eagle Rare 25 Year Old Kentucky Straight Bourbon Whiskey",
+      "bottle": "Eagle Rare 25",
+      "store": "Hi Proof",
+      "url": "https://www.hiproof.com/products/eagle-rare-25-year-old-kentucky-straight-bourbon-whiskey",
+      "image": "https://cdn.shopify.com/s/files/1/0851/0272/3373/files/eagle-rare-25-year-old-kentucky-straight-bourbon-whiskey-2704762.jpg?v=1775376788",
+      "price": "$11499.99",
+      "size": "",
+      "since": "2026-09-22T21:56:09Z"
+    }
+  ]
+}
