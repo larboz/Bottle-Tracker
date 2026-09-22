@@ -32,6 +32,20 @@ stores:
     search_url: https://rocktonspirits.com/shop?ch-query={q}
     bottles: *bottles
 
+  - name: DD Smoke Spirits
+    url: https://ddsmokespirits.com
+    render: true
+    product_href: /product
+    search_url: https://ddsmokespirits.com/shop?ch-query={q}
+    bottles: *bottles
+
+  - name: Royal Food & Liquor
+    url: https://royalfoodliquor.com
+    render: true
+    product_href: /product
+    search_url: https://royalfoodliquor.com/shop?ch-query={q}
+    bottles: *bottles
+
   - name: Hi Proof
     url: https://www.hiproof.com
     bottles: *bottles
@@ -56,3 +70,28 @@ stores:
       - offer
       - "re:\\d*pk"
       - "re:\\d+pack"
+
+# Skip any listing priced more than this much over MSRP (0.25 = 25%).
+max_over_msrp: 0.25
+
+# Suggested retail price per bottle, keyed by the first name on its line
+# above. Bottles missing here are never filtered. Researched Sept 2026.
+msrp:
+  Weller Single Barrel: 49.99
+  Weller CYPB: 49.99
+  William Larue Weller: 149.99
+  Eagle Rare 12: 49.99
+  Eagle Rare 17: 149.99
+  George Stagg: 149.99
+  Thomas Handy: 149.99
+  Sazerac 18 Year: 149.99
+  Rock Hill Farms: 59.99
+  Taylor Single Barrel: 79.99
+  Taylor Cured Oak: 79.99
+  Jack Daniel's 10 Year: 84.99
+  Jack Daniel's 12 Year: 94.99
+  Jack Daniel's 14 Year: 149.99
+  Redwood Empire Hyperion: 99.00
+  Ten Pin: 124.99
+  Tanager Cigar Blend: 149.00
+  Maker's Mark Cellar Aged 2026: 175.00

@@ -235,6 +235,16 @@ def check_browser(store, base, bottles):
     return hits
 
 
+def over_msrp(h, cfg):
+    """True if the price is more than max_over_msrp above the bottle's MSRP.
+    Bottles with no MSRP listed, or hits with no price, always pass."""
+    msrp = (cfg.get("msrp") or {}).get(h["bottle"].split("|")[0].strip())
+    price = re.sub(r"[^\d.]", "", h.get("price") or "")
+    if not msrp or not price:
+        return False
+    return float(price) > float(msrp) * (1 + cfg.get("max_over_msrp", 0.25))
+
+
 def send_email(alerts):
     user = os.environ.get("SMTP_USER")
     pw = os.environ.get("SMTP_PASS")
@@ -311,6 +321,9 @@ def main():
         ok_stores.add(name)
         seen = set()
         for h in hits:
+            if h["in_stock"] and over_msrp(h, cfg):
+                print(f"[{name}] {h['title']}: IN at {h['price']}, over MSRP limit, skipping")
+                h["in_stock"] = False
             if h["in_stock"]:
                 items[(name, h["url"])] = {
                     "name": h.get("name") or h["bottle"],
