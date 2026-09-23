@@ -26,6 +26,7 @@ stores:
       - Ten Pin
       - Tanager Cigar Blend
       - Maker's Mark Cellar Aged 2026
+      - Penelope Rio
 
   - name: Rockton Spirits
     url: https://rocktonspirits.com
@@ -115,6 +116,10 @@ stores:
     url: https://www.remedyliquor.com
     bottles: *bottles
     exclude_extra: *shopify_extra
+
+# Bottles that show on the page but never send an email.
+no_email:
+  - Penelope Rio
 
 # Skip any listing priced more than this much over MSRP (0.25 = 25%).
 max_over_msrp: 0.25

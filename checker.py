@@ -383,7 +383,8 @@ def main():
             was = old.get(key, False)
             new[key] = h["in_stock"]
             print(f"[{name}] {h['title']}: {'IN' if h['in_stock'] else 'out'}")
-            if h["in_stock"] and not was:
+            quiet = display_name(h["bottle"]) in (cfg.get("no_email") or [])
+            if h["in_stock"] and not was and not quiet:
                 alerts.append({
                     "bottle": h["bottle"], "store": name, "url": h["url"],
                     "price": h["price"], "size": h.get("size", ""),
