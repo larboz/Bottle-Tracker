@@ -22,7 +22,8 @@ OUT_TAGS = {"unavailable", "sold-out", "sold out", "out-of-stock", "out of stock
 def tokens(s):
     s = s.lower().replace("'", "").replace("\u2019", "")
     s = re.sub(r"(?<=[a-z])\.", "", s)
-    return re.findall(r"[a-z0-9]+", s)
+    # "and" is dropped so "Blade and Bow" == "Blade & Bow"
+    return [w for w in re.findall(r"[a-z0-9]+", s) if w != "and"]
 
 
 DEFAULT_EXCLUDE = ["cigar", "cigars", "rum", "rums", "glass", "glasses",
@@ -279,7 +280,8 @@ def over_msrp(h, cfg):
     price = re.sub(r"[^\d.]", "", h.get("price") or "")
     if not msrp or not price:
         return False
-    return float(price) > float(msrp) * (1 + cfg.get("max_over_msrp", 0.25))
+    cap = round(float(msrp) * (1 + cfg.get("max_over_msrp", 0.25)), 2)
+    return float(price) > cap
 
 
 def watch_info(cfg):
