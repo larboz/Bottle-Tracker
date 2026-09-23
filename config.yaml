@@ -4,14 +4,16 @@ stores:
     render: true
     product_href: /product
     search_url: https://goldeaglewine.com/shop?ch-query={q}
-    # One shared bottle list. Edit here and both stores use it.
+    # One shared bottle list. Edit here and every store uses it.
+    # Alternate spellings go after |. A word starting with ! rules out
+    # listings with that word for that bottle only (e.g. !jr).
     bottles: &bottles
       - Weller Single Barrel
       - Weller CYPB | Weller Craft Your Perfect Bourbon
       - William Larue Weller
       - Eagle Rare 12
       - Eagle Rare 17
-      - George Stagg
+      - George Stagg !jr
       - Thomas Handy
       - Sazerac 18 Year
       - Rock Hill Farms
@@ -67,11 +69,18 @@ stores:
     search_url: https://joesbev.com/shop?ch-query={q}
     bottles: *bottles
 
+  - name: Ramirez Beverage Center
+    url: https://ramirezliquor.com
+    render: true
+    product_href: /product
+    search_url: https://ramirezliquor.com/shop?ch-query={q}
+    bottles: *bottles
+
   - name: Hi Proof
     url: https://www.hiproof.com
     bottles: *bottles
     # Skips bundles, multi-packs and gift sets on top of the default list.
-    exclude_extra:
+    exclude_extra: &shopify_extra
       - bundle
       - bundles
       - combo
@@ -91,6 +100,21 @@ stores:
       - offer
       - "re:\\d*pk"
       - "re:\\d+pack"
+
+  - name: Barrel Shoppe
+    url: https://barrelshoppe.com
+    bottles: *bottles
+    exclude_extra: *shopify_extra
+
+  - name: Seelbach's
+    url: https://seelbachs.com
+    bottles: *bottles
+    exclude_extra: *shopify_extra
+
+  - name: Remedy Liquor
+    url: https://www.remedyliquor.com
+    bottles: *bottles
+    exclude_extra: *shopify_extra
 
 # Skip any listing priced more than this much over MSRP (0.25 = 25%).
 max_over_msrp: 0.25

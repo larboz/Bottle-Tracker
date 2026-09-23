@@ -31,6 +31,23 @@ DEFAULT_EXCLUDE = ["cigar", "cigars", "rum", "rums", "glass", "glasses",
                    "mezcal", "vodka", "gin", "cognac"]
 
 
+def split_alt(alt):
+    """'George Stagg !jr' -> ('George Stagg', {'jr'}). Words starting with !
+    rule out a listing for this bottle only."""
+    keep, neg = [], set()
+    for w in alt.split():
+        if w.startswith("!"):
+            neg.update(tokens(w[1:]))
+        else:
+            keep.append(w)
+    return " ".join(keep), neg
+
+
+def display_name(bottle):
+    """First spelling of a bottle entry, without any !words."""
+    return split_alt(bottle.split("|")[0])[0]
+
+
 def min_window(words, need):
     """Length of the shortest run of words containing every word in need."""
     best = None
@@ -59,12 +76,18 @@ def matches(bottle, title, exclude=None):
     Words can be in any order but must sit within one word of each other
     (so 'Weller Single Barrel' will not match 'Single Barrel Cigar Co Weller')."""
     words = tokens(title)
+    # "Bottle A + Bottle B" listings are bundles
+    if exclude is not None and re.search(r"\s\+\s", title):
+        return False
     if exclude is not None:
         bad_words, bad_patterns = exclude
         for w in words:
             if w in bad_words or any(p.fullmatch(w) for p in bad_patterns):
                 return False
     for alt in bottle.split("|"):
+        alt, neg = split_alt(alt)
+        if neg & set(words):
+            continue
         need = set(tokens(alt))
         if not need:
             continue
@@ -102,7 +125,7 @@ def base_url(url):
 
 def shopify_products(base):
     out = []
-    for page in range(1, 41):
+    for page in range(1, 101):
         r = requests.get(f"{base}/products.json",
                          params={"limit": 250, "page": page},
                          headers=UA, timeout=30)
@@ -197,10 +220,11 @@ def check_browser(store, base, bottles):
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         page = browser.new_page(user_agent=UA["User-Agent"])
-        queries = [(b.split("|")[0].strip(), a.strip())
+        queries = [(display_name(b), a.strip())
                    for b in bottles for a in b.split("|") if a.strip()]
         for display, bottle in queries:
-            url = store["search_url"].format(q=urllib.parse.quote_plus(bottle))
+            query = split_alt(bottle)[0]
+            url = store["search_url"].format(q=urllib.parse.quote_plus(query))
             page.goto(url, wait_until="networkidle", timeout=60000)
             page.wait_for_timeout(4000)
             tiles = page.eval_on_selector_all("a", TILE_JS, marker)
@@ -243,7 +267,7 @@ def check_browser(store, base, bottles):
 def over_msrp(h, cfg):
     """True if the price is more than max_over_msrp above the bottle's MSRP.
     Bottles with no MSRP listed, or hits with no price, always pass."""
-    msrp = (cfg.get("msrp") or {}).get(h["bottle"].split("|")[0].strip())
+    msrp = (cfg.get("msrp") or {}).get(display_name(h["bottle"]))
     price = re.sub(r"[^\d.]", "", h.get("price") or "")
     if not msrp or not price:
         return False
@@ -257,7 +281,7 @@ def watch_info(cfg):
     for store in cfg["stores"]:
         stores.append({"name": store["name"], "url": store["url"]})
         for b in store["bottles"]:
-            n = b.split("|")[0].strip()
+            n = display_name(b)
             if n not in names:
                 names.append(n)
     return {
