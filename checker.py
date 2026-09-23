@@ -395,8 +395,10 @@ def main():
                 new[key] = False
 
     # keep last known items for any store that errored this run
+    # (but not for stores removed from config.yaml)
+    listed = {s["name"] for s in cfg["stores"]}
     for i in old_items:
-        if i["store"] not in ok_stores:
+        if i["store"] in listed and i["store"] not in ok_stores:
             items[(i["store"], i["url"])] = i
     if alerts:
         send_email(alerts)
