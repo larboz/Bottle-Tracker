@@ -110,6 +110,11 @@ stores:
     bottles: *bottles
     exclude_extra: *shopify_extra
 
+  - name: The Liquor Barn
+    url: https://theliquorbarn.com
+    bottles: *bottles
+    exclude_extra: *shopify_extra
+
 # Bottles that show on the page but never send an email.
 no_email:
   - Penelope Rio
