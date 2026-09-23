@@ -16,6 +16,7 @@ STATE_FILE = Path("state.json")
 DATA_FILE = Path("data.json")
 SOLD_OUT = re.compile(r"sold out|out of stock|unavailable", re.I)
 NO_RESULTS = re.compile(r"couldn.t find any results", re.I)
+OUT_TAGS = {"unavailable", "sold-out", "sold out", "out-of-stock", "out of stock"}
 
 
 def tokens(s):
@@ -148,6 +149,13 @@ def check_shopify(base, bottles, products, store):
             if matches(bottle, p["title"], exclude_set(store)):
                 variants = p.get("variants", [])
                 in_stock = any(v.get("available") for v in variants)
+                # Some stores (e.g. The Liquor Barn) leave sold-out bottles
+                # purchasable in Shopify and tag them instead.
+                tags = p.get("tags") or []
+                if isinstance(tags, str):
+                    tags = tags.split(",")
+                if {t.strip().lower() for t in tags} & OUT_TAGS:
+                    in_stock = False
                 prices = [float(v["price"]) for v in variants if v.get("price")]
                 imgs = p.get("images") or []
                 size = re.search(r"\b\d+(?:\.\d+)?\s?(?:ml|l)\b", p["title"], re.I)
