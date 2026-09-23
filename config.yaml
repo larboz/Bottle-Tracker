@@ -116,6 +116,11 @@ stores:
     bottles: *bottles
     exclude_extra: *shopify_extra
 
+  - name: Bonding Over Bourbon
+    url: https://bondingbottle.shop
+    bottles: *bottles
+    exclude_extra: *shopify_extra
+
 # Bottles that show on the page but never send an email.
 no_email:
   - Penelope Rio
