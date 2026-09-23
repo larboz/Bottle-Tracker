@@ -1,4 +1,115 @@
 {
-  "updated": "2026-09-23T16:22:26Z",
-  "items": []
+  "updated": "2026-09-23T16:47:19Z",
+  "items": [],
+  "watch": {
+    "bottles": [
+      {
+        "name": "Weller Single Barrel",
+        "msrp": 49.99
+      },
+      {
+        "name": "Weller CYPB",
+        "msrp": 49.99
+      },
+      {
+        "name": "William Larue Weller",
+        "msrp": 149.99
+      },
+      {
+        "name": "Eagle Rare 12",
+        "msrp": 49.99
+      },
+      {
+        "name": "Eagle Rare 17",
+        "msrp": 149.99
+      },
+      {
+        "name": "George Stagg",
+        "msrp": 149.99
+      },
+      {
+        "name": "Thomas Handy",
+        "msrp": 149.99
+      },
+      {
+        "name": "Sazerac 18 Year",
+        "msrp": 149.99
+      },
+      {
+        "name": "Rock Hill Farms",
+        "msrp": 59.99
+      },
+      {
+        "name": "Taylor Single Barrel",
+        "msrp": 79.99
+      },
+      {
+        "name": "Taylor Cured Oak",
+        "msrp": 79.99
+      },
+      {
+        "name": "Jack Daniel's 10 Year",
+        "msrp": 84.99
+      },
+      {
+        "name": "Jack Daniel's 12 Year",
+        "msrp": 94.99
+      },
+      {
+        "name": "Jack Daniel's 14 Year",
+        "msrp": 149.99
+      },
+      {
+        "name": "Redwood Empire Hyperion",
+        "msrp": 99.0
+      },
+      {
+        "name": "Ten Pin",
+        "msrp": 124.99
+      },
+      {
+        "name": "Tanager Cigar Blend",
+        "msrp": 149.0
+      },
+      {
+        "name": "Maker's Mark Cellar Aged 2026",
+        "msrp": 175.0
+      }
+    ],
+    "stores": [
+      {
+        "name": "Gold Eagle",
+        "url": "https://goldeaglewine.com"
+      },
+      {
+        "name": "Rockton Spirits",
+        "url": "https://rocktonspirits.com"
+      },
+      {
+        "name": "DD Smoke Spirits",
+        "url": "https://ddsmokespirits.com"
+      },
+      {
+        "name": "Royal Food & Liquor",
+        "url": "https://royalfoodliquor.com"
+      },
+      {
+        "name": "Greene Valley",
+        "url": "https://greenevalleyws.com"
+      },
+      {
+        "name": "Garfield's Beverage",
+        "url": "https://garfieldsbeverage.com"
+      },
+      {
+        "name": "Joe's Beverage Warehouse",
+        "url": "https://joesbev.com"
+      },
+      {
+        "name": "Hi Proof",
+        "url": "https://www.hiproof.com"
+      }
+    ],
+    "max_over_msrp": 0.25
+  }
 }
