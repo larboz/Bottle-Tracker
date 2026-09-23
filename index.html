@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>These are in!</title>
+<title>🥃 Larboz's bottle tracker</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥃</text></svg>">
 <meta name="description" content="Whiskey bottles that just showed up on local store shelves.">
 <style>
   :root {
@@ -73,6 +74,48 @@
   .btn:hover { background: #f0b25c; }
   .empty { text-align: center; color: var(--muted); padding: 60px 10px; font-size: 1.1rem; }
   .empty .big { font-size: 3rem; display: block; margin-bottom: 8px; }
+  .watch { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
+  .watch h2 {
+    font-family: Georgia, "Times New Roman", serif; color: var(--amber);
+    font-size: 1.6rem; font-weight: normal; margin: 0 0 22px;
+    display: flex; align-items: center; justify-content: center; gap: 14px;
+  }
+  .watch h2::before, .watch h2::after {
+    content: ""; flex: 0 0 40px; height: 1px; background: var(--line);
+  }
+  .panels { display: grid; gap: 20px; grid-template-columns: 3fr 2fr; }
+  @media (max-width: 760px) { .panels { grid-template-columns: 1fr; } }
+  .panel {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 20px 22px;
+  }
+  .panel h3 {
+    margin: 0 0 14px; font-size: .78rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted); font-weight: 600;
+  }
+  .bottles { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  .bottles th {
+    text-align: right; color: var(--muted); font-weight: 500; font-size: .8rem;
+    padding: 0 0 8px 12px;
+  }
+  .bottles th:first-child { text-align: left; padding-left: 0; }
+  .bottles td { padding: 9px 0 9px 12px; border-top: 1px solid var(--line); text-align: right; white-space: nowrap; }
+  .bottles td:first-child { text-align: left; padding-left: 0; white-space: normal; }
+  .bottles td.cap { color: var(--amber); font-weight: 600; }
+  .bottles td.none { color: var(--muted); }
+  .stores { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .stores a {
+    display: inline-block; padding: 7px 13px; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--text); text-decoration: none; font-size: .9rem;
+    background: #ffffff06;
+  }
+  .stores a:hover { border-color: var(--amber-dark); color: var(--amber); }
+  .rules { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; font-size: .92rem; line-height: 1.45; }
+  .rules li { display: flex; gap: 12px; }
+  .rules .ic { flex: none; width: 1.4em; text-align: center; }
+  .rules b { color: var(--text); }
+  .rules span.t { color: var(--muted); }
+  .side { display: grid; gap: 20px; align-content: start; }
   footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 0 20px 40px; }
 </style>
 </head>
@@ -86,9 +129,36 @@
   <div id="grid" class="grid"></div>
   <div id="empty" class="empty" hidden>
     <span class="big">&#129347;</span>
-    Nothing from the list is in right now.<br>This page checks in a few times a day.
+    Nothing from the list is in right now.<br>This page checks every 30 minutes.
   </div>
 </main>
+<section id="watch" class="watch" hidden>
+  <h2>What I'm watching</h2>
+  <div class="panels">
+    <div class="panel">
+      <h3>Bottles</h3>
+      <table class="bottles">
+        <thead><tr><th>Bottle</th><th>MSRP</th><th>Max price</th></tr></thead>
+        <tbody id="bottles"></tbody>
+      </table>
+    </div>
+    <div class="side">
+      <div class="panel">
+        <h3>Stores</h3>
+        <ul id="stores" class="stores"></ul>
+      </div>
+      <div class="panel">
+        <h3>Rules</h3>
+        <ul class="rules">
+          <li><span class="ic">&#9200;</span><span class="t"><b>Every 30 minutes</b>, 8am to 9:30pm Central.</span></li>
+          <li><span class="ic">&#128176;</span><span class="t"><b>Fair price only.</b> A bottle shows up here only if it is in stock and priced no more than <b id="cap">25%</b> over MSRP. Listings with no price shown are included.</span></li>
+          <li><span class="ic">&#127919;</span><span class="t"><b>Exact matches.</b> The bottle's name has to appear together in the listing. Cigars, rum or tequila finished in whiskey barrels, bundles, gift sets and glassware are skipped.</span></li>
+          <li><span class="ic">&#128231;</span><span class="t"><b>Email alert</b> the first time a bottle comes into stock, not on every check.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 <footer>Automatic checks about every 30 minutes. Always confirm price and stock with the store.</footer>
 
 <script>
@@ -163,10 +233,44 @@
       : "Last checked " + ago(data.updated);
   }
 
+  function money(n) { return "$" + Number(n).toFixed(2); }
+
+  function renderWatch(w) {
+    var sec = document.getElementById("watch");
+    if (!w || !w.bottles) { sec.hidden = true; return; }
+    var over = typeof w.max_over_msrp === "number" ? w.max_over_msrp : 0.25;
+    document.getElementById("cap").textContent = Math.round(over * 100) + "%";
+    var tb = document.getElementById("bottles");
+    tb.textContent = "";
+    w.bottles.forEach(function (b) {
+      var tr = document.createElement("tr");
+      tr.appendChild(el("td", "", b.name));
+      if (b.msrp) {
+        tr.appendChild(el("td", "", money(b.msrp)));
+        tr.appendChild(el("td", "cap", money(b.msrp * (1 + over))));
+      } else {
+        tr.appendChild(el("td", "none", "n/a"));
+        tr.appendChild(el("td", "none", "Any"));
+      }
+      tb.appendChild(tr);
+    });
+    var ul = document.getElementById("stores");
+    ul.textContent = "";
+    (w.stores || []).forEach(function (st) {
+      var li = document.createElement("li");
+      var href = safeUrl(st.url);
+      var a = el(href ? "a" : "span", "", st.name);
+      if (href) { a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    sec.hidden = false;
+  }
+
   function load() {
     fetch("data.json?t=" + Date.now())
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(render)
+      .then(function (d) { render(d); renderWatch(d.watch); })
       .catch(function () { statusEl.textContent = "No data yet. Check back soon."; });
   }
   load();

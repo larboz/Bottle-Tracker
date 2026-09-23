@@ -250,6 +250,23 @@ def over_msrp(h, cfg):
     return float(price) > float(msrp) * (1 + cfg.get("max_over_msrp", 0.25))
 
 
+def watch_info(cfg):
+    """What the page lists at the bottom: bottles, MSRPs, stores, price limit."""
+    msrp = cfg.get("msrp") or {}
+    names, stores = [], []
+    for store in cfg["stores"]:
+        stores.append({"name": store["name"], "url": store["url"]})
+        for b in store["bottles"]:
+            n = b.split("|")[0].strip()
+            if n not in names:
+                names.append(n)
+    return {
+        "bottles": [{"name": n, "msrp": msrp.get(n)} for n in names],
+        "stores": stores,
+        "max_over_msrp": cfg.get("max_over_msrp", 0.25),
+    }
+
+
 def send_email(alerts):
     user = os.environ.get("SMTP_USER")
     pw = os.environ.get("SMTP_PASS")
@@ -360,7 +377,8 @@ def main():
         send_email(alerts)
     STATE_FILE.write_text(json.dumps(new, indent=2, sort_keys=True))
     DATA_FILE.write_text(json.dumps(
-        {"updated": now_iso, "items": sorted(items.values(), key=lambda x: x["name"])},
+        {"updated": now_iso, "items": sorted(items.values(), key=lambda x: x["name"]),
+         "watch": watch_info(cfg)},
         indent=2))
 
 
