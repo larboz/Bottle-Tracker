@@ -60,7 +60,7 @@ stores:
     search_url: https://garfieldsbeverage.com/shop?ch-query={q}
     bottles: *bottles
 
-  - name: Joe's Beverage
+  - name: Joe's Beverage Warehouse
     url: https://joesbev.com
     render: true
     product_href: /product
