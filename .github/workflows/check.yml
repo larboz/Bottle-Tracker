@@ -19,6 +19,9 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      # A queued run checks out the code from when it was queued. Get the
+      # latest so its saved results build on the previous run's.
+      - run: git pull --ff-only origin main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -36,5 +39,10 @@ jobs:
           git add state.json data.json
           if ! git diff --staged --quiet; then
             git commit -m "update state"
-            for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+            # On a clash, keep this run's files: they are the newest.
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && exit 0
+              git rebase --abort 2>/dev/null; sleep 5
+            done
+            echo "Could not save results"; exit 1
           fi
