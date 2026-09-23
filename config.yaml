@@ -70,13 +70,6 @@ stores:
     search_url: https://joesbev.com/shop?ch-query={q}
     bottles: *bottles
 
-  - name: Ramirez Beverage Center
-    url: https://ramirezliquor.com
-    render: true
-    product_href: /product
-    search_url: https://ramirezliquor.com/shop?ch-query={q}
-    bottles: *bottles
-
   - name: Hi Proof
     url: https://www.hiproof.com
     bottles: *bottles
