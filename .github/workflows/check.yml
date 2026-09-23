@@ -8,6 +8,12 @@ on:
 permissions:
   contents: write
 
+# Also started by an outside scheduler (cron-job.org), since GitHub's own
+# schedule runs late or not at all. One run at a time; extras wait in line.
+concurrency:
+  group: check
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-24.04
