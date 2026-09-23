@@ -1,16 +1,6 @@
 {
-  "updated": "2026-09-23T18:36:22Z",
+  "updated": "2026-09-23T19:30:40Z",
   "items": [
-    {
-      "name": "Colonel E H Taylor Jr Single Barrel Bourbon Whiskey",
-      "bottle": "Taylor Single Barrel",
-      "store": "Ramirez Beverage Center",
-      "url": "https://ramirezliquor.com/shop/product/colonel-e-h-taylor-jr-single-barrel-bourbon-whiskey/6202f52a371eb91b983affd7?option-id=05bfa5dfe8c02ec2be029e77735090a8b18db72345f46e8978b048bdaef17b2c",
-      "image": "https://cityhive-production-cdn.cityhive.net/product_details/6660a922f3522853b75c9ec1/primary_image/large.png?sig=dc2749c0110862999b7e4bc9ac4809558c23689ce2f035bce23b589c994a85d6",
-      "price": "$89.99",
-      "size": "750 mL",
-      "since": "2026-09-23T18:00:34Z"
-    },
     {
       "name": "Penelope 2026 Rio Bourbon Whiskey",
       "bottle": "Penelope Rio",
@@ -107,6 +97,10 @@
         "msrp": 175.0
       },
       {
+        "name": "Blade and Bow Solera",
+        "msrp": 64.99
+      },
+      {
         "name": "Penelope Rio",
         "msrp": null
       }
@@ -141,10 +135,6 @@
         "url": "https://joesbev.com"
       },
       {
-        "name": "Ramirez Beverage Center",
-        "url": "https://ramirezliquor.com"
-      },
-      {
         "name": "Hi Proof",
         "url": "https://www.hiproof.com"
       },
@@ -159,6 +149,14 @@
       {
         "name": "Remedy Liquor",
         "url": "https://www.remedyliquor.com"
+      },
+      {
+        "name": "The Liquor Barn",
+        "url": "https://theliquorbarn.com"
+      },
+      {
+        "name": "Bonding Over Bourbon",
+        "url": "https://bondingbottle.shop"
       }
     ],
     "max_over_msrp": 0.25
