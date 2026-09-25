@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T22:01:20Z",
+  "updated": "2026-09-25T22:22:19Z",
   "items": [
     {
       "name": "Penelope 2026 Rio Bourbon Whiskey",
@@ -139,6 +139,10 @@
         "url": "https://joesbev.com"
       },
       {
+        "name": "Malloy's Finest",
+        "url": "https://malloysfinest.com"
+      },
+      {
         "name": "Hi Proof",
         "url": "https://www.hiproof.com"
       },
@@ -163,6 +167,6 @@
         "url": "https://bondingbottle.shop"
       }
     ],
-    "max_over_msrp": 0.25
+    "max_over_msrp": 0.3
   }
 }
