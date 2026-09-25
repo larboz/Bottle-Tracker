@@ -126,8 +126,8 @@ stores:
 no_email:
   - Penelope Rio
 
-# Skip any listing priced more than this much over MSRP (0.25 = 25%).
-max_over_msrp: 0.25
+# Skip any listing priced more than this much over MSRP (0.30 = 30%).
+max_over_msrp: 0.30
 
 # Suggested retail price per bottle, keyed by the first name on its line
 # above. Bottles missing here are never filtered. Researched Sept 2026.

@@ -5,6 +5,7 @@ import os
 import re
 import smtplib
 import urllib.parse
+from concurrent.futures import ThreadPoolExecutor
 from email.message import EmailMessage
 from pathlib import Path
 
@@ -337,6 +338,20 @@ def send_email(alerts):
         s.send_message(msg)
 
 
+def fetch_hits(store):
+    """All matches for one store, or None if the store can't be checked."""
+    name, base = store["name"], base_url(store["url"])
+    if store.get("render"):
+        return check_browser(store, base, store["bottles"])
+    products = None if store.get("search_url") else shopify_products(base)
+    if products is not None:
+        return check_shopify(base, store["bottles"], products, store)
+    if store.get("search_url"):
+        return check_search(store, base, store["bottles"])
+    print(f"[{name}] Not Shopify; add a search_url. Skipping.")
+    return None
+
+
 def main():
     cfg = yaml.safe_load(Path("config.yaml").read_text())
     old = json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
@@ -353,26 +368,19 @@ def main():
     items = {}
     ok_stores = set()
 
-    for store in cfg["stores"]:
-        name, base = store["name"], base_url(store["url"])
+    # Fetch every store in parallel (each browser store gets its own
+    # browser), then handle the results one store at a time, in order.
+    with ThreadPoolExecutor(max_workers=cfg.get("parallel", 4)) as pool:
+        futures = [pool.submit(fetch_hits, store) for store in cfg["stores"]]
+    for store, fut in zip(cfg["stores"], futures):
+        name = store["name"]
         try:
-            if store.get("render"):
-                hits = check_browser(store, base, store["bottles"])
-                products = None
-            else:
-                products = None if store.get("search_url") else shopify_products(base)
-            if store.get("render"):
-                pass
-            elif products is not None:
-                hits = check_shopify(base, store["bottles"], products, store)
-            elif store.get("search_url"):
-                hits = check_search(store, base, store["bottles"])
-            else:
-                print(f"[{name}] Not Shopify; add a search_url. Skipping.")
-                continue
+            hits = fut.result()
         except Exception as e:
             print(f"[{name}] error: {e}")
             continue  # keep old state for this store
+        if hits is None:
+            continue
 
         ok_stores.add(name)
         seen = set()
