@@ -137,17 +137,18 @@ no_email:
 max_over_msrp: 0.30
 
 # Suggested retail price per bottle, keyed by the first name on its line
-# above. Bottles missing here are never filtered. Researched Sept 2026.
+# above. Bottles missing here are never filtered. Researched Sept 2026;
+# checked against North Carolina's state store prices (abc2.nc.gov).
 msrp:
-  Weller Single Barrel: 49.99
-  Weller CYPB: 49.99
-  William Larue Weller: 149.99
+  Weller Single Barrel: 59.99
+  Weller CYPB: 69.99
+  William Larue Weller: 154.99
   Eagle Rare 12: 49.99
-  Eagle Rare 17: 149.99
-  George Stagg: 149.99
-  Thomas Handy: 149.99
-  Sazerac 18 Year: 149.99
-  Rock Hill Farms: 59.99
+  Eagle Rare 17: 154.99
+  George Stagg: 154.99
+  Thomas Handy: 154.99
+  Sazerac 18 Year: 154.99
+  Rock Hill Farms: 89.99
   Taylor Single Barrel: 79.99
   Taylor Cured Oak: 79.99
   Jack Daniel's 10 Year: 84.99
