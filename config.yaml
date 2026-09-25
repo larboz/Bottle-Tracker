@@ -72,6 +72,13 @@ stores:
     search_url: https://joesbev.com/shop?ch-query={q}
     bottles: *bottles
 
+  - name: Malloy's Finest
+    url: https://malloysfinest.com
+    render: true
+    product_href: /product
+    search_url: https://malloysfinest.com/shop?ch-query={q}
+    bottles: *bottles
+
   - name: Hi Proof
     url: https://www.hiproof.com
     bottles: *bottles
