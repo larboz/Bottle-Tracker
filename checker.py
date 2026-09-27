@@ -274,15 +274,21 @@ def check_browser(store, base, bottles):
     return hits
 
 
+def price_value(price):
+    """'$1,099.99' -> 1099.99, or None if there's no price."""
+    digits = re.sub(r"[^\d.]", "", price or "")
+    return float(digits) if digits else None
+
+
 def over_msrp(h, cfg):
     """True if the price is more than max_over_msrp above the bottle's MSRP.
     Bottles with no MSRP listed, or hits with no price, always pass."""
     msrp = (cfg.get("msrp") or {}).get(display_name(h["bottle"]))
-    price = re.sub(r"[^\d.]", "", h.get("price") or "")
-    if not msrp or not price:
+    price = price_value(h.get("price"))
+    if not msrp or price is None:
         return False
     cap = round(float(msrp) * (1 + cfg.get("max_over_msrp", 0.25)), 2)
-    return float(price) > cap
+    return price > cap
 
 
 def watch_info(cfg):
@@ -358,15 +364,17 @@ def main():
     new = dict(old)
     alerts = []
     now_iso = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    old_items = []
+    old_items, old_watch = [], {}
     if DATA_FILE.exists():
         try:
-            old_items = json.loads(DATA_FILE.read_text()).get("items", [])
+            old_data = json.loads(DATA_FILE.read_text())
+            old_items, old_watch = old_data.get("items", []), old_data.get("watch") or {}
         except ValueError:
-            old_items = []
+            pass
     since = {(i["store"], i["url"]): i.get("since", now_iso) for i in old_items}
     items = {}
     ok_stores = set()
+    lowest = {}  # bottle -> cheapest in-stock listing, even over the MSRP limit (page only)
 
     # Fetch every store in parallel (each browser store gets its own
     # browser), then handle the results one store at a time, in order.
@@ -385,6 +393,10 @@ def main():
         ok_stores.add(name)
         seen = set()
         for h in hits:
+            p = price_value(h.get("price"))
+            b = display_name(h["bottle"])
+            if h["in_stock"] and p is not None and (b not in lowest or p < lowest[b]["value"]):
+                lowest[b] = {"value": p, "price": h["price"], "store": name, "url": h["url"]}
             if h["in_stock"] and over_msrp(h, cfg):
                 print(f"[{name}] {h['title']}: IN at {h['price']}, over MSRP limit, skipping")
                 h["in_stock"] = False
@@ -418,12 +430,21 @@ def main():
     for i in old_items:
         if i["store"] in listed and i["store"] not in ok_stores:
             items[(i["store"], i["url"])] = i
+    # a store that errored this run keeps its previous lowest price
+    for ob in old_watch.get("bottles", []):
+        lo = ob.get("lowest")
+        if lo and ob["name"] not in lowest and lo.get("store") in listed and lo["store"] not in ok_stores:
+            lowest[ob["name"]] = lo
+    watch = watch_info(cfg)
+    for wb in watch["bottles"]:
+        lo = lowest.get(wb["name"])
+        wb["lowest"] = {k: lo[k] for k in ("price", "store", "url")} if lo else None
     if alerts:
         send_email(alerts)
     STATE_FILE.write_text(json.dumps(new, indent=2, sort_keys=True))
     DATA_FILE.write_text(json.dumps(
         {"updated": now_iso, "items": sorted(items.values(), key=lambda x: x["name"]),
-         "watch": watch_info(cfg)},
+         "watch": watch},
         indent=2))
 
 

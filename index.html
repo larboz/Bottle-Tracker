@@ -102,7 +102,15 @@
   .bottles td { padding: 9px 0 9px 12px; border-top: 1px solid var(--line); text-align: right; white-space: nowrap; }
   .bottles td:first-child { text-align: left; padding-left: 0; white-space: normal; }
   .bottles td.cap { color: var(--amber); font-weight: 600; }
-  .bottles td.none { color: var(--muted); }
+  .bottles td.none, .bottles .none { color: var(--muted); }
+  .bottles td.low { white-space: normal; min-width: 7.5em; }
+  .bottles .lp { font-weight: 600; }
+  .bottles .lp.ok { color: #5fbf6a; }
+  .bottles .where { display: block; font-size: .75rem; color: var(--muted); text-decoration: none; line-height: 1.3; }
+  .bottles a.where:hover { color: var(--amber); }
+  @media (max-width: 520px) {
+    .bottles th:nth-child(2), .bottles td:nth-child(2) { display: none; }
+  }
   .stores { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
   .stores a {
     display: inline-block; padding: 7px 13px; border-radius: 999px;
@@ -138,7 +146,7 @@
     <div class="panel">
       <h3>Bottles</h3>
       <table class="bottles">
-        <thead><tr><th>Bottle</th><th>MSRP</th><th>Max price</th></tr></thead>
+        <thead><tr><th>Bottle</th><th>MSRP</th><th>Max price</th><th>Lowest in stores</th></tr></thead>
         <tbody id="bottles"></tbody>
       </table>
     </div>
@@ -235,6 +243,23 @@
 
   function money(n) { return "$" + Number(n).toFixed(2); }
 
+  // Cheapest in-stock listing seen on the last check, even if over the max.
+  function lowestCell(b, over) {
+    var td = el("td", "low");
+    var lo = b.lowest;
+    if (!lo || !lo.price) { td.appendChild(el("span", "none", "Not in stock")); return td; }
+    var val = parseFloat(String(lo.price).replace(/[^\d.]/g, ""));
+    var ok = !b.msrp || val <= Math.round(b.msrp * (1 + over) * 100) / 100;
+    var shown = isNaN(val) ? lo.price
+      : "$" + val.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    td.appendChild(el("div", ok ? "lp ok" : "lp", shown));
+    var href = safeUrl(lo.url);
+    var where = el(href ? "a" : "span", "where", "at " + lo.store);
+    if (href) { where.href = href; where.target = "_blank"; where.rel = "noopener noreferrer"; }
+    td.appendChild(where);
+    return td;
+  }
+
   function renderWatch(w) {
     var sec = document.getElementById("watch");
     if (!w || !w.bottles) { sec.hidden = true; return; }
@@ -252,6 +277,7 @@
         tr.appendChild(el("td", "none", "n/a"));
         tr.appendChild(el("td", "none", "Any"));
       }
+      tr.appendChild(lowestCell(b, over));
       tb.appendChild(tr);
     });
     var ul = document.getElementById("stores");
