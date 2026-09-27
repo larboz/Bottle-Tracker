@@ -108,8 +108,13 @@
   .bottles .lp.ok { color: #5fbf6a; }
   .bottles .where { display: block; font-size: .75rem; color: var(--muted); text-decoration: none; line-height: 1.3; }
   .bottles a.where:hover { color: var(--amber); }
+  .panel:first-child { overflow-x: auto; }
   @media (max-width: 520px) {
     .bottles th:nth-child(2), .bottles td:nth-child(2) { display: none; }
+    .panel { padding: 16px 14px; }
+    .bottles { font-size: .84rem; }
+    .bottles th, .bottles td { padding-left: 7px; }
+    .bottles td.low { min-width: 0; }
   }
   .stores { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
   .stores a {
@@ -146,7 +151,7 @@
     <div class="panel">
       <h3>Bottles</h3>
       <table class="bottles">
-        <thead><tr><th>Bottle</th><th>MSRP</th><th>Max price</th><th>Lowest in stores</th></tr></thead>
+        <thead><tr><th>Bottle</th><th>MSRP</th><th>Max price</th><th>Lowest in stores</th><th>Binny's</th></tr></thead>
         <tbody id="bottles"></tbody>
       </table>
     </div>
@@ -260,6 +265,21 @@
     return td;
   }
 
+  // Binny's product page for this bottle, if one is listed in config.yaml.
+  function binnysCell(b, over) {
+    var td = el("td", "low");
+    var bn = b.binnys;
+    if (!bn) { td.appendChild(el("span", "none", "No page")); return td; }
+    var val = parseFloat(String(bn.price || "").replace(/[^\d.]/g, ""));
+    var ok = bn.in_stock && (!b.msrp || val <= Math.round(b.msrp * (1 + over) * 100) / 100);
+    td.appendChild(el("div", ok ? "lp ok" : "lp", bn.price || "No price"));
+    var href = safeUrl(bn.url);
+    var st = el(href ? "a" : "span", "where", bn.in_stock ? "In stock" : "Out of stock");
+    if (href) { st.href = href; st.target = "_blank"; st.rel = "noopener noreferrer"; }
+    td.appendChild(st);
+    return td;
+  }
+
   function renderWatch(w) {
     var sec = document.getElementById("watch");
     if (!w || !w.bottles) { sec.hidden = true; return; }
@@ -280,6 +300,7 @@
         tr.appendChild(el("td", "none", "No limit"));
       }
       tr.appendChild(lowestCell(b, over));
+      tr.appendChild(binnysCell(b, over));
       tb.appendChild(tr);
     });
     var ul = document.getElementById("stores");

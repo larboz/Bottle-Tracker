@@ -133,6 +133,12 @@ stores:
     bottles: *bottles
     exclude_extra: *shopify_extra
 
+# Binny's product pages, keyed by bottle name (first name on its line in
+# the bottle list). Binny's search is off-limits to bots, so each bottle
+# needs its page listed here. Shown in the page's Binny's column only.
+binnys:
+  Remus Repeal Reserve VIII: https://www.binnys.com/spirits/whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-159549/
+
 # Bottles that show on the page but never send an email.
 no_email:
   - Penelope Rio

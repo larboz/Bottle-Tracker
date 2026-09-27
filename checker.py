@@ -236,7 +236,15 @@ def check_browser(store, base, bottles):
         for display, bottle in queries:
             query = split_alt(bottle)[0]
             url = store["search_url"].format(q=urllib.parse.quote_plus(query))
-            page.goto(url, wait_until="networkidle", timeout=60000)
+            # retry a slow page once before giving up on the store
+            for attempt in (1, 2):
+                try:
+                    page.goto(url, wait_until="networkidle", timeout=60000)
+                    break
+                except Exception:
+                    if attempt == 2:
+                        raise
+                    print(f"[{store['name']}] '{bottle}': slow page, retrying")
             page.wait_for_timeout(4000)
             tiles = page.eval_on_selector_all("a", TILE_JS, marker)
             # Big stores always return close matches, so a good page has
@@ -307,6 +315,51 @@ def watch_info(cfg):
         "stores": stores,
         "max_over_msrp": cfg.get("max_over_msrp", 0.25),
     }
+
+
+PRODUCT_JS = """
+() => [...document.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent)
+"""
+
+
+def check_binnys(pages):
+    """Binny's blocks search for bots (robots.txt), but product pages are
+    allowed. pages: {bottle name: product URL}. Returns {bottle: result}."""
+    from playwright.sync_api import sync_playwright
+
+    out = {}
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch()
+        page = browser.new_page(user_agent=UA["User-Agent"])
+        for bottle, url in pages.items():
+            try:
+                page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                page.wait_for_timeout(3000)
+                offer = None
+                for raw in page.evaluate(PRODUCT_JS):
+                    try:
+                        data = json.loads(raw)
+                    except ValueError:
+                        continue
+                    for d in data if isinstance(data, list) else [data]:
+                        if d.get("@type") == "Product" and d.get("offers"):
+                            offer = d["offers"]
+                offer = offer[0] if isinstance(offer, list) else offer
+                if not offer:
+                    raise RuntimeError("no product data on page")
+                price = offer.get("price") or offer.get("lowPrice")
+                result = {
+                    "url": url,
+                    "price": f"${float(price):,.2f}" if price else "",
+                    "in_stock": str(offer.get("availability", "")).endswith("InStock"),
+                }
+                print(f"[Binny's] {bottle}: {result['price'] or 'no price'} "
+                      f"{'IN' if result['in_stock'] else 'out'}")
+                out[bottle] = result
+            except Exception as e:
+                print(f"[Binny's] {bottle}: error: {e}")
+        browser.close()
+    return out
 
 
 def send_email(alerts):
@@ -380,7 +433,13 @@ def main():
     # Fetch every store in parallel (each browser store gets its own
     # browser), then handle the results one store at a time, in order.
     with ThreadPoolExecutor(max_workers=cfg.get("parallel", 4)) as pool:
+        binnys_future = pool.submit(check_binnys, cfg.get("binnys") or {})
         futures = [pool.submit(fetch_hits, store) for store in cfg["stores"]]
+    try:
+        binnys = binnys_future.result()
+    except Exception as e:
+        print(f"[Binny's] error: {e}")
+        binnys = {}
     for store, fut in zip(cfg["stores"], futures):
         name = store["name"]
         try:
@@ -437,9 +496,15 @@ def main():
         if lo and ob["name"] not in lowest and lo.get("store") in listed and lo["store"] not in ok_stores:
             lowest[ob["name"]] = lo
     watch = watch_info(cfg)
+    old_binnys = {ob["name"]: ob.get("binnys") for ob in old_watch.get("bottles", [])}
     for wb in watch["bottles"]:
         lo = lowest.get(wb["name"])
         wb["lowest"] = {k: lo[k] for k in ("price", "store", "url")} if lo else None
+        # Binny's column (page only). Keep the last result if a page failed this run.
+        if wb["name"] in (cfg.get("binnys") or {}):
+            wb["binnys"] = binnys.get(wb["name"]) or old_binnys.get(wb["name"])
+        else:
+            wb["binnys"] = None
     if alerts:
         send_email(alerts)
     STATE_FILE.write_text(json.dumps(new, indent=2, sort_keys=True))
