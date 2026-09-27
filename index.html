@@ -276,8 +276,8 @@
         tr.appendChild(el("td", "", money(b.msrp)));
         tr.appendChild(el("td", "cap", money(b.msrp * (1 + over))));
       } else {
-        tr.appendChild(el("td", "none", "n/a"));
-        tr.appendChild(el("td", "none", "Any"));
+        tr.appendChild(el("td", "none", "Not set"));
+        tr.appendChild(el("td", "none", "No limit"));
       }
       tr.appendChild(lowestCell(b, over));
       tb.appendChild(tr);
