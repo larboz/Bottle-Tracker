@@ -267,7 +267,9 @@
     document.getElementById("cap").textContent = Math.round(over * 100) + "%";
     var tb = document.getElementById("bottles");
     tb.textContent = "";
-    w.bottles.forEach(function (b) {
+    w.bottles.slice().sort(function (x, y) {
+      return x.name.localeCompare(y.name, "en", {sensitivity: "base"});
+    }).forEach(function (b) {
       var tr = document.createElement("tr");
       tr.appendChild(el("td", "", b.name));
       if (b.msrp) {
