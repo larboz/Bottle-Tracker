@@ -82,17 +82,18 @@ def matches(bottle, title, exclude=None):
     # "Bottle A + Bottle B" listings are bundles
     if exclude is not None and re.search(r"\s\+\s", title):
         return False
-    if exclude is not None:
-        bad_words, bad_patterns = exclude
-        for w in words:
-            if w in bad_words or any(p.fullmatch(w) for p in bad_patterns):
-                return False
+    bad_words, bad_patterns = exclude if exclude is not None else (set(), [])
     for alt in bottle.split("|"):
         alt, neg = split_alt(alt)
         if neg & set(words):
             continue
         need = set(tokens(alt))
         if not need:
+            continue
+        # skip-list words that are part of the bottle's own name don't count
+        # (so "cigar" still rules out cigars, but not "Tanager Cigar Blend")
+        if any((w in bad_words or any(p.fullmatch(w) for p in bad_patterns))
+               and w not in need for w in words):
             continue
         span = min_window(words, need)
         if span is not None and span <= len(need) + 1:

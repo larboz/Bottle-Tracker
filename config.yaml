@@ -28,6 +28,10 @@ stores:
       - Maker's Mark Cellar Aged 2026
       - Blade and Bow Solera | Blade and Bow 12
       - Old Grand Dad Single Barrel
+      - Ry3 Cigar | Ry3 Rye Cigar
+      - Shortbarrel Cigar | Short Barrel Cigar
+      - Remus Repeal Reserve VIII | Remus Repeal Reserve 8
+      - Starlight Sakura
       - Penelope Rio
 
   - name: Rockton Spirits
@@ -132,6 +136,7 @@ stores:
 # Bottles that show on the page but never send an email.
 no_email:
   - Penelope Rio
+  - Remus Repeal Reserve VIII
 
 # Skip any listing priced more than this much over MSRP (0.30 = 30%).
 max_over_msrp: 0.30
@@ -160,3 +165,7 @@ msrp:
   Maker's Mark Cellar Aged 2026: 175.00
   Blade and Bow Solera: 64.99
   Old Grand Dad Single Barrel: 49.99
+  Ry3 Cigar: 115.00
+  Shortbarrel Cigar: 89.99
+  Remus Repeal Reserve VIII: 99.99
+  Starlight Sakura: 150.00
