@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T22:30:39Z",
+  "updated": "2026-09-27T23:00:45Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -276,7 +276,11 @@
           "store": "Rockton Spirits",
           "url": "https://rocktonspirits.com/shop/product/george-remus-repeal-reserve-bourbon-viii/6712728e67111622228c1db9?option-id=0e1dd3aed0ab83cb04e9f78f29f710392b254c7b3a324240b13ee9e31a59cdd9"
         },
-        "binnys": null
+        "binnys": {
+          "url": "https://www.binnys.com/spirits/whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-159549/",
+          "price": "$89.99",
+          "in_stock": false
+        }
       },
       {
         "name": "Starlight Sakura",
