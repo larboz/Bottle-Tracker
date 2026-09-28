@@ -82,24 +82,34 @@ def main():
         old = {}
 
     results = {b: {} for b in pages}
+    blocked = False
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
+        # One browsing session for everything, switching the store the way
+        # Binny's store picker does, with a pause between pages.
+        ctx = browser.new_context(user_agent=UA)
+        page = ctx.new_page()
         for store, store_id in stores.items():
-            ctx = browser.new_context(user_agent=UA)
             ctx.add_cookies([{"name": "current-store", "value": str(store_id),
                               "domain": "www.binnys.com", "path": "/"}])
-            page = ctx.new_page()
             for bottle, url in pages.items():
-                try:
-                    r = read_page(page, url, store)
-                    print(f"[Binny's {store}] {bottle}: {r['status']} {r['price']} {r['shelf']}")
-                except Exception as e:
-                    print(f"[Binny's {store}] {bottle}: error: {e}")
+                r = None
+                if not blocked:
+                    try:
+                        r = read_page(page, url, store)
+                        print(f"[Binny's {store}] {bottle}: {r['status']} {r['price']} {r['shelf']}")
+                    except Exception as e:
+                        print(f"[Binny's {store}] {bottle}: error: {e}")
+                        # Binny's security check: stop for this run, don't retry
+                        blocked = "Just a moment" in str(e)
+                    page.wait_for_timeout(5000)
+                if not r:
                     # keep this store's last result for this bottle
                     r = ((old.get(bottle) or {}).get("stores") or {}).get(store)
                 if r:
                     results[bottle][store] = r
-            ctx.close()
+        if blocked:
+            print("[Binny's] security check shown; stopped for this run")
         browser.close()
 
     bottles = {}
