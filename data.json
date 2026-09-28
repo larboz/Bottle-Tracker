@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T08:12:05Z",
+  "updated": "2026-09-28T12:00:43Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -127,7 +127,11 @@
       {
         "name": "William Larue Weller",
         "msrp": 154.99,
-        "lowest": null,
+        "lowest": {
+          "price": "$1499.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/william-larue-weller-bourbon-kentucky-2023-edition-750ml"
+        },
         "binnys": null
       },
       {
@@ -157,8 +161,8 @@
         "msrp": 154.99,
         "lowest": {
           "price": "$499.99",
-          "store": "Bonding Over Bourbon",
-          "url": "https://bondingbottle.shop/products/thomas-h-handy-sazerac-straight-rye-whiskey-750-ml"
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/thomas-handy-sazerac-whiskey-rye-kentucky-2025-750ml"
         },
         "binnys": null
       },
