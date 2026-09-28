@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T14:30:46Z",
+  "updated": "2026-09-28T15:01:01Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -111,8 +111,7 @@
           "price": "$299.99",
           "store": "Joe's Beverage Warehouse",
           "url": "https://joesbev.com/shop/product/weller-single-barrel-bourbon/64b6c1e223c3ed4b95cc1829?option-id=c3f7c7ce54b82944a5672644af974f983fbff7976252fa0b6100bb7b2e4f1d0e"
-        },
-        "binnys": null
+        }
       },
       {
         "name": "Weller CYPB",
@@ -121,8 +120,7 @@
           "price": "$989.99",
           "store": "Royal Food & Liquor",
           "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
-        },
-        "binnys": null
+        }
       },
       {
         "name": "William Larue Weller",
@@ -131,20 +129,17 @@
           "price": "$1499.99",
           "store": "Remedy Liquor",
           "url": "https://www.remedyliquor.com/products/william-larue-weller-bourbon-kentucky-2023-edition-750ml"
-        },
-        "binnys": null
+        }
       },
       {
         "name": "Eagle Rare 12",
         "msrp": 49.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Eagle Rare 17",
         "msrp": 154.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "George Stagg",
@@ -153,8 +148,7 @@
           "price": "$1,099.99",
           "store": "Royal Food & Liquor",
           "url": "https://royalfoodliquor.com/shop/product/george-t-stagg-kentucky-straight-bourbon-whiskey/56c28e19756275139d6a0200?option-id=5516830ddf51a9c6b8643f843ee5ad8ead7bd991721a2e0da0348ce25b3cdc0d"
-        },
-        "binnys": null
+        }
       },
       {
         "name": "Thomas Handy",
@@ -163,20 +157,17 @@
           "price": "$499.99",
           "store": "Remedy Liquor",
           "url": "https://www.remedyliquor.com/products/thomas-handy-sazerac-whiskey-rye-kentucky-2025-750ml"
-        },
-        "binnys": null
+        }
       },
       {
         "name": "Sazerac 18 Year",
         "msrp": 154.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Rock Hill Farms",
         "msrp": 89.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Taylor Single Barrel",
@@ -185,68 +176,57 @@
           "price": "$139.99",
           "store": "Remedy Liquor",
           "url": "https://www.remedyliquor.com/products/e-h-taylor-sgl-barl-wsky"
-        },
-        "binnys": null
+        }
       },
       {
         "name": "Taylor Cured Oak",
         "msrp": 79.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Jack Daniel's 12 Year",
         "msrp": 99.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Jack Daniel's 14 Year",
         "msrp": 149.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Redwood Empire Hyperion",
         "msrp": 99.0,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Ten Pin",
         "msrp": 124.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Tanager Cigar Blend",
         "msrp": 149.0,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Maker's Mark Cellar Aged 2026",
         "msrp": 175.0,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Blade and Bow Solera",
         "msrp": 64.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Old Grand Dad Single Barrel",
         "msrp": 49.99,
-        "lowest": null,
-        "binnys": null
+        "lowest": null
       },
       {
         "name": "Ry3 Cigar",
@@ -255,8 +235,7 @@
           "price": "$110.99",
           "store": "Rockton Spirits",
           "url": "https://rocktonspirits.com/shop/product/ry3-cigar-series/64938c23c40bd77a5b9f0fe7?option-id=8c23f319ecbf0b4b78e9aaabaa20545905ebf3a0b33d8330e28585e9e1d9ce49"
-        },
-        "binnys": null
+        }
       },
       {
         "name": "Shortbarrel Cigar",
@@ -265,8 +244,7 @@
           "price": "$89.99",
           "store": "Remedy Liquor",
           "url": "https://www.remedyliquor.com/products/shortbarrel-bourbon-cigar-blend-release-kentucky-750ml"
-        },
-        "binnys": null
+        }
       },
       {
         "name": "Remus Repeal Reserve VIII",
@@ -275,11 +253,6 @@
           "price": "$114.99",
           "store": "Rockton Spirits",
           "url": "https://rocktonspirits.com/shop/product/george-remus-repeal-reserve-bourbon-viii/6712728e67111622228c1db9?option-id=0e1dd3aed0ab83cb04e9f78f29f710392b254c7b3a324240b13ee9e31a59cdd9"
-        },
-        "binnys": {
-          "url": "https://www.binnys.com/spirits/whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-159549/",
-          "price": "$89.99",
-          "in_stock": false
         }
       },
       {
@@ -289,8 +262,7 @@
           "price": "$149.99",
           "store": "Joe's Beverage Warehouse",
           "url": "https://joesbev.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1"
-        },
-        "binnys": null
+        }
       },
       {
         "name": "Penelope Rio",
@@ -299,8 +271,7 @@
           "price": "$149.99",
           "store": "Seelbach's",
           "url": "https://seelbachs.com/products/penelope-rio-bourbon-whiskey"
-        },
-        "binnys": null
+        }
       }
     ],
     "stores": [
