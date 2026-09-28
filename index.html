@@ -234,9 +234,30 @@
     return c;
   }
 
+  // Binny's finds within MSRP + the limit, as cards (from binnys.json).
+  function binnysItems(data) {
+    var w = data.watch || {};
+    var over = typeof w.max_over_msrp === "number" ? w.max_over_msrp : 0.25;
+    var out = [];
+    (w.bottles || []).forEach(function (b) {
+      var bn = (binnys.bottles || {})[b.name];
+      var best = bn && bn.best;
+      if (!best || !b.msrp) return;
+      var val = parseFloat(String(best.price).replace(/[^\d.]/g, ""));
+      if (isNaN(val) || val > Math.round(b.msrp * (1 + over) * 100) / 100) return;
+      out.push({
+        name: best.name || b.name, price: best.price, size: "750 ml",
+        store: "Binny's " + best.store + (best.shelf ? " (" + best.shelf + ")" : ""),
+        url: bn.url, image: best.image, since: binnys.updated
+      });
+    });
+    return out;
+  }
+
   function render(data) {
     grid.textContent = "";
-    var items = data.items || [];
+    var items = (data.items || []).concat(binnysItems(data))
+      .sort(function (a, b) { return a.name.localeCompare(b.name); });
     empty.hidden = items.length > 0;
     items.forEach(function (i) { grid.appendChild(card(i)); });
     var mins = (Date.now() - new Date(data.updated).getTime()) / 60000;
@@ -341,7 +362,7 @@
         return fetch("binnys.json?t=" + Date.now())
           .then(function (r) { return r.ok ? r.json() : {}; })
           .catch(function () { return {}; })
-          .then(function (bj) { binnys = bj || {}; renderWatch(d.watch); });
+          .then(function (bj) { binnys = bj || {}; render(d); renderWatch(d.watch); });
       })
       .catch(function () { statusEl.textContent = "No data yet. Check back soon."; });
   }

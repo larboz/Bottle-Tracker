@@ -42,16 +42,26 @@ def read_page(page, url, store):
     # where = "<store name> <shelf>"; drop the store name
     shelf = where[len(store):].strip() if where.lower().startswith(store.lower()) else where
     in_stock = status.startswith(("IN STOCK", "ONLY", "LOW"))
+    info = product_info(page)
     return {
         "status": status.capitalize(),
         "in_stock": in_stock,
         "shelf": shelf.title() if in_stock else "",
-        "price": product_price(page) or text_price(text),
+        "price": info.get("price") or text_price(text),
+        "name": info.get("name", ""),
+        "image": info.get("image") or og_image(page),
     }
 
 
-def product_price(page):
-    """Price from the page's structured product data (most reliable)."""
+def og_image(page):
+    """The page's share image (Binny's product data has no photo)."""
+    el = page.query_selector('meta[property="og:image"]')
+    url = (el.get_attribute("content") or "") if el else ""
+    return url if url.startswith("https://") else ""
+
+
+def product_info(page):
+    """Price, name and photo from the page's structured product data."""
     for raw in page.eval_on_selector_all('script[type="application/ld+json"]',
                                          "els => els.map(e => e.textContent)"):
         try:
@@ -59,12 +69,17 @@ def product_price(page):
         except ValueError:
             continue
         for d in data if isinstance(data, list) else [data]:
-            offer = d.get("offers") if d.get("@type") == "Product" else None
+            if d.get("@type") != "Product":
+                continue
+            offer = d.get("offers")
             offer = offer[0] if isinstance(offer, list) else offer
             price = (offer or {}).get("price") or (offer or {}).get("lowPrice")
-            if price:
-                return f"${float(price):,.2f}"
-    return ""
+            image = d.get("image")
+            image = image[0] if isinstance(image, list) and image else image
+            return {"price": f"${float(price):,.2f}" if price else "",
+                    "name": d.get("name", ""),
+                    "image": image if isinstance(image, str) else ""}
+    return {}
 
 
 def text_price(text):
@@ -123,7 +138,8 @@ def main():
         if in_stock:
             val, _, s = min(in_stock)
             best = {"store": s, "price": per[s]["price"], "status": per[s]["status"],
-                    "shelf": per[s]["shelf"]}
+                    "shelf": per[s]["shelf"], "name": per[s].get("name", ""),
+                    "image": per[s].get("image", "")}
         bottles[bottle] = {"url": url, "best": best, "stores": per}
 
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
