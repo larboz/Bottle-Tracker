@@ -1,7 +1,10 @@
 name: Binny's check
 on:
-  # Manual only: Binny's security service challenges GitHub's servers, so
-  # this doesn't run automatically from GitHub.
+  # Runs right after every Bottle check (which cron-job.org starts), so it
+  # follows the same schedule without a job of its own.
+  workflow_run:
+    workflows: ["Bottle check"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -13,18 +16,20 @@ concurrency:
 
 jobs:
   binnys:
-    runs-on: ubuntu-24.04
+    # Binny's security service challenges GitHub's servers, so this job runs
+    # on Larry's Mac (a self-hosted runner) over a home connection instead.
+    runs-on: [self-hosted, binnys]
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
       - run: git pull --ff-only origin main
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install -r requirements.txt
-      - run: playwright install --with-deps chromium
-      - run: python binnys.py
+      - name: Python packages (kept between runs)
+        run: |
+          [ -x "$HOME/.bottle-venv/bin/python" ] || python3 -m venv "$HOME/.bottle-venv"
+          "$HOME/.bottle-venv/bin/pip" install -q -r requirements.txt
+          "$HOME/.bottle-venv/bin/playwright" install chromium
+      - run: '"$HOME/.bottle-venv/bin/python" binnys.py'
       - name: Save results
         run: |
           git config user.name "bottle-bot"
