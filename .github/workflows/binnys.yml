@@ -1,9 +1,7 @@
 name: Binny's check
 on:
-  # Runs right after every Bottle check, so it needs no schedule of its own.
-  workflow_run:
-    workflows: ["Bottle check"]
-    types: [completed]
+  # Manual only: Binny's security service challenges GitHub's servers, so
+  # this doesn't run automatically from GitHub.
   workflow_dispatch:
 
 permissions:
