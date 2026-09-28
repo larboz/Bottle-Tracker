@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T19:41:18Z",
+  "updated": "2026-09-28T19:56:49Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -265,6 +265,11 @@
           "store": "Remedy Liquor",
           "url": "https://www.remedyliquor.com/products/shortbarrel-bourbon-cigar-blend-release-kentucky-750ml"
         }
+      },
+      {
+        "name": "Remus Repeal Reserve VII",
+        "msrp": 99.99,
+        "lowest": null
       },
       {
         "name": "Remus Repeal Reserve VIII",
