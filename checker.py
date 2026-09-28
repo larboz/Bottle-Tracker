@@ -289,15 +289,15 @@ def price_value(price):
     return float(digits) if digits else None
 
 
-def over_msrp(h, cfg):
-    """True if the price is more than max_over_msrp above the bottle's MSRP.
-    Bottles with no MSRP listed, or hits with no price, always pass."""
+def within_limit(h, cfg):
+    """True if the listing has a price at or under the bottle's MSRP plus
+    max_over_msrp. No MSRP or no price = not within (not shown, no email)."""
     msrp = (cfg.get("msrp") or {}).get(display_name(h["bottle"]))
     price = price_value(h.get("price"))
     if not msrp or price is None:
         return False
     cap = round(float(msrp) * (1 + cfg.get("max_over_msrp", 0.25)), 2)
-    return price > cap
+    return price <= cap
 
 
 def watch_info(cfg):
@@ -406,8 +406,9 @@ def main():
             b = display_name(h["bottle"])
             if h["in_stock"] and p is not None and (b not in lowest or p < lowest[b]["value"]):
                 lowest[b] = {"value": p, "price": h["price"], "store": name, "url": h["url"]}
-            if h["in_stock"] and over_msrp(h, cfg):
-                print(f"[{name}] {h['title']}: IN at {h['price']}, over MSRP limit, skipping")
+            if h["in_stock"] and not within_limit(h, cfg):
+                print(f"[{name}] {h['title']}: IN at {h['price'] or 'no price'}, "
+                      f"not within MSRP limit, skipping")
                 h["in_stock"] = False
             if h["in_stock"]:
                 items[(name, h["url"])] = {

@@ -31,6 +31,7 @@ stores:
       - Ry3 Cigar | Ry3 Rye Cigar
       - Shortbarrel Cigar | Short Barrel Cigar
       - Remus Repeal Reserve VIII | Remus Repeal Reserve 8
+      - Remus Repeal Reserve IX | Remus Repeal Reserve 9
       - Starlight Sakura
       - Penelope Rio
 
@@ -144,6 +145,7 @@ binnys:
     Mokena: 33
   pages:
     Remus Repeal Reserve VIII: https://www.binnys.com/spirits/whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-159549/
+    Remus Repeal Reserve IX: https://www.binnys.com/spirits/whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-174779/
 
 # Bottles that show on the page but never send an email.
 no_email:
@@ -154,7 +156,7 @@ no_email:
 max_over_msrp: 0.30
 
 # Suggested retail price per bottle, keyed by the first name on its line
-# above. Bottles missing here are never filtered. Researched Sept 2026;
+# above. Bottles missing here never show at the top or email. Researched Sept 2026;
 # checked against North Carolina's state store prices (abc2.nc.gov).
 msrp:
   Weller Single Barrel: 59.99
@@ -180,4 +182,6 @@ msrp:
   Ry3 Cigar: 115.00
   Shortbarrel Cigar: 89.99
   Remus Repeal Reserve VIII: 99.99
+  Remus Repeal Reserve IX: 99.99
+  Penelope Rio: 99.99
   Starlight Sakura: 150.00
