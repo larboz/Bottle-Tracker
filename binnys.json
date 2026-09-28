@@ -1,0 +1,39 @@
+{
+  "updated": "2026-09-28T14:54:37Z",
+  "stores": [
+    "Orland Park",
+    "Joliet",
+    "Mokena"
+  ],
+  "bottles": {
+    "Remus Repeal Reserve VIII": {
+      "url": "https://www.binnys.com/spirits/whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-159549/",
+      "best": {
+        "store": "Orland Park",
+        "price": "$89.99",
+        "status": "In stock",
+        "shelf": "Aisle 24 > Bourbon"
+      },
+      "stores": {
+        "Orland Park": {
+          "status": "In stock",
+          "in_stock": true,
+          "shelf": "Aisle 24 > Bourbon",
+          "price": "$89.99"
+        },
+        "Joliet": {
+          "status": "In stock",
+          "in_stock": true,
+          "shelf": "Island Stackings > Section 16",
+          "price": "$89.99"
+        },
+        "Mokena": {
+          "status": "Only 2 left",
+          "in_stock": true,
+          "shelf": "Aisle 10 > Bourbon",
+          "price": "$89.99"
+        }
+      }
+    }
+  }
+}

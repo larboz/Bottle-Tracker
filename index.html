@@ -266,17 +266,33 @@
   }
 
   // Binny's product page for this bottle, if one is listed in config.yaml.
+  // Binny's (binnys.json, written by binnys.py): lowest in-stock price
+  // among the chosen stores, which store, and its status.
+  var binnys = {};
   function binnysCell(b, over) {
     var td = el("td", "low");
-    var bn = b.binnys;
+    var bn = (binnys.bottles || {})[b.name];
     if (!bn) { td.appendChild(el("span", "none", "No page")); return td; }
-    var val = parseFloat(String(bn.price || "").replace(/[^\d.]/g, ""));
-    var ok = bn.in_stock && (!b.msrp || val <= Math.round(b.msrp * (1 + over) * 100) / 100);
-    td.appendChild(el("div", ok ? "lp ok" : "lp", bn.price || "No price"));
     var href = safeUrl(bn.url);
-    var st = el(href ? "a" : "span", "where", bn.in_stock ? "In stock" : "Out of stock");
-    if (href) { st.href = href; st.target = "_blank"; st.rel = "noopener noreferrer"; }
-    td.appendChild(st);
+    function link(text) {
+      var a = el(href ? "a" : "span", "where", text);
+      if (href) { a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      return a;
+    }
+    var best = bn.best;
+    if (!best) {
+      td.appendChild(el("div", "lp none", "Out of stock"));
+      td.appendChild(link("at all " + (binnys.stores || []).length + " stores"));
+      return td;
+    }
+    var val = parseFloat(String(best.price).replace(/[^\d.]/g, ""));
+    var ok = !b.msrp || val <= Math.round(b.msrp * (1 + over) * 100) / 100;
+    td.appendChild(el("div", ok ? "lp ok" : "lp", best.price));
+    td.appendChild(link("at " + best.store + (best.status !== "In stock" ? " (" + best.status.toLowerCase() + ")" : "")));
+    // the other stores, e.g. "Joliet: in stock · Mokena: out"
+    var others = Object.keys(bn.stores || {}).filter(function (s) { return s !== best.store; })
+      .map(function (s) { return s + ": " + (bn.stores[s].in_stock ? "in" : "out"); });
+    if (others.length) td.appendChild(el("span", "where", others.join(" \u00B7 ")));
     return td;
   }
 
@@ -319,7 +335,14 @@
   function load() {
     fetch("data.json?t=" + Date.now())
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (d) { render(d); renderWatch(d.watch); })
+      .then(function (d) {
+        render(d);
+        // binnys.json is optional; the column says "No page" without it
+        return fetch("binnys.json?t=" + Date.now())
+          .then(function (r) { return r.ok ? r.json() : {}; })
+          .catch(function () { return {}; })
+          .then(function (bj) { binnys = bj || {}; renderWatch(d.watch); });
+      })
       .catch(function () { statusEl.textContent = "No data yet. Check back soon."; });
   }
   load();

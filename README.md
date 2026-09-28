@@ -27,6 +27,7 @@ Watches online liquor stores for hard-to-find whiskey bottles and alerts me the 
 | `config.yaml` | Stores and bottles to watch |
 | `checker.py` | Stock checker, email alerts, writes `data.json` |
 | `arrivals.py` | New Arrivals change tracker |
+| `binnys.py` | Binny's stock and price at chosen stores (product pages listed in `config.yaml`), writes `binnys.json` |
 | `index.html` | The public page |
 | `.github/workflows/` | Schedules for the checker and tracker |
 
