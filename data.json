@@ -1,16 +1,6 @@
 {
-  "updated": "2026-09-29T00:30:45Z",
+  "updated": "2026-09-29T05:59:29Z",
   "items": [
-    {
-      "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
-      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
-      "store": "Remedy Liquor",
-      "url": "https://www.remedyliquor.com/products/george-remus-bourbon-repeal-reserve-ix-series-indiana-750ml",
-      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/Remus-Repeal-IX.png?v=1758774800",
-      "price": "$54.99",
-      "size": "750ML",
-      "since": "2026-09-28T19:41:18Z"
-    },
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
       "bottle": "Remus Repeal Reserve VIII",
@@ -145,11 +135,7 @@
       {
         "name": "William Larue Weller",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1499.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/william-larue-weller-bourbon-kentucky-2023-edition-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Eagle Rare 12",
@@ -175,8 +161,8 @@
         "msrp": 154.99,
         "lowest": {
           "price": "$499.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/thomas-handy-sazerac-whiskey-rye-kentucky-2025-750ml"
+          "store": "Bonding Over Bourbon",
+          "url": "https://bondingbottle.shop/products/thomas-h-handy-sazerac-straight-rye-whiskey-750-ml"
         }
       },
       {
@@ -193,9 +179,9 @@
         "name": "Taylor Single Barrel",
         "msrp": 79.99,
         "lowest": {
-          "price": "$139.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/e-h-taylor-sgl-barl-wsky"
+          "price": "$219.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/eh-taylor-single-barrel-750-ml/686be8888ccb4c3f9202699d?option-id=2720995185c12b4a715aba629f1863633bebe714d16d8714686d8c4200cc229a"
         }
       },
       {
@@ -294,8 +280,8 @@
         "msrp": 150.0,
         "lowest": {
           "price": "$149.99",
-          "store": "Seelbach's",
-          "url": "https://seelbachs.com/products/starlight-distillery-sakura-finished-bourbon-batch-03"
+          "store": "Joe's Beverage Warehouse",
+          "url": "https://joesbev.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1"
         }
       },
       {
