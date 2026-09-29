@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T19:30:56Z",
+  "updated": "2026-09-29T20:00:52Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -38,16 +38,6 @@
       "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
       "price": "$89.99",
-      "size": "750 mL",
-      "since": "2026-09-28T19:41:18Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
-      "store": "Joe's Beverage Warehouse",
-      "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$79.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
     },
@@ -108,16 +98,6 @@
       "url": "https://royalfoodliquor.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1",
       "image": "https://royalfoodliquor.com/shop?ch-query=Starlight+Sakura",
       "price": "$153.99",
-      "size": "750 mL",
-      "since": "2026-09-27T21:00:43Z"
-    },
-    {
-      "name": "Starlight Sakura Reserve Bourbon Batch",
-      "bottle": "Starlight Sakura",
-      "store": "Joe's Beverage Warehouse",
-      "url": "https://joesbev.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1",
-      "image": "https://cityhive-production-cdn.cityhive.net/product_details/6a7659e12cde42a405c534a9/primary_image/large.png?sig=02ba9c67d9398f54601d1e3ac1383f1b060d2e04c0b0c4d61186a407304febad",
-      "price": "$149.99",
       "size": "750 mL",
       "since": "2026-09-27T21:00:43Z"
     }
@@ -294,8 +274,8 @@
         "msrp": 150.0,
         "lowest": {
           "price": "$149.99",
-          "store": "Joe's Beverage Warehouse",
-          "url": "https://joesbev.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1"
+          "store": "Seelbach's",
+          "url": "https://seelbachs.com/products/starlight-distillery-sakura-finished-bourbon-batch-03"
         }
       },
       {
