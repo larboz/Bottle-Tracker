@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T18:27:24Z",
+  "updated": "2026-09-29T18:35:12Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -285,8 +285,8 @@
         "msrp": 99.99,
         "lowest": {
           "price": "$54.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/george-remus-bourbon-repeal-reserve-ix-series-indiana-750ml"
+          "store": "Hi Proof",
+          "url": "https://www.hiproof.com/products/george-remus-repeal-reserve-series-ix-straight-bourbon-whiskey-remus-indiana-usa-750ml"
         }
       },
       {
@@ -302,9 +302,9 @@
         "name": "Penelope Rio",
         "msrp": 99.99,
         "lowest": {
-          "price": "$219.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/penelope-rio-bourbon-whiskey/642aeed0197aab48a0106b78?option-id=a91e9f1829a09ceada0cd2e0370d8a72830321b051b3e291a6b36201ece7d129"
+          "price": "$149.99",
+          "store": "Seelbach's",
+          "url": "https://seelbachs.com/products/penelope-rio-bourbon-whiskey"
         }
       }
     ],
