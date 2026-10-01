@@ -1,6 +1,16 @@
 {
-  "updated": "2026-10-01T12:01:00Z",
+  "updated": "2026-10-01T12:30:41Z",
   "items": [
+    {
+      "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
+      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
+      "store": "Remedy Liquor",
+      "url": "https://www.remedyliquor.com/products/george-remus-bourbon-repeal-reserve-ix-series-indiana-750ml",
+      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/Remus-Repeal-IX.png?v=1758774800",
+      "price": "$54.99",
+      "size": "750ML",
+      "since": "2026-10-01T12:30:41Z"
+    },
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
       "bottle": "Remus Repeal Reserve VIII",
@@ -30,16 +40,6 @@
       "price": "$89.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
-      "store": "Garfield's Beverage",
-      "url": "https://garfieldsbeverage.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=351292a2f4732e006390b54b1fdfaa4f9ae743d957e3b00c4afad885e15ec157",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$79.99",
-      "size": "750 mL",
-      "since": "2026-10-01T12:01:00Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -145,7 +145,11 @@
       {
         "name": "William Larue Weller",
         "msrp": 154.99,
-        "lowest": null
+        "lowest": {
+          "price": "$1499.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/william-larue-weller-bourbon-kentucky-2023-edition-750ml"
+        }
       },
       {
         "name": "Eagle Rare 12",
@@ -171,8 +175,8 @@
         "msrp": 154.99,
         "lowest": {
           "price": "$499.99",
-          "store": "Bonding Over Bourbon",
-          "url": "https://bondingbottle.shop/products/thomas-h-handy-sazerac-straight-rye-whiskey-750-ml"
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/thomas-handy-sazerac-whiskey-rye-kentucky-2025-750ml"
         }
       },
       {
@@ -189,9 +193,9 @@
         "name": "Taylor Single Barrel",
         "msrp": 79.99,
         "lowest": {
-          "price": "$219.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/eh-taylor-single-barrel-750-ml/686be8888ccb4c3f9202699d?option-id=2720995185c12b4a715aba629f1863633bebe714d16d8714686d8c4200cc229a"
+          "price": "$139.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/e-h-taylor-sgl-barl-wsky"
         }
       },
       {
