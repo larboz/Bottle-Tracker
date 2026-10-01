@@ -72,6 +72,17 @@
     border-radius: 10px;
   }
   .btn:hover { background: #f0b25c; }
+  .listing { color: var(--muted); font-size: .8rem; line-height: 1.3; margin-top: -2px; }
+  .more { margin-top: 10px; font-size: .85rem; }
+  .more summary { cursor: pointer; color: var(--amber); list-style: none; }
+  .more summary::-webkit-details-marker { display: none; }
+  .more summary::before { content: "\25B8  "; }
+  .more[open] summary::before { content: "\25BE  "; }
+  .more ul { list-style: none; margin: 8px 0 0; padding: 0; }
+  .more li { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-top: 1px solid var(--line); }
+  .more li a { color: var(--text); text-decoration: none; }
+  .more li a:hover { color: var(--amber); }
+  .more .mp { font-weight: 600; white-space: nowrap; }
   .empty { text-align: center; color: var(--muted); padding: 60px 10px; font-size: 1.1rem; }
   .empty .big { font-size: 3rem; display: block; margin-bottom: 8px; }
   .watch { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
@@ -199,7 +210,16 @@
     return d + (d === 1 ? " day ago" : " days ago");
   }
 
-  function card(item) {
+  // Tracked bottle name from a config entry: "Weller CYPB | ..." -> "Weller CYPB",
+  // dropping any "!word" exclusions.
+  function displayName(bottle) {
+    return String(bottle || "").split("|")[0].split(/\s+/)
+      .filter(function (w) { return w && w.charAt(0) !== "!"; }).join(" ");
+  }
+  function priceVal(p) { var v = parseFloat(String(p || "").replace(/[^\d.]/g, "")); return isNaN(v) ? Infinity : v; }
+
+  // One card per bottle: the cheapest listing, other stores in a dropdown.
+  function card(item, others) {
     var c = el("article", "card");
     var wrap = el("div", "imgwrap");
     var src = safeUrl(item.image);
@@ -217,7 +237,8 @@
     c.appendChild(wrap);
 
     var body = el("div", "body");
-    body.appendChild(el("div", "name", item.name));
+    body.appendChild(el("div", "name", item.title || item.name));
+    if (item.title && item.title !== item.name) body.appendChild(el("div", "listing", item.name));
     if (item.price) body.appendChild(el("div", "price", item.price));
     var meta = [item.size, item.store].filter(Boolean).join(" \u00B7 ");
     if (meta) body.appendChild(el("div", "meta", meta));
@@ -229,6 +250,22 @@
       a.target = "_blank";
       a.rel = "noopener noreferrer";
       body.appendChild(a);
+    }
+    if (others && others.length) {
+      var more = el("details", "more");
+      more.appendChild(el("summary", "", "Show " + others.length + " more " + (others.length === 1 ? "store" : "stores")));
+      var ul = el("ul");
+      others.forEach(function (o) {
+        var li = el("li");
+        var href = safeUrl(o.url);
+        var a2 = el(href ? "a" : "span", "", o.store);
+        if (href) { a2.href = href; a2.target = "_blank"; a2.rel = "noopener noreferrer"; }
+        li.appendChild(a2);
+        li.appendChild(el("span", "mp", o.price));
+        ul.appendChild(li);
+      });
+      more.appendChild(ul);
+      body.appendChild(more);
     }
     c.appendChild(body);
     return c;
@@ -246,7 +283,7 @@
       var val = parseFloat(String(best.price).replace(/[^\d.]/g, ""));
       if (isNaN(val) || val > Math.round(b.msrp * (1 + over) * 100) / 100) return;
       out.push({
-        name: best.name || b.name, price: best.price, size: "750 ml",
+        bottle: b.name, name: best.name || b.name, price: best.price, size: "750 ml",
         store: "Binny's " + best.store + (best.shelf ? " (" + best.shelf + ")" : ""),
         url: bn.url, image: best.image, since: binnys.updated
       });
@@ -256,10 +293,19 @@
 
   function render(data) {
     grid.textContent = "";
-    var items = (data.items || []).concat(binnysItems(data))
-      .sort(function (a, b) { return a.name.localeCompare(b.name); });
+    // group listings by tracked bottle, cheapest first
+    var groups = {};
+    (data.items || []).concat(binnysItems(data)).forEach(function (i) {
+      var key = displayName(i.bottle) || i.name;
+      (groups[key] = groups[key] || []).push(i);
+    });
+    var items = Object.keys(groups).sort(function (a, b) { return a.localeCompare(b); });
     empty.hidden = items.length > 0;
-    items.forEach(function (i) { grid.appendChild(card(i)); });
+    items.forEach(function (key) {
+      var list = groups[key].sort(function (a, b) { return priceVal(a.price) - priceVal(b.price); });
+      var top = Object.assign({}, list[0], {title: key});
+      grid.appendChild(card(top, list.slice(1)));
+    });
     var mins = (Date.now() - new Date(data.updated).getTime()) / 60000;
     dot.className = mins > 180 ? "dot stale" : "dot";
     statusEl.textContent = items.length
