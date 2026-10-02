@@ -15,6 +15,7 @@ import yaml
 UA = {"User-Agent": "Mozilla/5.0 (compatible; BottleWatch/1.0)"}
 STATE_FILE = Path("state.json")
 DATA_FILE = Path("data.json")
+PAGE_URL = "https://larboz.github.io/Bottle-Tracker/"
 SOLD_OUT = re.compile(r"sold out|out of stock|unavailable", re.I)
 NO_RESULTS = re.compile(r"couldn.t find any results", re.I)
 OUT_TAGS = {"unavailable", "sold-out", "sold out", "out-of-stock", "out of stock"}
@@ -339,7 +340,9 @@ def send_email(alerts):
         blocks.append("\n".join(lines))
     intro = "Good news. This just came into stock:" if len(alerts) == 1 \
         else "Good news. These just came into stock:"
-    body = intro + "\n\n" + "\n\n".join(blocks) + "\n\nMove fast, allocated bottles go quickly.\n"
+    body = (intro + "\n\n" + "\n\n".join(blocks)
+            + "\n\nMove fast, allocated bottles go quickly.\n"
+            + f"\nEverything in stock right now: {PAGE_URL}\n")
 
     if not (user and pw):
         print(f"No SMTP creds; would send:\nSubject: {subject}\n\n{body}")
@@ -426,7 +429,7 @@ def main():
             quiet = display_name(h["bottle"]) in (cfg.get("no_email") or [])
             if h["in_stock"] and not was and not quiet:
                 alerts.append({
-                    "bottle": h["bottle"], "store": name, "url": h["url"],
+                    "bottle": display_name(h["bottle"]), "store": name, "url": h["url"],
                     "price": h["price"], "size": h.get("size", ""),
                 })
         # anything previously tracked for this store but no longer listed -> out
