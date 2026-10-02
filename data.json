@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T12:00:40Z",
+  "updated": "2026-10-02T12:30:40Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -187,11 +187,7 @@
       {
         "name": "Rock Hill Farms",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$249.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/rock-hill-farms-bourbon-single-barrel-kentucky-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Taylor Single Barrel",
@@ -303,8 +299,8 @@
         "msrp": 150.0,
         "lowest": {
           "price": "$149.99",
-          "store": "Joe's Beverage Warehouse",
-          "url": "https://joesbev.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1"
+          "store": "Seelbach's",
+          "url": "https://seelbachs.com/products/starlight-distillery-sakura-finished-bourbon-batch-03"
         }
       },
       {
