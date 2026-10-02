@@ -34,6 +34,8 @@ stores:
       - Remus Repeal Reserve VIII | Remus Repeal Reserve 8
       - Remus Repeal Reserve IX | Remus Repeal Reserve 9
       - Remus Repeal Reserve X !rye | Remus Repeal Reserve 10 !rye
+      - Penelope Cigar Sessions Chapter 2 | Penelope Cigar Chapter 2 | Penelope Cigar Chapter 02 | Cigar Session Chapter2
+      - Holladay Ancient Cave
       - Starlight Sakura
       - Penelope Rio
 
@@ -136,6 +138,11 @@ stores:
     bottles: *bottles
     exclude_extra: *shopify_extra
 
+  - name: Dram Fellows
+    url: https://dramfellows.com
+    bottles: *bottles
+    exclude_extra: *shopify_extra
+
 # Binny's (binnys.py, its own program and workflow). Binny's search is
 # off-limits to bots, so each bottle needs its product page listed. Store
 # numbers are Binny's own ids (there is no New Lenox store; Mokena is the
@@ -187,5 +194,7 @@ msrp:
   Remus Repeal Reserve VIII: 99.99
   Remus Repeal Reserve IX: 99.99
   Remus Repeal Reserve X: 79.99
+  Penelope Cigar Sessions Chapter 2: 79.99
+  Holladay Ancient Cave: 45.00  # 375 ml
   Penelope Rio: 99.99
   Starlight Sakura: 150.00
