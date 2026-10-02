@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T19:30:42Z",
+  "updated": "2026-10-02T20:00:40Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -32,6 +32,16 @@
       "since": "2026-09-28T19:41:18Z"
     },
     {
+      "name": "Old Grand-Dad 114 Single Barrel 7 Year Kentucky Straight Bourbon Whiskey",
+      "bottle": "Old Grand Dad Single Barrel",
+      "store": "Dram Fellows",
+      "url": "https://dramfellows.com/products/old-grand-dad-114-single-barrel-7-year-kentucky-straight-bourbon-whiskey",
+      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/Old-Granddad-114-7-Year-bottle.jpg?v=1780006583",
+      "price": "$64.99",
+      "size": "",
+      "since": "2026-10-02T20:00:40Z"
+    },
+    {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
       "store": "DD Smoke Spirits",
@@ -50,6 +60,26 @@
       "price": "$79.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
+      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
+      "store": "Dram Fellows",
+      "url": "https://dramfellows.com/products/remus-repeal-reserve-series-ix-straight-bourbon-whiskey",
+      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/RemusRepealReserveSeriesIX.webp?v=1779126681",
+      "price": "$64.99",
+      "size": "",
+      "since": "2026-10-02T20:00:40Z"
+    },
+    {
+      "name": "Remus Repeal Reserve VIII",
+      "bottle": "Remus Repeal Reserve VIII | Remus Repeal Reserve 8",
+      "store": "Dram Fellows",
+      "url": "https://dramfellows.com/products/remus-repeal-reserve-viii",
+      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/remus-repeal-reserve-viii-856118.jpg?v=1733728963",
+      "price": "$83.99",
+      "size": "",
+      "since": "2026-10-02T20:00:40Z"
     },
     {
       "name": "Ry3 Cigar Series Cask Strength",
@@ -137,69 +167,81 @@
         "name": "Weller CYPB",
         "msrp": 69.99,
         "lowest": {
-          "price": "$989.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
+          "price": "$349.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/w-l-weller-c-y-p-b-bourbon"
         }
       },
       {
         "name": "William Larue Weller",
         "msrp": 154.99,
         "lowest": {
-          "price": "$1499.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/william-larue-weller-bourbon-kentucky-2023-edition-750ml"
+          "price": "$1399.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/william-larue-weller-kentucky-straight-bourbon-whiskey-2025-release"
         }
       },
       {
         "name": "Eagle Rare 12",
         "msrp": 49.99,
-        "lowest": null
+        "lowest": {
+          "price": "$149.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/eagle-rare-12-year-bourbon"
+        }
       },
       {
         "name": "Eagle Rare 17",
         "msrp": 154.99,
-        "lowest": null
+        "lowest": {
+          "price": "$1699.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/eagle-rare-17-year-old-bourbon-whiskey-2025-release"
+        }
       },
       {
         "name": "George Stagg",
         "msrp": 154.99,
         "lowest": {
-          "price": "$1,099.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/george-t-stagg-kentucky-straight-bourbon-whiskey/56c28e19756275139d6a0200?option-id=5516830ddf51a9c6b8643f843ee5ad8ead7bd991721a2e0da0348ce25b3cdc0d"
+          "price": "$999.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/george-t-stagg-bourbon-2024-release"
         }
       },
       {
         "name": "Thomas Handy",
         "msrp": 154.99,
         "lowest": {
-          "price": "$499.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/thomas-handy-sazerac-whiskey-rye-kentucky-2025-750ml"
+          "price": "$449.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/thomas-h-handy-sazerac-straight-rye-whiskey-2025-release"
         }
       },
       {
         "name": "Sazerac 18 Year",
         "msrp": 154.99,
-        "lowest": null
+        "lowest": {
+          "price": "$1499.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/sazerac-rye-18-year-old-kentucky-rye-whiskey-2025-release"
+        }
       },
       {
         "name": "Rock Hill Farms",
         "msrp": 89.99,
         "lowest": {
           "price": "$249.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/rock-hill-farms-bourbon-single-barrel-kentucky-750ml"
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/rockhill-farms-single-barrel-bourbon"
         }
       },
       {
         "name": "Taylor Single Barrel",
         "msrp": 79.99,
         "lowest": {
-          "price": "$139.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/e-h-taylor-sgl-barl-wsky"
+          "price": "$129.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/colonel-e-h-taylor-jr-single-barrel-1"
         }
       },
       {
@@ -210,7 +252,11 @@
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": null
+        "lowest": {
+          "price": "$349.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/jack-daniels-10-year-old-limited-release"
+        }
       },
       {
         "name": "Jack Daniel's 12 Year",
@@ -220,7 +266,11 @@
       {
         "name": "Jack Daniel's 14 Year",
         "msrp": 149.99,
-        "lowest": null
+        "lowest": {
+          "price": "$499.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/jack-daniel-s-14-year-old-tennessee-whiskey-batch-2-700ml"
+        }
       },
       {
         "name": "Redwood Empire Hyperion",
@@ -250,7 +300,11 @@
       {
         "name": "Old Grand Dad Single Barrel",
         "msrp": 49.99,
-        "lowest": null
+        "lowest": {
+          "price": "$64.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/old-grand-dad-114-single-barrel-7-year-kentucky-straight-bourbon-whiskey"
+        }
       },
       {
         "name": "Ry3 Cigar",
@@ -273,15 +327,19 @@
       {
         "name": "Remus Repeal Reserve VII",
         "msrp": 99.99,
-        "lowest": null
+        "lowest": {
+          "price": "$199.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/george-remus-repeal-reserve-vii"
+        }
       },
       {
         "name": "Remus Repeal Reserve VIII",
         "msrp": 99.99,
         "lowest": {
-          "price": "$114.99",
-          "store": "Rockton Spirits",
-          "url": "https://rocktonspirits.com/shop/product/george-remus-repeal-reserve-bourbon-viii/6712728e67111622228c1db9?option-id=0e1dd3aed0ab83cb04e9f78f29f710392b254c7b3a324240b13ee9e31a59cdd9"
+          "price": "$83.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/remus-repeal-reserve-viii"
         }
       },
       {
@@ -296,6 +354,16 @@
       {
         "name": "Remus Repeal Reserve X",
         "msrp": 79.99,
+        "lowest": null
+      },
+      {
+        "name": "Penelope Cigar Sessions Chapter 2",
+        "msrp": 79.99,
+        "lowest": null
+      },
+      {
+        "name": "Holladay Ancient Cave",
+        "msrp": 45.0,
         "lowest": null
       },
       {
@@ -373,6 +441,10 @@
       {
         "name": "Bonding Over Bourbon",
         "url": "https://bondingbottle.shop"
+      },
+      {
+        "name": "Dram Fellows",
+        "url": "https://dramfellows.com"
       }
     ],
     "max_over_msrp": 0.3
