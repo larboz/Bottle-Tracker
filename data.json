@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T16:57:56Z",
+  "updated": "2026-10-03T17:08:31Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -44,22 +44,22 @@
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
-      "store": "Joe's Beverage Warehouse",
-      "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$79.99",
-      "size": "750 mL",
-      "since": "2026-09-29T20:30:40Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
       "store": "DD Smoke Spirits",
       "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
       "price": "$89.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "Joe's Beverage Warehouse",
+      "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$79.99",
+      "size": "750 mL",
+      "since": "2026-09-29T20:30:40Z"
     },
     {
       "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
