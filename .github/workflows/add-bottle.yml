@@ -1,0 +1,118 @@
+name: Add bottle
+# Started by the "Add a bottle" box on the web page, which opens an issue
+# titled "Add bottle: <name>". Claude researches the bottle and adds it to
+# config.yaml; this workflow then checks, commits, comments and closes.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  id-token: write
+
+concurrency:
+  group: config-edit
+  cancel-in-progress: false
+
+jobs:
+  add:
+    # Public repo: only issues Larry opens can start this (and spend Claude usage).
+    if: github.event.issue.user.login == 'larboz' && startsWith(github.event.issue.title, 'Add bottle:')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: git pull --ff-only origin main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ github.token }}
+          claude_args: >-
+            --max-turns 40
+            --allowedTools "WebSearch,WebFetch,Read,Glob,Grep,Edit,Write,Bash(python3:*),Bash(python:*)"
+          prompt: |
+            You maintain a bourbon stock tracker. Larry asked to track a new bottle.
+
+            Request (issue #${{ github.event.issue.number }}):
+            Title: ${{ github.event.issue.title }}
+            Notes: ${{ github.event.issue.body }}
+
+            Do this, editing only config.yaml:
+            1. Identify the exact bottle and current release with WebSearch. If the request is
+               ambiguous (several releases or versions), pick the newest or the one Larry most
+               likely means and say so in the summary.
+            2. Find the MSRP for a 750 ml bottle (or the size it's sold in; note the size).
+               Prefer, in order: the distillery's own or gift-shop price, the official press
+               release SRP, then a state store price list such as North Carolina's
+               (https://abc2.nc.gov/Pricing/PriceList). Use the 2026 price when prices changed.
+            3. Add one line to the shared bottle list (the list anchored `bottles: &bottles`
+               under the first store). Format: the main name first, then alternate spellings
+               stores use, separated by " | ". A word starting with ! rules out listings with
+               that word for this bottle only (e.g. "George Stagg !jr"). Matching needs every
+               word of one spelling to appear close together in a store's listing title
+               (within one extra word), ignoring case, apostrophes, periods and the word "and".
+               Look at real store listing titles online and add spellings so they all match,
+               while look-alikes (other releases, ryes vs bourbons, minis, bundles) don't.
+            4. Add the MSRP under `msrp:`, keyed by the main name exactly as written first on
+               the bottle line (without any !words). Keep the existing style and comments.
+            5. If the notes say "Email alerts: no", add the main name under `no_email:`.
+               Notes may also include a Binny's
+               link (add under `binnys: pages:`, keyed by the main name; only a single-bottle
+               binnys.com product page), or an "email below $X" amount (add under
+               `email_below:`). Only do these when the notes ask.
+            6. Test with Python before finishing. For example:
+                 import yaml, checker
+                 cfg = yaml.safe_load(open("config.yaml"))
+                 ex = checker.exclude_set(cfg["stores"][0])
+                 checker.matches("<your bottle line>", "<a real listing title>", ex)
+               Check several real titles match and several look-alikes don't, and that
+               checker.within_limit({"bottle": "<line>", "price": "$<msrp>"}, cfg) is True.
+            7. If the bottle is already on the list, change nothing and say so.
+            8. Write a short summary for Larry to add-bottle-summary.md (not inside
+               config.yaml): the bottle line you added, MSRP with source links, max price
+               (MSRP + max_over_msrp), and anything you weren't sure about. Plain language,
+               no em dashes.
+
+      - name: Check config
+        run: |
+          python - <<'EOF'
+          import yaml, checker
+          cfg = yaml.safe_load(open("config.yaml"))
+          names = {checker.display_name(b) for b in cfg["stores"][0]["bottles"]}
+          for key in ("no_email",):
+              for n in cfg.get(key) or []:
+                  assert n in names, f"{key} has {n!r}, which is not on the bottle list"
+          for n in (cfg.get("binnys") or {}).get("pages") or {}:
+              assert n in names, f"binnys.pages has {n!r}, which is not on the bottle list"
+          checker.watch_info(cfg)
+          print(len(names), "bottles,", len(cfg["stores"]), "stores: config OK")
+          EOF
+
+      - name: Save and report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "bottle-bot"
+          git config user.email "bot@users.noreply.github.com"
+          [ -f add-bottle-summary.md ] || echo "No summary was written." > add-bottle-summary.md
+          if git diff --quiet -- config.yaml; then
+            gh issue comment "$ISSUE" --body-file add-bottle-summary.md
+            gh issue comment "$ISSUE" --body "No change was made to config.yaml."
+            exit 0
+          fi
+          git add config.yaml
+          git commit -m "Add bottle from issue #$ISSUE" -m "$(head -c 2000 add-bottle-summary.md)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break
+            git rebase --abort 2>/dev/null; sleep 5
+          done
+          git log origin/main -1 --format=%H | grep -q "$(git rev-parse HEAD)" || { echo "push failed"; exit 1; }
+          gh issue comment "$ISSUE" --body-file add-bottle-summary.md
+          gh issue close "$ISSUE" --comment "Added. It will be in the next check."
