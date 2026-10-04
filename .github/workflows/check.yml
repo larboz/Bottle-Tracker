@@ -41,7 +41,13 @@ jobs:
             git commit -m "update state"
             # On a clash, keep this run's files: they are the newest.
             for i in 1 2 3; do
-              git pull --rebase -X theirs origin main && git push && exit 0
+              if git pull --rebase -X theirs origin main; then
+                # Bottles added while this check ran must stay on the page:
+                # rebuild the bottle list from the latest config.yaml.
+                python checker.py --watch-only
+                git diff --quiet data.json || git commit -q --amend --no-edit data.json
+                git push && exit 0
+              fi
               git rebase --abort 2>/dev/null; sleep 5
             done
             echo "Could not save results"; exit 1
