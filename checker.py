@@ -426,12 +426,28 @@ def main():
             was = old.get(key, False)
             new[key] = h["in_stock"]
             print(f"[{name}] {h['title']}: {'IN' if h['in_stock'] else 'out'}")
-            quiet = display_name(h["bottle"]) in (cfg.get("no_email") or [])
+            bottle = display_name(h["bottle"])
+            quiet = bottle in (cfg.get("no_email") or [])
             if h["in_stock"] and not was and not quiet:
                 alerts.append({
-                    "bottle": display_name(h["bottle"]), "store": name, "url": h["url"],
+                    "bottle": bottle, "store": name, "url": h["url"],
                     "price": h["price"], "size": h.get("size", ""),
                 })
+            # email_below: email when a listing is in stock under this price, even
+            # for a no_email bottle, and even if it was already in stock at a higher
+            # price (tracked with its own state key, so it emails once per drop)
+            below = (cfg.get("email_below") or {}).get(bottle)
+            if below is not None:
+                bkey = f"{key}|below"
+                is_below = h["in_stock"] and p is not None and p < float(below)
+                seen.add(bkey)
+                new[bkey] = is_below
+                if is_below and not old.get(bkey, False) and not any(
+                        x["url"] == h["url"] and x["store"] == name for x in alerts):
+                    alerts.append({
+                        "bottle": f"{bottle} (under ${float(below):,.2f})", "store": name,
+                        "url": h["url"], "price": h["price"], "size": h.get("size", ""),
+                    })
         # anything previously tracked for this store but no longer listed -> out
         for key in list(new):
             if key.startswith(f"{name}|") and key not in seen:

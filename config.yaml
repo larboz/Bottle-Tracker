@@ -164,6 +164,11 @@ no_email:
   - Remus Repeal Reserve IX
   - Remus Repeal Reserve X
 
+# Email anyway when a bottle is in stock under this price, even if it's on
+# no_email or was already in stock at a higher price.
+email_below:
+  Remus Repeal Reserve VIII: 70.00
+
 # Skip any listing priced more than this much over MSRP (0.30 = 30%).
 max_over_msrp: 0.30
 

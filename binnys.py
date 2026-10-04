@@ -5,7 +5,8 @@ allowed. Each bottle in config.yaml's binnys.pages is loaded once per store,
 with Binny's own "current-store" cookie set the way its store picker does,
 and the page's "IN STOCK @ <store>" line and price are read.
 
-Writes binnys.json for the web page. Never sends email.
+Writes binnys.json for the web page. Emails only for bottles in config.yaml's
+email_below, when a store's price first drops under that amount.
 """
 import datetime
 import json
@@ -88,7 +89,9 @@ def text_price(text):
 
 
 def main():
-    cfg = (yaml.safe_load(Path("config.yaml").read_text()).get("binnys") or {})
+    full = yaml.safe_load(Path("config.yaml").read_text())
+    cfg = full.get("binnys") or {}
+    email_below = full.get("email_below") or {}
     stores = cfg.get("stores") or {}
     pages = cfg.get("pages") or {}
     try:
@@ -141,6 +144,21 @@ def main():
                     "shelf": per[s]["shelf"], "name": per[s].get("name", ""),
                     "image": per[s].get("image", "")}
         bottles[bottle] = {"url": url, "best": best, "stores": per}
+
+    # email_below: email once when a store's in-stock price drops under the amount
+    alerts = []
+    for bottle, below in email_below.items():
+        for s, r in (bottles.get(bottle) or {}).get("stores", {}).items():
+            def under(x):
+                v = price_value((x or {}).get("price"))
+                return bool(x and x.get("in_stock") and v is not None and v < float(below))
+            if under(r) and not under(((old.get(bottle) or {}).get("stores") or {}).get(s)):
+                alerts.append({"bottle": f"{bottle} (under ${float(below):,.2f})",
+                               "store": f"Binny's {s}" + (f" ({r['shelf']})" if r.get("shelf") else ""),
+                               "url": bottles[bottle]["url"], "price": r["price"], "size": "750 ml"})
+    if alerts:
+        from checker import send_email
+        send_email(alerts)
 
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     OUT_FILE.write_text(json.dumps(
