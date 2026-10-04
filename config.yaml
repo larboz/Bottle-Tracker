@@ -51,6 +51,7 @@ stores:
       - Starlight Sakura
       - Penelope Rio
       - Parker's Heritage Collection 2026 !malt !cognac | Parker's Heritage 2026 !malt !cognac | Parker's Heritage 20th Edition !malt !cognac | Parker's Heritage 14 Year !malt !cognac
+      - Brewer's Coalition Black Tuesday | Brewer's Coalition Bruery Black Tuesday | Virginia Distillery Black Tuesday | Virginia Distillery Bruery Black Tuesday | Virginia Distillery Co Bruery Black Tuesday | VDC Bruery Black Tuesday | VDC Black Tuesday
 
   - name: Rockton Spirits
     url: https://rocktonspirits.com
@@ -228,3 +229,4 @@ msrp:
   Penelope Rio: 99.99
   Starlight Sakura: 150.00
   Parker's Heritage Collection 2026: 199.99
+  Brewer's Coalition Black Tuesday: 54.99  # 700 ml
