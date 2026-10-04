@@ -153,9 +153,15 @@
   }
   .addform button:hover { background: #f0b25c; }
   .addmsg { color: var(--muted); font-size: .85rem; min-height: 1.2em; }
-  .addkey { display: flex; gap: 14px; font-size: .78rem; }
-  .addkey a { color: var(--muted); }
-  .addkey a:hover { color: var(--amber); }
+  .keybox { display: flex; gap: 8px; }
+  .keybox input {
+    flex: 1; min-width: 0; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line);
+    background: #ffffff08; color: var(--text); font: inherit; font-size: .85rem;
+  }
+  .keybox button {
+    background: transparent; color: var(--amber); border: 1px solid var(--amber-dark);
+    border-radius: 8px; padding: 6px 12px; font: inherit; font-size: .85rem; cursor: pointer;
+  }
   .side { display: grid; gap: 20px; align-content: start; }
   footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 0 20px 40px; }
 </style>
@@ -205,9 +211,9 @@
           <label class="check"><input id="addemail" type="checkbox" checked> Alert me by email</label>
           <button type="submit">Submit</button>
           <div id="addmsg" class="addmsg" aria-live="polite"></div>
-          <div class="addkey">
-            <a href="#" id="keyset">Send without opening GitHub</a>
-            <a href="#" id="keyforget" hidden>Forget saved key</a>
+          <div id="keybox" class="keybox" hidden>
+            <input id="keyinput" type="password" placeholder="Paste your GitHub key" autocomplete="off">
+            <button type="button" id="keysave">Save and send</button>
           </div>
         </form>
       </div>
@@ -450,52 +456,56 @@
   function getKey() { try { return localStorage.getItem(KEY) || ""; } catch (e) { return ""; } }
   function setKey(v) { try { v ? localStorage.setItem(KEY, v) : localStorage.removeItem(KEY); } catch (e) {} }
   var addmsg = document.getElementById("addmsg");
-  function showKeyLinks() {
-    var has = !!getKey();
-    document.getElementById("keyset").hidden = has;
-    document.getElementById("keyforget").hidden = !has;
-  }
-  document.getElementById("keyset").addEventListener("click", function (e) {
-    e.preventDefault();
-    var v = window.prompt("Paste your GitHub token (Issues: read and write, Bottle-Tracker only). It stays in this browser.");
-    if (v && v.trim()) { setKey(v.trim()); addmsg.textContent = "Key saved. Requests now send directly."; }
-    showKeyLinks();
-  });
-  document.getElementById("keyforget").addEventListener("click", function (e) {
-    e.preventDefault(); setKey(""); addmsg.textContent = "Key removed."; showKeyLinks();
-  });
-  showKeyLinks();
+  var keybox = document.getElementById("keybox");
+  var pending = null;  // request waiting for the key
 
-  document.getElementById("addform").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var nameEl = document.getElementById("addname");
-    var name = nameEl.value.trim();
-    if (!name) return;
-    var email = document.getElementById("addemail").checked;
-    var title = "Add bottle: " + name;
-    var body = "Bottle: " + name + "\nEmail alerts: " + (email ? "yes" : "no (page only)") + "\n";
+  // First Submit in a browser asks for the key once (a GitHub token that can
+  // only open issues on this repo). It's kept in this browser only.
+  function askKey(text) {
+    addmsg.textContent = text;
+    keybox.hidden = false;
+    document.getElementById("keyinput").focus();
+  }
+  document.getElementById("keysave").addEventListener("click", function () {
+    var inp = document.getElementById("keyinput");
+    var v = inp.value.trim();
+    if (!v) return;
+    setKey(v); inp.value = "";
+    if (!getKey()) { addmsg.textContent = "This browser won't save the key (private mode?)."; return; }
+    keybox.hidden = true;
+    if (pending) send(pending.name, pending.email);
+    else addmsg.textContent = "Key saved.";
+  });
+
+  function send(name, email) {
+    pending = {name: name, email: email};
     var key = getKey();
-    if (!key) {
-      window.open("https://github.com/larboz/Bottle-Tracker/issues/new?title=" +
-        encodeURIComponent(title) + "&body=" + encodeURIComponent(body), "_blank", "noopener");
-      return;
-    }
+    if (!key) { askKey("One-time setup for this browser: paste your GitHub key."); return; }
     addmsg.textContent = "Sending...";
     fetch("https://api.github.com/repos/larboz/Bottle-Tracker/issues", {
       method: "POST",
       headers: {"Authorization": "Bearer " + key, "Accept": "application/vnd.github+json",
                 "Content-Type": "application/json"},
-      body: JSON.stringify({title: title, body: body})
+      body: JSON.stringify({
+        title: "Add bottle: " + name,
+        body: "Bottle: " + name + "\nEmail alerts: " + (email ? "yes" : "no (page only)") + "\n"
+      })
     }).then(function (r) {
       if (r.status === 401 || r.status === 403) throw new Error("key");
       if (!r.ok) throw new Error(r.status);
-      nameEl.value = "";
+      pending = null;
+      document.getElementById("addname").value = "";
       addmsg.textContent = "Request sent \u2713 " + name + " will be added in a few minutes.";
     }).catch(function (err) {
-      addmsg.textContent = err.message === "key"
-        ? "The saved key was rejected. Use \u201cForget saved key\u201d and save a new one."
-        : "Couldn't send (" + err.message + "). Try again in a minute.";
+      if (err.message === "key") { setKey(""); askKey("That key didn't work. Paste a new one."); }
+      else addmsg.textContent = "Couldn't send (" + err.message + "). Try again in a minute.";
     });
+  }
+
+  document.getElementById("addform").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("addname").value.trim();
+    if (name) send(name, document.getElementById("addemail").checked);
   });
 
   load();
