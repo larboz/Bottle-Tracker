@@ -232,10 +232,21 @@ def check_browser(store, base, bottles):
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         page = browser.new_page(user_agent=UA["User-Agent"])
-        queries = [(display_name(b), a.strip())
-                   for b in bottles for a in b.split("|") if a.strip()]
-        for display, bottle in queries:
-            query = split_alt(bottle)[0]
+        queries = []  # (display name, full bottle entry, search words)
+        for b in bottles:
+            kept = []
+            # Search once per spelling, but skip a spelling whose words include
+            # all of a shorter one ("Ry3 7 Year Tokaji" is covered by "Ry3 Tokaji").
+            # Every spelling is still used for matching the results.
+            terms = sorted((split_alt(a)[0] for a in b.split("|") if a.strip()),
+                           key=lambda q: len(tokens(q)))
+            for q in terms:
+                if not any(set(tokens(k)) <= set(tokens(q)) for k in kept):
+                    kept.append(q)
+            queries += [(display_name(b), b, q) for q in kept]
+        seen_by_bottle = {}
+        for display, entry, query in queries:
+            bottle = query
             url = store["search_url"].format(q=urllib.parse.quote_plus(query))
             # retry a slow page once before giving up on the store
             for attempt in (1, 2):
@@ -258,13 +269,16 @@ def check_browser(store, base, bottles):
                 browser.close()
                 raise RuntimeError(f"no product tiles for '{bottle}' (page not loaded, or product_href wrong)")
             print(f"[{store['name']}] '{bottle}': {len(tiles)} product tiles on page")
-            seen = set()
+            seen = seen_by_bottle.setdefault(entry, set())  # no duplicates across searches
+            found = False
             for t in tiles:
                 text = " ".join((t["text"] or "").split())
                 if t["href"] in seen:
+                    found = True
                     continue
-                if matches(bottle, text, exclude_set(store)):
+                if matches(entry, text, exclude_set(store)):
                     seen.add(t["href"])
+                    found = True
                     price = re.search(r"\$\d[\d,]*\.\d\d", text)
                     size = re.search(r"\b\d+(?:\.\d+)?\s?(?:mL|L|oz)\b", text)
                     hits.append({
@@ -277,7 +291,7 @@ def check_browser(store, base, bottles):
                         "price": price.group(0) if price else "",
                         "size": size.group(0) if size else "",
                     })
-            if not seen:
+            if not found:
                 shown = [" ".join((t["text"] or "").split())[:70] for t in tiles][:6]
                 print(f"[{store['name']}] '{bottle}': NOT LISTED. Tiles shown: {shown}")
         browser.close()

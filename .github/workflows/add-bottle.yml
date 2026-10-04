@@ -105,7 +105,7 @@ jobs:
           [ -f add-bottle-summary.md ] || echo "No summary was written." > add-bottle-summary.md
           if git diff --quiet -- config.yaml; then
             gh issue comment "$ISSUE" --body-file add-bottle-summary.md
-            gh issue comment "$ISSUE" --body "No change was made to config.yaml."
+            gh issue close "$ISSUE" --comment "No change was made to config.yaml."
             exit 0
           fi
           git add config.yaml
