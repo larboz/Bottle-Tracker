@@ -9,6 +9,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write
   id-token: write
 
 concurrency:
@@ -108,7 +109,9 @@ jobs:
             gh issue close "$ISSUE" --comment "No change was made to config.yaml."
             exit 0
           fi
-          git add config.yaml
+          # show the new bottle on the page right away (prices come with the check)
+          python checker.py --watch-only
+          git add config.yaml data.json
           git commit -m "Add bottle from issue #$ISSUE" -m "$(head -c 2000 add-bottle-summary.md)"
           for i in 1 2 3; do
             git pull --rebase origin main && git push && break
@@ -116,4 +119,6 @@ jobs:
           done
           git log origin/main -1 --format=%H | grep -q "$(git rev-parse HEAD)" || { echo "push failed"; exit 1; }
           gh issue comment "$ISSUE" --body-file add-bottle-summary.md
-          gh issue close "$ISSUE" --comment "Added. It will be in the next check."
+          # start a price check now instead of waiting for the next scheduled one
+          gh workflow run check.yml || true
+          gh issue close "$ISSUE" --comment "Added. It's on the page now; prices fill in within about 10 minutes."

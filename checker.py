@@ -491,5 +491,22 @@ def main():
         indent=2))
 
 
+def refresh_watch():
+    """Update only the page's bottle list from config.yaml (no store checks),
+    so a newly added bottle shows right away. Prices fill in on the next check."""
+    cfg = yaml.safe_load(Path("config.yaml").read_text())
+    data = json.loads(DATA_FILE.read_text()) if DATA_FILE.exists() else {"items": []}
+    old = {b["name"]: b for b in (data.get("watch") or {}).get("bottles", [])}
+    watch = watch_info(cfg)
+    for wb in watch["bottles"]:
+        if wb["name"] in old and "lowest" in old[wb["name"]]:
+            wb["lowest"] = old[wb["name"]]["lowest"]
+        # a new bottle has no "lowest" yet: the page shows "Not checked yet"
+    data["watch"] = watch
+    DATA_FILE.write_text(json.dumps(data, indent=2))
+    print(f"bottle list refreshed: {len(watch['bottles'])} bottles")
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    refresh_watch() if "--watch-only" in sys.argv else main()

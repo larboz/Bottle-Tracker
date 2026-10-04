@@ -340,6 +340,10 @@
         }
       },
       {
+        "name": "Ry3 Tokaji",
+        "msrp": 89.99
+      },
+      {
         "name": "Shortbarrel Cigar",
         "msrp": 89.99,
         "lowest": {
@@ -407,6 +411,10 @@
           "store": "Seelbach's",
           "url": "https://seelbachs.com/products/penelope-rio-bourbon-whiskey"
         }
+      },
+      {
+        "name": "Parker's Heritage Collection 2026",
+        "msrp": 199.99
       }
     ],
     "stores": [

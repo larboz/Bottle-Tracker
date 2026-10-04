@@ -356,6 +356,7 @@
   function lowestCell(b, over) {
     var td = el("td", "low");
     var lo = b.lowest;
+    if (!("lowest" in b)) { td.appendChild(el("span", "none", "Not checked yet")); return td; }
     if (!lo || !lo.price) { td.appendChild(el("span", "none", "Not in stock")); return td; }
     var val = parseFloat(String(lo.price).replace(/[^\d.]/g, ""));
     var ok = !b.msrp || val <= Math.round(b.msrp * (1 + over) * 100) / 100;
