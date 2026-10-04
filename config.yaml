@@ -159,7 +159,10 @@ binnys:
 # Bottles that show on the page but never send an email.
 no_email:
   - Penelope Rio
+  - Remus Repeal Reserve VII
   - Remus Repeal Reserve VIII
+  - Remus Repeal Reserve IX
+  - Remus Repeal Reserve X
 
 # Skip any listing priced more than this much over MSRP (0.30 = 30%).
 max_over_msrp: 0.30
