@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T20:00:46Z",
+  "updated": "2026-10-04T20:19:26Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -130,6 +130,16 @@
       "price": "$129.99",
       "size": "750 mL",
       "since": "2026-10-01T00:00:44Z"
+    },
+    {
+      "name": "Ry3 Tokaji Cask Single Barrel Rye Whiskey",
+      "bottle": "Ry3 Tokaji",
+      "store": "Malloy's Finest",
+      "url": "https://malloysfinest.com/shop/product/ry3-tokaji-cask-single-barrel-rye-whiskey/6ab423c6a699da7aeaeaf3ed?option-id=52e57874bac45a0f54fb2cbd2af326fcf38297ce1167add8d16ab17ce8cfb37c",
+      "image": "https://malloysfinest.com/shop?ch-query=Ry3+Tokaji",
+      "price": "$94.99",
+      "size": "750 mL",
+      "since": "2026-10-04T20:19:26Z"
     },
     {
       "name": "SHORTBARREL BOURBON CIGAR BLEND RELEASE KENTUCKY 750ML",
@@ -341,7 +351,12 @@
       },
       {
         "name": "Ry3 Tokaji",
-        "msrp": 89.99
+        "msrp": 89.99,
+        "lowest": {
+          "price": "$94.99",
+          "store": "Malloy's Finest",
+          "url": "https://malloysfinest.com/shop/product/ry3-tokaji-cask-single-barrel-rye-whiskey/6ab423c6a699da7aeaeaf3ed?option-id=52e57874bac45a0f54fb2cbd2af326fcf38297ce1167add8d16ab17ce8cfb37c"
+        }
       },
       {
         "name": "Shortbarrel Cigar",
@@ -423,7 +438,8 @@
       },
       {
         "name": "Brewer's Coalition Black Tuesday",
-        "msrp": 54.99
+        "msrp": 54.99,
+        "lowest": null
       }
     ],
     "stores": [
