@@ -139,6 +139,19 @@
   .rules .ic { flex: none; width: 1.4em; text-align: center; }
   .rules b { color: var(--text); }
   .rules span.t { color: var(--muted); }
+  .addform { display: grid; gap: 10px; }
+  .addform input[type=text] {
+    width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
+    background: #ffffff08; color: var(--text); font: inherit; font-size: .95rem;
+  }
+  .addform input[type=text]:focus { outline: none; border-color: var(--amber-dark); }
+  .addform .check { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: .9rem; }
+  .addform .check input { accent-color: var(--amber); width: 16px; height: 16px; }
+  .addform button {
+    background: var(--amber); color: #1a1208; font-weight: 700; border: 0;
+    padding: 10px 14px; border-radius: 10px; cursor: pointer; font: inherit; font-weight: 700;
+  }
+  .addform button:hover { background: #f0b25c; }
   .side { display: grid; gap: 20px; align-content: start; }
   footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 0 20px 40px; }
 </style>
@@ -179,6 +192,15 @@
           <li><span class="ic">&#127919;</span><span class="t"><b>Exact matches.</b> The bottle's name has to appear together in the listing. Cigars, rum or tequila finished in whiskey barrels, bundles, gift sets and glassware are skipped.</span></li>
           <li><span class="ic">&#128231;</span><span class="t"><b>Email alert</b> the first time a bottle comes into stock, not on every check.</span></li>
         </ul>
+      </div>
+      <div class="panel">
+        <h3>Add a bottle</h3>
+        <!-- Opens a pre-filled GitHub issue; only requests opened by larboz are acted on. -->
+        <form id="addform" class="addform">
+          <input id="addname" type="text" placeholder="Bottle name, e.g. Blanton's Gold" required maxlength="120" autocomplete="off">
+          <label class="check"><input id="addemail" type="checkbox" checked> Alert me by email</label>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </div>
@@ -412,6 +434,18 @@
       })
       .catch(function () { statusEl.textContent = "No data yet. Check back soon."; });
   }
+  // "Add a bottle": open a pre-filled GitHub issue for the request.
+  document.getElementById("addform").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("addname").value.trim();
+    if (!name) return;
+    var email = document.getElementById("addemail").checked;
+    var body = "Bottle: " + name + "\nEmail alerts: " + (email ? "yes" : "no (page only)") + "\n";
+    window.open("https://github.com/larboz/Bottle-Tracker/issues/new?title=" +
+      encodeURIComponent("Add bottle: " + name) + "&body=" + encodeURIComponent(body),
+      "_blank", "noopener");
+  });
+
   load();
   setInterval(load, 5 * 60 * 1000);
 </script>
