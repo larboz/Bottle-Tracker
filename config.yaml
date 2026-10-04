@@ -4,6 +4,17 @@ stores:
     render: true
     product_href: /product
     search_url: https://goldeaglewine.com/shop?ch-query={q}
+    # Skips bundles and multi-packs. Shorter than the Shopify list because
+    # City Hive tiles also show shop labels like "Select", "On Sale", "Offer".
+    exclude_extra: &cityhive_extra
+      - bundle
+      - bundles
+      - combo
+      - trio
+      - duo
+      - sampler
+      - "re:\\d+pk"
+      - "re:\\d+pack"
     # One shared bottle list. Edit here and every store uses it.
     # Alternate spellings go after |. A word starting with ! rules out
     # listings with that word for that bottle only (e.g. !jr).
@@ -46,6 +57,7 @@ stores:
     product_href: /product
     search_url: https://rocktonspirits.com/shop?ch-query={q}
     bottles: *bottles
+    exclude_extra: *cityhive_extra
 
   - name: DD Smoke Spirits
     url: https://ddsmokespirits.com
@@ -53,6 +65,7 @@ stores:
     product_href: /product
     search_url: https://ddsmokespirits.com/shop?ch-query={q}
     bottles: *bottles
+    exclude_extra: *cityhive_extra
 
   - name: Royal Food & Liquor
     url: https://royalfoodliquor.com
@@ -60,6 +73,7 @@ stores:
     product_href: /product
     search_url: https://royalfoodliquor.com/shop?ch-query={q}
     bottles: *bottles
+    exclude_extra: *cityhive_extra
 
   - name: Greene Valley
     url: https://greenevalleyws.com
@@ -67,6 +81,7 @@ stores:
     product_href: /product
     search_url: https://greenevalleyws.com/shop?ch-query={q}
     bottles: *bottles
+    exclude_extra: *cityhive_extra
 
   - name: Garfield's Beverage
     url: https://garfieldsbeverage.com
@@ -74,6 +89,7 @@ stores:
     product_href: /product
     search_url: https://garfieldsbeverage.com/shop?ch-query={q}
     bottles: *bottles
+    exclude_extra: *cityhive_extra
 
   - name: Joe's Beverage Warehouse
     url: https://joesbev.com
@@ -81,6 +97,7 @@ stores:
     product_href: /product
     search_url: https://joesbev.com/shop?ch-query={q}
     bottles: *bottles
+    exclude_extra: *cityhive_extra
 
   - name: Malloy's Finest
     url: https://malloysfinest.com
@@ -88,6 +105,7 @@ stores:
     product_href: /product
     search_url: https://malloysfinest.com/shop?ch-query={q}
     bottles: *bottles
+    exclude_extra: *cityhive_extra
 
   - name: Hi Proof
     url: https://www.hiproof.com
