@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T14:30:48Z",
+  "updated": "2026-10-05T15:00:42Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -42,14 +42,14 @@
       "since": "2026-10-02T23:00:37Z"
     },
     {
-      "name": "Redwood Empire Hyperion American Whisky 2026 750ml",
-      "bottle": "Redwood Empire Hyperion",
-      "store": "Hi Proof",
-      "url": "https://www.hiproof.com/products/redwood-empire-hyperion-american-whisky-2026-750ml",
-      "image": "https://cdn.shopify.com/s/files/1/0851/0272/3373/files/redwood-empire-hyperion-american-whisky-2026-750ml-3923219.jpg?v=1788430987",
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "DD Smoke Spirits",
+      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
       "price": "$89.99",
-      "size": "750ml",
-      "since": "2026-10-04T19:30:38Z"
+      "size": "750 mL",
+      "since": "2026-09-28T19:41:18Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -60,16 +60,6 @@
       "price": "$79.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
-      "store": "DD Smoke Spirits",
-      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$89.99",
-      "size": "750 mL",
-      "since": "2026-09-28T19:41:18Z"
     },
     {
       "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
@@ -295,11 +285,7 @@
       {
         "name": "Redwood Empire Hyperion",
         "msrp": 99.0,
-        "lowest": {
-          "price": "$89.99",
-          "store": "Hi Proof",
-          "url": "https://www.hiproof.com/products/redwood-empire-hyperion-american-whisky-2026-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Ten Pin",
