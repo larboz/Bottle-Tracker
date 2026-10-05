@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T02:16:30Z",
+  "updated": "2026-10-05T09:26:29Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -27,7 +27,7 @@
       "store": "Hi Proof",
       "url": "https://www.hiproof.com/products/george-remus-repeal-reserve-series-ix-straight-bourbon-whiskey-remus-indiana-usa-750ml",
       "image": "https://cdn.shopify.com/s/files/1/0851/0272/3373/files/george-remus-repeal-reserve-series-ix-104-proof-straight-bourbon-whiskey-remus-indiana-usa-750ml-6235450.jpg?v=1775373070",
-      "price": "$54.99",
+      "price": "$52.99",
       "size": "750ml",
       "since": "2026-09-28T19:41:18Z"
     },
@@ -54,22 +54,22 @@
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
-      "store": "DD Smoke Spirits",
-      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$89.99",
-      "size": "750 mL",
-      "since": "2026-09-28T19:41:18Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
       "store": "Joe's Beverage Warehouse",
       "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
       "price": "$79.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "DD Smoke Spirits",
+      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$89.99",
+      "size": "750 mL",
+      "since": "2026-09-28T19:41:18Z"
     },
     {
       "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
@@ -178,18 +178,18 @@
         "name": "Weller Single Barrel",
         "msrp": 59.99,
         "lowest": {
-          "price": "$299.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/weller-single-barrel"
+          "price": "$769.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/weller-single-barrel-750-ml/686be72eaaba40466f4b2715?option-id=008071c44cf5f679b21835a056ce2683fe6302ecf415a89629dd970fe60711ea"
         }
       },
       {
         "name": "Weller CYPB",
         "msrp": 69.99,
         "lowest": {
-          "price": "$349.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/w-l-weller-c-y-p-b-bourbon"
+          "price": "$989.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
         }
       },
       {
@@ -223,18 +223,18 @@
         "name": "George Stagg",
         "msrp": 154.99,
         "lowest": {
-          "price": "$999.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/george-t-stagg-bourbon-2024-release"
+          "price": "$1,099.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/george-t-stagg-kentucky-straight-bourbon-whiskey/56c28e19756275139d6a0200?option-id=5516830ddf51a9c6b8643f843ee5ad8ead7bd991721a2e0da0348ce25b3cdc0d"
         }
       },
       {
         "name": "Thomas Handy",
         "msrp": 154.99,
         "lowest": {
-          "price": "$449.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/thomas-h-handy-sazerac-straight-rye-whiskey-2025-release"
+          "price": "$499.99",
+          "store": "Bonding Over Bourbon",
+          "url": "https://bondingbottle.shop/products/thomas-h-handy-sazerac-straight-rye-whiskey-750-ml"
         }
       },
       {
@@ -259,9 +259,9 @@
         "name": "Taylor Single Barrel",
         "msrp": 79.99,
         "lowest": {
-          "price": "$129.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/colonel-e-h-taylor-jr-single-barrel-1"
+          "price": "$219.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/eh-taylor-single-barrel-750-ml/686be8888ccb4c3f9202699d?option-id=2720995185c12b4a715aba629f1863633bebe714d16d8714686d8c4200cc229a"
         }
       },
       {
@@ -370,16 +370,16 @@
         "name": "Remus Repeal Reserve VIII",
         "msrp": 99.99,
         "lowest": {
-          "price": "$83.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/remus-repeal-reserve-viii"
+          "price": "$114.99",
+          "store": "Rockton Spirits",
+          "url": "https://rocktonspirits.com/shop/product/george-remus-repeal-reserve-bourbon-viii/6712728e67111622228c1db9?option-id=0e1dd3aed0ab83cb04e9f78f29f710392b254c7b3a324240b13ee9e31a59cdd9"
         }
       },
       {
         "name": "Remus Repeal Reserve IX",
         "msrp": 99.99,
         "lowest": {
-          "price": "$54.99",
+          "price": "$52.99",
           "store": "Hi Proof",
           "url": "https://www.hiproof.com/products/george-remus-repeal-reserve-series-ix-straight-bourbon-whiskey-remus-indiana-usa-750ml"
         }
