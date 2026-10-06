@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06T00:00:42Z",
+  "updated": "2026-10-06T00:30:44Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -32,16 +32,6 @@
       "since": "2026-09-28T19:41:18Z"
     },
     {
-      "name": "Maker\u2019s Mark Cellar Aged 2026  Cask Strength 112.1 Proof 700ml",
-      "bottle": "Maker's Mark Cellar Aged 2026",
-      "store": "Hi Proof",
-      "url": "https://www.hiproof.com/products/maker-s-mark-cellar-aged-2026-bourbon-11-14-year-cask-strength-112-1-proof-700ml",
-      "image": "https://cdn.shopify.com/s/files/1/0851/0272/3373/files/makers-mark-cellar-aged-2026-cask-strength-1121-proof-700ml-8245890.jpg?v=1790987168",
-      "price": "$199.99",
-      "size": "700ml",
-      "since": "2026-10-05T22:00:50Z"
-    },
-    {
       "name": "Old Grand-Dad 114 Single Barrel 7 Year Kentucky Straight Bourbon Whiskey",
       "bottle": "Old Grand Dad Single Barrel",
       "store": "Dram Fellows",
@@ -54,22 +44,22 @@
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
-      "store": "Joe's Beverage Warehouse",
-      "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$79.99",
-      "size": "750 mL",
-      "since": "2026-09-29T20:30:40Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
       "store": "DD Smoke Spirits",
       "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
       "price": "$89.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "Joe's Beverage Warehouse",
+      "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$79.99",
+      "size": "750 mL",
+      "since": "2026-09-29T20:30:40Z"
     },
     {
       "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
@@ -311,9 +301,9 @@
         "name": "Maker's Mark Cellar Aged 2026",
         "msrp": 175.0,
         "lowest": {
-          "price": "$199.99",
-          "store": "Hi Proof",
-          "url": "https://www.hiproof.com/products/maker-s-mark-cellar-aged-2026-bourbon-11-14-year-cask-strength-112-1-proof-700ml"
+          "price": "$299.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/maker-s-mark-cellar-aged-2026-straight-bourbon-700ml"
         }
       },
       {
