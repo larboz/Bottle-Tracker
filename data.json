@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T13:30:39Z",
+  "updated": "2026-10-07T14:00:47Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -60,16 +60,6 @@
       "price": "$64.99",
       "size": "",
       "since": "2026-10-02T23:00:37Z"
-    },
-    {
-      "name": "Remus Repeal Reserve VIII",
-      "bottle": "Remus Repeal Reserve VIII | Remus Repeal Reserve 8",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/remus-repeal-reserve-viii",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/remus-repeal-reserve-viii-856118.jpg?v=1733728963",
-      "price": "$83.99",
-      "size": "",
-      "since": "2026-10-06T21:37:53Z"
     },
     {
       "name": "Ry3 Cigar Series Cask Strength",
@@ -336,19 +326,15 @@
       {
         "name": "Remus Repeal Reserve VII",
         "msrp": 99.99,
-        "lowest": {
-          "price": "$199.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/george-remus-repeal-reserve-vii"
-        }
+        "lowest": null
       },
       {
         "name": "Remus Repeal Reserve VIII",
         "msrp": 99.99,
         "lowest": {
-          "price": "$83.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/remus-repeal-reserve-viii"
+          "price": "$114.99",
+          "store": "Rockton Spirits",
+          "url": "https://rocktonspirits.com/shop/product/george-remus-repeal-reserve-bourbon-viii/6712728e67111622228c1db9?option-id=0e1dd3aed0ab83cb04e9f78f29f710392b254c7b3a324240b13ee9e31a59cdd9"
         }
       },
       {
