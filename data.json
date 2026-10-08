@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T15:30:40Z",
+  "updated": "2026-10-08T16:01:17Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -158,18 +158,18 @@
         "name": "Weller Single Barrel",
         "msrp": 59.99,
         "lowest": {
-          "price": "$769.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/weller-single-barrel-750-ml/686be72eaaba40466f4b2715?option-id=008071c44cf5f679b21835a056ce2683fe6302ecf415a89629dd970fe60711ea"
+          "price": "$299.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/weller-single-barrel"
         }
       },
       {
         "name": "Weller CYPB",
         "msrp": 69.99,
         "lowest": {
-          "price": "$989.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
+          "price": "$349.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/w-l-weller-c-y-p-b-bourbon"
         }
       },
       {
@@ -239,9 +239,9 @@
         "name": "Taylor Single Barrel",
         "msrp": 79.99,
         "lowest": {
-          "price": "$139.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/e-h-taylor-sgl-barl-wsky"
+          "price": "$129.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/colonel-e-h-taylor-jr-single-barrel-1"
         }
       },
       {
@@ -252,7 +252,11 @@
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": null
+        "lowest": {
+          "price": "$349.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/jack-daniels-10-year-old-limited-release"
+        }
       },
       {
         "name": "Jack Daniel's 12 Year",
@@ -380,8 +384,8 @@
         "msrp": 150.0,
         "lowest": {
           "price": "$149.99",
-          "store": "Seelbach's",
-          "url": "https://seelbachs.com/products/starlight-distillery-sakura-finished-bourbon-batch-03"
+          "store": "Joe's Beverage Warehouse",
+          "url": "https://joesbev.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1"
         }
       },
       {
