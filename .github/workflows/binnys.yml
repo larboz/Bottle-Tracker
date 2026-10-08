@@ -23,6 +23,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      # On the Mac, git sometimes doesn't pick up checkout's saved sign-in
+      # ("could not read Username"), so give it this job's token directly.
+      # The token only works while this job runs.
+      - name: Git sign-in for this job
+        env:
+          TOKEN: ${{ github.token }}
+        run: git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git"
       - run: git pull --ff-only origin main
       - name: Python packages (kept between runs)
         run: |
