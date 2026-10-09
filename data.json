@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T00:30:37Z",
+  "updated": "2026-10-09T04:30:06Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -22,24 +22,14 @@
       "since": "2026-09-27T21:00:43Z"
     },
     {
-      "name": "Old Grand-Dad 114 Single Barrel 7 Year Kentucky Straight Bourbon Whiskey",
-      "bottle": "Old Grand Dad Single Barrel",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/old-grand-dad-114-single-barrel-7-year-kentucky-straight-bourbon-whiskey",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/Old-Granddad-114-7-Year-bottle.jpg?v=1780006583",
-      "price": "$64.99",
-      "size": "",
-      "since": "2026-10-02T23:00:37Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
-      "store": "DD Smoke Spirits",
-      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$89.99",
-      "size": "750 mL",
-      "since": "2026-09-28T19:41:18Z"
+      "name": "George Remus Repeal Reserve Series IX 104 Proof Straight Bourbon Whiskey, Remus, Indiana, Usa, 750ml",
+      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
+      "store": "Hi Proof",
+      "url": "https://www.hiproof.com/products/george-remus-repeal-reserve-series-ix-straight-bourbon-whiskey-remus-indiana-usa-750ml",
+      "image": "https://cdn.shopify.com/s/files/1/0851/0272/3373/files/george-remus-repeal-reserve-series-ix-104-proof-straight-bourbon-whiskey-remus-indiana-usa-750ml-6235450.jpg?v=1775373070",
+      "price": "$52.99",
+      "size": "750ml",
+      "since": "2026-10-09T04:30:06Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -50,6 +40,16 @@
       "price": "$79.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "DD Smoke Spirits",
+      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$89.99",
+      "size": "750 mL",
+      "since": "2026-09-28T19:41:18Z"
     },
     {
       "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
@@ -231,8 +231,8 @@
         "msrp": 89.99,
         "lowest": {
           "price": "$249.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/rock-hill-farms-bourbon-single-barrel-kentucky-750ml"
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/rockhill-farms-single-barrel-bourbon"
         }
       },
       {
@@ -304,11 +304,7 @@
       {
         "name": "Old Grand Dad Single Barrel",
         "msrp": 49.99,
-        "lowest": {
-          "price": "$64.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/old-grand-dad-114-single-barrel-7-year-kentucky-straight-bourbon-whiskey"
-        }
+        "lowest": null
       },
       {
         "name": "Ry3 Cigar",
@@ -359,9 +355,9 @@
         "name": "Remus Repeal Reserve IX",
         "msrp": 99.99,
         "lowest": {
-          "price": "$54.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/george-remus-bourbon-repeal-reserve-ix-series-indiana-750ml"
+          "price": "$52.99",
+          "store": "Hi Proof",
+          "url": "https://www.hiproof.com/products/george-remus-repeal-reserve-series-ix-straight-bourbon-whiskey-remus-indiana-usa-750ml"
         }
       },
       {
