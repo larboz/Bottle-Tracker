@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T16:30:41Z",
+  "updated": "2026-10-09T17:00:49Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -70,6 +70,16 @@
       "price": "$64.99",
       "size": "",
       "since": "2026-10-02T23:00:37Z"
+    },
+    {
+      "name": "Remus Repeal Reserve VIII",
+      "bottle": "Remus Repeal Reserve VIII | Remus Repeal Reserve 8",
+      "store": "Dram Fellows",
+      "url": "https://dramfellows.com/products/remus-repeal-reserve-viii",
+      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/remus-repeal-reserve-viii-856118.jpg?v=1733728963",
+      "price": "$83.99",
+      "size": "",
+      "since": "2026-10-09T17:00:49Z"
     },
     {
       "name": "Ry3 Cigar Series Cask Strength",
@@ -158,18 +168,18 @@
         "name": "Weller Single Barrel",
         "msrp": 59.99,
         "lowest": {
-          "price": "$769.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/weller-single-barrel-750-ml/686be72eaaba40466f4b2715?option-id=008071c44cf5f679b21835a056ce2683fe6302ecf415a89629dd970fe60711ea"
+          "price": "$299.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/weller-single-barrel"
         }
       },
       {
         "name": "Weller CYPB",
         "msrp": 69.99,
         "lowest": {
-          "price": "$989.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
+          "price": "$349.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/w-l-weller-c-y-p-b-bourbon"
         }
       },
       {
@@ -184,7 +194,11 @@
       {
         "name": "Eagle Rare 12",
         "msrp": 49.99,
-        "lowest": null
+        "lowest": {
+          "price": "$149.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/eagle-rare-12-year-bourbon"
+        }
       },
       {
         "name": "Eagle Rare 17",
@@ -199,9 +213,9 @@
         "name": "George Stagg",
         "msrp": 154.99,
         "lowest": {
-          "price": "$1,099.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/george-t-stagg-kentucky-straight-bourbon-whiskey/56c28e19756275139d6a0200?option-id=5516830ddf51a9c6b8643f843ee5ad8ead7bd991721a2e0da0348ce25b3cdc0d"
+          "price": "$999.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/george-t-stagg-bourbon-2024-release"
         }
       },
       {
@@ -235,9 +249,9 @@
         "name": "Taylor Single Barrel",
         "msrp": 79.99,
         "lowest": {
-          "price": "$139.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/e-h-taylor-sgl-barl-wsky"
+          "price": "$129.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/colonel-e-h-taylor-jr-single-barrel-1"
         }
       },
       {
@@ -248,7 +262,11 @@
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": null
+        "lowest": {
+          "price": "$349.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/jack-daniels-10-year-old-limited-release"
+        }
       },
       {
         "name": "Jack Daniel's 12 Year",
@@ -258,7 +276,11 @@
       {
         "name": "Jack Daniel's 14 Year",
         "msrp": 149.99,
-        "lowest": null
+        "lowest": {
+          "price": "$499.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/jack-daniel-s-14-year-old-tennessee-whiskey-batch-2-700ml"
+        }
       },
       {
         "name": "Redwood Empire Hyperion",
@@ -328,15 +350,19 @@
       {
         "name": "Remus Repeal Reserve VII",
         "msrp": 99.99,
-        "lowest": null
+        "lowest": {
+          "price": "$199.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/george-remus-repeal-reserve-vii"
+        }
       },
       {
         "name": "Remus Repeal Reserve VIII",
         "msrp": 99.99,
         "lowest": {
-          "price": "$114.99",
-          "store": "Rockton Spirits",
-          "url": "https://rocktonspirits.com/shop/product/george-remus-repeal-reserve-bourbon-viii/6712728e67111622228c1db9?option-id=0e1dd3aed0ab83cb04e9f78f29f710392b254c7b3a324240b13ee9e31a59cdd9"
+          "price": "$83.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/remus-repeal-reserve-viii"
         }
       },
       {
