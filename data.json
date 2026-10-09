@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T20:00:38Z",
+  "updated": "2026-10-09T20:30:38Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -177,9 +177,9 @@
         "name": "Weller CYPB",
         "msrp": 69.99,
         "lowest": {
-          "price": "$349.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/w-l-weller-c-y-p-b-bourbon"
+          "price": "$989.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
         }
       },
       {
@@ -249,9 +249,9 @@
         "name": "Taylor Single Barrel",
         "msrp": 79.99,
         "lowest": {
-          "price": "$129.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/colonel-e-h-taylor-jr-single-barrel-1"
+          "price": "$139.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/e-h-taylor-sgl-barl-wsky"
         }
       },
       {
@@ -262,11 +262,7 @@
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$349.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/jack-daniels-10-year-old-limited-release"
-        }
+        "lowest": null
       },
       {
         "name": "Jack Daniel's 12 Year",
