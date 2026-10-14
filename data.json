@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14T03:28:44Z",
+  "updated": "2026-10-14T12:00:51Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -32,14 +32,14 @@
       "since": "2026-10-13T16:00:40Z"
     },
     {
-      "name": "Old Grand-Dad 114 Single Barrel 7 Year Kentucky Straight Bourbon Whiskey",
-      "bottle": "Old Grand Dad Single Barrel",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/old-grand-dad-114-single-barrel-7-year-kentucky-straight-bourbon-whiskey",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/Old-Granddad-114-7-Year-bottle.jpg?v=1780006583",
-      "price": "$64.99",
-      "size": "",
-      "since": "2026-10-11T23:30:35Z"
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "DD Smoke Spirits",
+      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$89.99",
+      "size": "750 mL",
+      "since": "2026-09-28T19:41:18Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -50,16 +50,6 @@
       "price": "$79.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
-      "store": "DD Smoke Spirits",
-      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$89.99",
-      "size": "750 mL",
-      "since": "2026-09-28T19:41:18Z"
     },
     {
       "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
@@ -310,11 +300,7 @@
       {
         "name": "Old Grand Dad Single Barrel",
         "msrp": 49.99,
-        "lowest": {
-          "price": "$64.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/old-grand-dad-114-single-barrel-7-year-kentucky-straight-bourbon-whiskey"
-        }
+        "lowest": null
       },
       {
         "name": "Ry3 Cigar",
