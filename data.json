@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T21:30:38Z",
+  "updated": "2026-10-15T22:00:37Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -20,6 +20,16 @@
       "price": "$114.99",
       "size": "750 mL",
       "since": "2026-09-27T21:00:43Z"
+    },
+    {
+      "name": "George Remus Repeal Reserve Series IX 104 Proof Straight Bourbon Whiskey, Remus, Indiana, Usa, 750ml",
+      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
+      "store": "Hi Proof",
+      "url": "https://www.hiproof.com/products/george-remus-repeal-reserve-series-ix-straight-bourbon-whiskey-remus-indiana-usa-750ml",
+      "image": "https://cdn.shopify.com/s/files/1/0851/0272/3373/files/george-remus-repeal-reserve-series-ix-104-proof-straight-bourbon-whiskey-remus-indiana-usa-750ml-6235450.jpg?v=1775373070",
+      "price": "$52.99",
+      "size": "750ml",
+      "since": "2026-10-15T22:00:37Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -341,9 +351,9 @@
         "name": "Remus Repeal Reserve IX",
         "msrp": 99.99,
         "lowest": {
-          "price": "$54.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/george-remus-bourbon-repeal-reserve-ix-series-indiana-750ml"
+          "price": "$52.99",
+          "store": "Hi Proof",
+          "url": "https://www.hiproof.com/products/george-remus-repeal-reserve-series-ix-straight-bourbon-whiskey-remus-indiana-usa-750ml"
         }
       },
       {
