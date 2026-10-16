@@ -26,11 +26,15 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+      # The saved browser must match the installed Playwright version, or
+      # arrivals.py fails ("Looks like Playwright was just installed").
+      - id: pwv
+        run: echo "v=$(python -c 'import importlib.metadata as m; print(m.version("playwright"))')" >> "$GITHUB_OUTPUT"
       - uses: actions/cache@v4
         id: pw
         with:
           path: ~/.cache/ms-playwright
-          key: pw-${{ runner.os }}-v1
+          key: pw-${{ runner.os }}-${{ steps.pwv.outputs.v }}
       - if: steps.pw.outputs.cache-hit != 'true'
         run: playwright install --with-deps chromium
       - if: steps.pw.outputs.cache-hit == 'true'
