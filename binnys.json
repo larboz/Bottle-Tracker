@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T20:13:03Z",
+  "updated": "2026-10-17T20:43:00Z",
   "stores": [
     "Orland Park",
     "Joliet",
@@ -34,7 +34,7 @@
           "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/15/1595/159549/159549.jpg?v=638645850210000000"
         },
         "Mokena": {
-          "status": "Only 2 left",
+          "status": "Only 1 left",
           "in_stock": true,
           "shelf": "Aisle 10 > Bourbon",
           "price": "$89.99",
