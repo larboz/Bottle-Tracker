@@ -1,16 +1,6 @@
 {
-  "updated": "2026-10-18T21:30:44Z",
+  "updated": "2026-10-18T22:00:40Z",
   "items": [
-    {
-      "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
-      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
-      "store": "Remedy Liquor",
-      "url": "https://www.remedyliquor.com/products/george-remus-bourbon-repeal-reserve-ix-series-indiana-750ml",
-      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/Remus-Repeal-IX.png?v=1758774800",
-      "price": "$54.99",
-      "size": "750ML",
-      "since": "2026-10-15T21:30:38Z"
-    },
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
       "bottle": "Remus Repeal Reserve VIII",
@@ -44,22 +34,22 @@
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
-      "store": "DD Smoke Spirits",
-      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$89.99",
-      "size": "750 mL",
-      "since": "2026-09-28T19:41:18Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
       "store": "Joe's Beverage Warehouse",
       "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
       "price": "$79.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "DD Smoke Spirits",
+      "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$89.99",
+      "size": "750 mL",
+      "since": "2026-09-28T19:41:18Z"
     },
     {
       "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
