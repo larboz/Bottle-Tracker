@@ -25,3 +25,4 @@
 2026-10-16 12:08 CDT | +7 new: Valentine Distilling Mayor Pingree 9 Year Bourbon Oloroso Cask Finish Single Barrel; Maen Japanese Whisky Pure Malt 12 Year Old; Circle City Birds Of A Feather Bourbon Cask Strength Bourbon; Bardstown Lochs Of Jura Barrel Finish; Midleton Very Rare Barry Crockett Legacy Edition Irish Whiskey; Biggar And Leith Starlino Maraschino Cherries; Buchanans Green Seal Blended Scotch Whiskey | -7 gone
 2026-10-16 15:01 CDT | +2 new: The Glendronach 200Th Anniversary 14 Year Boynsmill House Edition Limited Release; Arette Artesanal Suave Blanco Tequila | -2 gone
 2026-10-17 11:08 CDT | +1 new: Rare Perfection 10 Year Barrel Proof Bourbon Gold Eagle Single Barrel | -1 gone
+2026-10-18 11:20 CDT | +2 new: Valentine Distilling Mayor Pingree 9 Year Bourbon Oloroso Cask Finish Single Barrel; Duck Club Wetlands Bourbon 1St Edition Ducks Unlimited Collaboration | -2 gone
