@@ -1,9 +1,10 @@
 {
-  "updated": "2026-10-19T16:43:59Z",
+  "updated": "2026-10-19T17:14:00Z",
   "stores": [
     "Orland Park",
     "Joliet",
-    "Mokena"
+    "Mokena",
+    "Ship to Me"
   ],
   "bottles": {
     "Remus Repeal Reserve VIII": {
@@ -37,6 +38,14 @@
           "status": "Only 1 left",
           "in_stock": true,
           "shelf": "Aisle 10 > Bourbon",
+          "price": "$89.99",
+          "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 8 2024",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/15/1595/159549/159549.jpg?v=638645850210000000"
+        },
+        "Ship to Me": {
+          "status": "Not available",
+          "in_stock": false,
+          "shelf": "",
           "price": "$89.99",
           "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 8 2024",
           "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/15/1595/159549/159549.jpg?v=638645850210000000"
@@ -74,6 +83,14 @@
           "status": "In stock",
           "in_stock": true,
           "shelf": "Aisle 10 > Bourbon",
+          "price": "$69.99",
+          "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 9 2025",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/17/1747/174779/174779.jpg?v=639020868680000000"
+        },
+        "Ship to Me": {
+          "status": "In stock",
+          "in_stock": true,
+          "shelf": "",
           "price": "$69.99",
           "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 9 2025",
           "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/17/1747/174779/174779.jpg?v=639020868680000000"
