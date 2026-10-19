@@ -42,6 +42,7 @@ def read_page(page, url, store):
     status, where = m.group(1).upper(), m.group(2)
     # where = "<store name> <shelf>"; drop the store name
     shelf = where[len(store):].strip() if where.lower().startswith(store.lower()) else where
+    shelf = re.sub(r"[^\w\s>&,.()'-]", "", shelf).strip()  # drop emoji like the Ship to Me truck
     in_stock = status.startswith(("IN STOCK", "ONLY", "LOW"))
     info = product_info(page)
     return {
