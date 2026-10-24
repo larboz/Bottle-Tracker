@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T23:30:43Z",
+  "updated": "2026-10-24T23:43:02Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -40,16 +40,6 @@
       "price": "$109.99",
       "size": "",
       "since": "2026-10-24T03:13:06Z"
-    },
-    {
-      "name": "Redwood Empire The Hyperion Inaugural Batch 001 Blend of Straight Whiskies",
-      "bottle": "Redwood Empire Hyperion",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/redwood-empire-the-hyperion-inaugural-batch-001-blend-of-straight-whiskies",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/ChatGPTImageAug24_2026_11_21_46AM.png?v=1787596027",
-      "price": "$99.99",
-      "size": "",
-      "since": "2026-10-23T22:00:47Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -296,9 +286,9 @@
         "name": "Redwood Empire Hyperion",
         "msrp": 99.0,
         "lowest": {
-          "price": "$99.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/redwood-empire-the-hyperion-inaugural-batch-001-blend-of-straight-whiskies"
+          "price": "$109.99",
+          "store": "Joe's Beverage Warehouse",
+          "url": "https://joesbev.com/shop/product/redwood-empire-the-hyperion/6a975045df76fef8912b35b5?option-id=55eff778f1fd4dacd484490001953ff8fad86a1c2db61742b9e0e4a5e3585681"
         }
       },
       {
