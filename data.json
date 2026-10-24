@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T00:30:40Z",
+  "updated": "2026-10-24T03:13:06Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -32,14 +32,14 @@
       "since": "2026-10-17T18:30:40Z"
     },
     {
-      "name": "Redwood Empire Hyperion",
+      "name": "Redwood Empire The Hyperion",
       "bottle": "Redwood Empire Hyperion",
       "store": "Joe's Beverage Warehouse",
-      "url": "https://joesbev.com/shop/product/redwood-empire-hyperion/6a975045df76fef8912b35b5?option-id=55eff778f1fd4dacd484490001953ff8fad86a1c2db61742b9e0e4a5e3585681",
+      "url": "https://joesbev.com/shop/product/redwood-empire-the-hyperion/6a975045df76fef8912b35b5?option-id=55eff778f1fd4dacd484490001953ff8fad86a1c2db61742b9e0e4a5e3585681",
       "image": "https://cityhive-production-cdn.cityhive.net/product_details/6adb82f22af802b072eedc80/primary_image/large.png?sig=c9dc10a7ae97b4ca10ad10562bed1a62422fa22e7dcc4c4df5e18f8359d4d866",
       "price": "$109.99",
       "size": "",
-      "since": "2026-10-22T00:15:27Z"
+      "since": "2026-10-24T03:13:06Z"
     },
     {
       "name": "Redwood Empire The Hyperion Inaugural Batch 001 Blend of Straight Whiskies",
@@ -54,22 +54,22 @@
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
-      "store": "Joe's Beverage Warehouse",
-      "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$79.99",
-      "size": "750 mL",
-      "since": "2026-09-29T20:30:40Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
       "store": "DD Smoke Spirits",
       "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
       "price": "$89.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "Joe's Beverage Warehouse",
+      "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$79.99",
+      "size": "750 mL",
+      "since": "2026-09-29T20:30:40Z"
     },
     {
       "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
