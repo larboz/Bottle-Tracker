@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T12:00:47Z",
+  "updated": "2026-10-25T12:30:39Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -50,16 +50,6 @@
       "price": "$89.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
-      "store": "Garfield's Beverage",
-      "url": "https://garfieldsbeverage.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=351292a2f4732e006390b54b1fdfaa4f9ae743d957e3b00c4afad885e15ec157",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$79.99",
-      "size": "750 mL",
-      "since": "2026-10-25T12:00:47Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -187,9 +177,9 @@
         "name": "Weller CYPB",
         "msrp": 69.99,
         "lowest": {
-          "price": "$349.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/w-l-weller-c-y-p-b-bourbon"
+          "price": "$989.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
         }
       },
       {
@@ -272,11 +262,7 @@
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$349.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/jack-daniels-10-year-old-limited-release"
-        }
+        "lowest": null
       },
       {
         "name": "Jack Daniel's 12 Year",
