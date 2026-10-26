@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T16:42:48Z",
+  "updated": "2026-10-26T17:00:40Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -42,6 +42,16 @@
       "since": "2026-10-26T16:42:48Z"
     },
     {
+      "name": "Penelope Rio Single Barrel Bourbon - Selected by Bourbon Thieves",
+      "bottle": "Penelope Rio",
+      "store": "Seelbach's",
+      "url": "https://seelbachs.com/products/penelope-rio-single-barrel-bourbon-selected-by-bourbon-thieves",
+      "image": "https://cdn.shopify.com/s/files/1/1829/2275/files/unnamed_2_a3bd4a33-a44b-4fb2-b95c-f63e7ce2583f.jpg?v=1793033719",
+      "price": "$99.99",
+      "size": "",
+      "since": "2026-10-26T17:00:40Z"
+    },
+    {
       "name": "Redwood Empire The Hyperion",
       "bottle": "Redwood Empire Hyperion",
       "store": "Joe's Beverage Warehouse",
@@ -60,6 +70,16 @@
       "price": "$89.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "Garfield's Beverage",
+      "url": "https://garfieldsbeverage.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=351292a2f4732e006390b54b1fdfaa4f9ae743d957e3b00c4afad885e15ec157",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$79.99",
+      "size": "750 mL",
+      "since": "2026-10-26T17:00:40Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -414,7 +434,7 @@
         "lowest": {
           "price": "$99.99",
           "store": "Seelbach's",
-          "url": "https://seelbachs.com/products/penelope-rio-single-barrel-bourbon-selected-by-bourbon-enthusiast"
+          "url": "https://seelbachs.com/products/penelope-rio-single-barrel-bourbon-selected-by-bourbon-thieves"
         }
       },
       {
