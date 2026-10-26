@@ -32,3 +32,4 @@
 2026-10-24 22:10 CDT | +4 new: Jim Beam 6 Year Bourbon Freedoms Finest; Cadenheads 12 Year Rum Diamond Distillery Guyana; Duck Club Wetlands Bourbon 1St Edition Ducks Unlimited Collaboration; Old Weston 7 Year Corn Whiskey | -4 gone
 2026-10-25 11:57 CDT | +1 new: Tequila Ocho Anejo Tequila Aged In Ferrand Cognac Barrel Select | -1 gone
 2026-10-25 17:03 CDT | +1 new: Cazcanes Nuestras Raices Tequila | -1 gone
+2026-10-26 18:23 CDT | +1 new: Tequila Ocho Anejo Tequila Aged In Ferrand Cognac Barrel Select | -1 gone
