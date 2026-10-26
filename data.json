@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T16:00:40Z",
+  "updated": "2026-10-26T16:42:48Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -30,6 +30,16 @@
       "price": "$79.99",
       "size": "750ml",
       "since": "2026-10-17T18:30:40Z"
+    },
+    {
+      "name": "Penelope Rio Single Barrel Bourbon - Selected by Bourbon Enthusiast",
+      "bottle": "Penelope Rio",
+      "store": "Seelbach's",
+      "url": "https://seelbachs.com/products/penelope-rio-single-barrel-bourbon-selected-by-bourbon-enthusiast",
+      "image": "",
+      "price": "$99.99",
+      "size": "",
+      "since": "2026-10-26T16:42:48Z"
     },
     {
       "name": "Redwood Empire The Hyperion",
@@ -402,9 +412,9 @@
         "name": "Penelope Rio",
         "msrp": 99.99,
         "lowest": {
-          "price": "$219.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/penelope-rio-double-cask-bourbon/642aeed0197aab48a0106b78?option-id=a91e9f1829a09ceada0cd2e0370d8a72830321b051b3e291a6b36201ece7d129"
+          "price": "$99.99",
+          "store": "Seelbach's",
+          "url": "https://seelbachs.com/products/penelope-rio-single-barrel-bourbon-selected-by-bourbon-enthusiast"
         }
       },
       {
