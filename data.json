@@ -1,6 +1,16 @@
 {
-  "updated": "2026-10-27T15:30:43Z",
+  "updated": "2026-10-27T15:49:01Z",
   "items": [
+    {
+      "name": "Black Saddle 12 Year Old Bourbon",
+      "bottle": "Black Saddle 12 Year | Black Saddle 12 Yr | Black Saddle 12",
+      "store": "Dram Fellows",
+      "url": "https://dramfellows.com/products/black-saddle-12-year-old-bourbon",
+      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/black-saddle-12-year-old-bourbon-568246.jpg?v=1707633511",
+      "price": "$58.99",
+      "size": "",
+      "since": "2026-10-27T15:49:01Z"
+    },
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
       "bottle": "Remus Repeal Reserve VIII",
@@ -197,9 +207,9 @@
         "name": "Weller CYPB",
         "msrp": 69.99,
         "lowest": {
-          "price": "$989.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
+          "price": "$349.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/w-l-weller-c-y-p-b-bourbon"
         }
       },
       {
@@ -259,7 +269,11 @@
       {
         "name": "Rock Hill Farms",
         "msrp": 89.99,
-        "lowest": null
+        "lowest": {
+          "price": "$249.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/rock-hill-farms-bourbon-single-barrel-kentucky-750ml"
+        }
       },
       {
         "name": "Taylor Single Barrel",
@@ -278,7 +292,11 @@
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": null
+        "lowest": {
+          "price": "$349.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/jack-daniels-10-year-old-limited-release"
+        }
       },
       {
         "name": "Jack Daniel's 12 Year",
@@ -358,7 +376,11 @@
       {
         "name": "Remus Repeal Reserve VII",
         "msrp": 99.99,
-        "lowest": null
+        "lowest": {
+          "price": "$199.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/george-remus-repeal-reserve-vii"
+        }
       },
       {
         "name": "Remus Repeal Reserve VIII",
@@ -426,7 +448,12 @@
       },
       {
         "name": "Black Saddle 12 Year",
-        "msrp": 54.99
+        "msrp": 54.99,
+        "lowest": {
+          "price": "$58.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/black-saddle-12-year-old-bourbon"
+        }
       },
       {
         "name": "Brewer's Coalition Black Tuesday",
