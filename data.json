@@ -1,15 +1,15 @@
 {
-  "updated": "2026-10-27T20:01:24Z",
+  "updated": "2026-10-27T20:30:48Z",
   "items": [
     {
-      "name": "Black Saddle 12 Year Old Bourbon",
-      "bottle": "Black Saddle 12 Year | Black Saddle 12 Yr | Black Saddle 12",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/black-saddle-12-year-old-bourbon",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/black-saddle-12-year-old-bourbon-568246.jpg?v=1707633511",
-      "price": "$58.99",
-      "size": "",
-      "since": "2026-10-27T19:00:51Z"
+      "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
+      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
+      "store": "Remedy Liquor",
+      "url": "https://www.remedyliquor.com/products/george-remus-bourbon-repeal-reserve-ix-series-indiana-750ml",
+      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/Remus-Repeal-IX.png?v=1758774800",
+      "price": "$54.99",
+      "size": "750ML",
+      "since": "2026-10-27T20:30:48Z"
     },
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -30,16 +30,6 @@
       "price": "$46.99",
       "size": "750ml",
       "since": "2026-10-19T20:00:48Z"
-    },
-    {
-      "name": "Maker\u2019s Mark Cellar Aged 2026  Cask Strength 112.1 Proof 700ml",
-      "bottle": "Maker's Mark Cellar Aged 2026",
-      "store": "Hi Proof",
-      "url": "https://www.hiproof.com/products/maker-s-mark-cellar-aged-2026-bourbon-11-14-year-cask-strength-112-1-proof-700ml",
-      "image": "https://cdn.shopify.com/s/files/1/0851/0272/3373/files/makers-mark-cellar-aged-2026-cask-strength-1121-proof-700ml-8245890.jpg?v=1790987168",
-      "price": "$219.99",
-      "size": "700ml",
-      "since": "2026-10-27T08:12:02Z"
     },
     {
       "name": "Penelope Cigar Sessions Chapter 02 750ml",
@@ -84,6 +74,16 @@
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
+      "store": "Garfield's Beverage",
+      "url": "https://garfieldsbeverage.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=351292a2f4732e006390b54b1fdfaa4f9ae743d957e3b00c4afad885e15ec157",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$79.99",
+      "size": "750 mL",
+      "since": "2026-10-27T20:30:48Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
       "store": "Joe's Beverage Warehouse",
       "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
@@ -100,16 +100,6 @@
       "price": "$64.99",
       "size": "",
       "since": "2026-10-15T23:30:39Z"
-    },
-    {
-      "name": "Remus Repeal Reserve VIII",
-      "bottle": "Remus Repeal Reserve VIII | Remus Repeal Reserve 8",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/remus-repeal-reserve-viii",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/remus-repeal-reserve-viii-856118.jpg?v=1733728963",
-      "price": "$83.99",
-      "size": "",
-      "since": "2026-10-27T18:12:31Z"
     },
     {
       "name": "Ry3 Cigar Series Cask Strength",
@@ -207,9 +197,9 @@
         "name": "Weller CYPB",
         "msrp": 69.99,
         "lowest": {
-          "price": "$349.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/w-l-weller-c-y-p-b-bourbon"
+          "price": "$989.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
         }
       },
       {
@@ -224,11 +214,7 @@
       {
         "name": "Eagle Rare 12",
         "msrp": 49.99,
-        "lowest": {
-          "price": "$159.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/eagle-rare-12-year-bourbon"
-        }
+        "lowest": null
       },
       {
         "name": "Eagle Rare 17",
@@ -243,9 +229,9 @@
         "name": "George Stagg",
         "msrp": 154.99,
         "lowest": {
-          "price": "$999.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/george-t-stagg-bourbon-2024-release"
+          "price": "$1,099.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/george-t-stagg-kentucky-straight-bourbon-whiskey/56c28e19756275139d6a0200?option-id=5516830ddf51a9c6b8643f843ee5ad8ead7bd991721a2e0da0348ce25b3cdc0d"
         }
       },
       {
@@ -292,11 +278,7 @@
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$349.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/jack-daniels-10-year-old-limited-release"
-        }
+        "lowest": null
       },
       {
         "name": "Jack Daniel's 12 Year",
@@ -330,11 +312,7 @@
       {
         "name": "Maker's Mark Cellar Aged 2026",
         "msrp": 175.0,
-        "lowest": {
-          "price": "$219.99",
-          "store": "Hi Proof",
-          "url": "https://www.hiproof.com/products/maker-s-mark-cellar-aged-2026-bourbon-11-14-year-cask-strength-112-1-proof-700ml"
-        }
+        "lowest": null
       },
       {
         "name": "Blade and Bow Solera",
@@ -376,19 +354,15 @@
       {
         "name": "Remus Repeal Reserve VII",
         "msrp": 99.99,
-        "lowest": {
-          "price": "$199.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/george-remus-repeal-reserve-vii"
-        }
+        "lowest": null
       },
       {
         "name": "Remus Repeal Reserve VIII",
         "msrp": 99.99,
         "lowest": {
-          "price": "$83.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/remus-repeal-reserve-viii"
+          "price": "$114.99",
+          "store": "Rockton Spirits",
+          "url": "https://rocktonspirits.com/shop/product/george-remus-repeal-reserve-bourbon-viii/6712728e67111622228c1db9?option-id=0e1dd3aed0ab83cb04e9f78f29f710392b254c7b3a324240b13ee9e31a59cdd9"
         }
       },
       {
@@ -449,11 +423,7 @@
       {
         "name": "Black Saddle 12 Year",
         "msrp": 54.99,
-        "lowest": {
-          "price": "$58.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/black-saddle-12-year-old-bourbon"
-        }
+        "lowest": null
       },
       {
         "name": "Brewer's Coalition Black Tuesday",
