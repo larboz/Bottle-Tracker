@@ -160,11 +160,6 @@ stores:
     bottles: *bottles
     exclude_extra: *shopify_extra
 
-  - name: Dram Fellows
-    url: https://dramfellows.com
-    bottles: *bottles
-    exclude_extra: *shopify_extra
-
 # Binny's (binnys.py, its own program and workflow). Binny's search is
 # off-limits to bots, so each bottle needs its product page listed. Store
 # numbers are Binny's own ids (there is no New Lenox store; Mokena is the
