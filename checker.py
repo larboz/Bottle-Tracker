@@ -370,9 +370,70 @@ def send_email(alerts):
         s.send_message(msg)
 
 
+def check_sitemap(store, base, bottles):
+    """For stores with a public sitemap and product pages that carry standard
+    product data (schema.org JSON-LD), e.g. Off Premise. Reads the sitemap,
+    loads only the product pages whose address contains a bottle's words,
+    and reads name, price, stock and photo from each page."""
+    import time
+    path = store.get("product_path", "/product/")
+    r = requests.get(store["sitemap"], headers=UA, timeout=60)
+    r.raise_for_status()
+    urls = [u for u in re.findall(r"<loc>([^<]+)</loc>", r.text) if path in u]
+    if not urls:
+        raise RuntimeError("no product pages in sitemap")
+    ex = exclude_set(store)
+    wanted = []  # (bottle, url): every word of one spelling appears in the address
+    for u in urls:
+        slug = set(tokens(u.split(path, 1)[1].replace("-", " ")))
+        for b in bottles:
+            if any(set(tokens(split_alt(a)[0])) <= slug for a in b.split("|") if a.strip()):
+                wanted.append((b, u))
+    hits = []
+    for b, u in wanted[:40]:  # stay polite
+        time.sleep(1)
+        page = requests.get(u, headers=UA, timeout=30)
+        if page.status_code != 200:
+            continue
+        prod = None
+        for raw in re.findall(r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', page.text, re.S):
+            try:
+                data = json.loads(raw)
+            except ValueError:
+                continue
+            for d in data if isinstance(data, list) else [data]:
+                if d.get("@type") == "Product":
+                    prod = d
+        if not prod or not matches(b, prod.get("name", ""), ex):
+            continue
+        offer = prod.get("offers") or {}
+        offer = offer[0] if isinstance(offer, list) else offer
+        price = offer.get("price") or offer.get("lowPrice")
+        price = f"${float(price):,.2f}" if price else ""
+        # Some stores mark everything "InStock" in the data but say "Sold out"
+        # on the page, right after the price. Both have to agree.
+        text = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", re.sub(
+            r"<script.*?</script>|<style.*?</style>", " ", page.text, flags=re.S))).split())
+        i = text.find(price) if price else -1
+        sold_out = i >= 0 and SOLD_OUT.search(text[i:i + 40])
+        image = prod.get("image")
+        image = image[0] if isinstance(image, list) and image else image
+        size = re.search(r"\b\d+(?:\.\d+)?\s?(?:ml|l)\b", prod.get("name", ""), re.I)
+        hits.append({
+            "bottle": b, "title": prod.get("name", "")[:100], "name": prod.get("name", ""),
+            "image": image if isinstance(image, str) else "", "url": u, "price": price,
+            "in_stock": str(offer.get("availability", "")).endswith("InStock") and not sold_out,
+            "size": size.group(0) if size else "",
+        })
+    print(f"[{store['name']}] {len(urls)} products in sitemap, {len(wanted)} pages checked, {len(hits)} matches")
+    return hits
+
+
 def fetch_hits(store):
     """All matches for one store, or None if the store can't be checked."""
     name, base = store["name"], base_url(store["url"])
+    if store.get("sitemap"):
+        return check_sitemap(store, base, store["bottles"])
     if store.get("render"):
         return check_browser(store, base, store["bottles"])
     products = None if store.get("search_url") else shopify_products(base)

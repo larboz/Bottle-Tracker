@@ -160,6 +160,15 @@ stores:
     bottles: *bottles
     exclude_extra: *shopify_extra
 
+  # Lincoln Park, Chicago. Sells allocated bottles at MSRP (its own claim).
+  # Pickup or local delivery. Read via its sitemap and product pages.
+  - name: Off Premise
+    url: https://offpremisechicago.com
+    sitemap: https://offpremisechicago.com/sitemap.xml
+    product_path: /product/
+    bottles: *bottles
+    exclude_extra: *shopify_extra
+
 # Binny's (binnys.py, its own program and workflow). Binny's search is
 # off-limits to bots, so each bottle needs its product page listed. Store
 # numbers are Binny's own ids (there is no New Lenox store; Mokena is the
