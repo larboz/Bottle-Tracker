@@ -37,3 +37,4 @@
 2026-10-27 17:50 CDT | +1 new: El Silencio Mezcal Ensamble | -1 gone
 2026-10-28 03:51 CDT | +3 new: Absolut Vodka; Accord Stone Irish Whiskey 100 Proof; Arette Artesanal Suave Blanco Tequila | -3 gone
 2026-10-28 13:39 CDT | +2 new: Eden Mill Single Malt Scotch Bourbon Cask; Eden Mill Single Malt Scotch Sherry Cask | -2 gone
+2026-10-28 17:56 CDT | +3 new: La Adelita Tequila Blanco; La Adelita Tequila Reposado; Three Floyds Dark Lord 7 Year Malt Whiskey Bottled In Bond | -3 gone
