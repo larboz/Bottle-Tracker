@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T02:00:33Z",
+  "updated": "2026-10-28T08:17:03Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -80,16 +80,6 @@
       "price": "$79.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
-      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/remus-repeal-reserve-series-ix-straight-bourbon-whiskey",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/RemusRepealReserveSeriesIX.webp?v=1779126681",
-      "price": "$64.99",
-      "size": "",
-      "since": "2026-10-15T23:30:39Z"
     },
     {
       "name": "Ry3 Cigar Series Cask Strength",
@@ -195,65 +185,45 @@
       {
         "name": "William Larue Weller",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1399.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/william-larue-weller-kentucky-straight-bourbon-whiskey-2025-release"
-        }
+        "lowest": null
       },
       {
         "name": "Eagle Rare 12",
         "msrp": 49.99,
-        "lowest": {
-          "price": "$159.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/eagle-rare-12-year-bourbon"
-        }
+        "lowest": null
       },
       {
         "name": "Eagle Rare 17",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1699.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/eagle-rare-17-year-old-bourbon-whiskey-2025-release"
-        }
+        "lowest": null
       },
       {
         "name": "George Stagg",
         "msrp": 154.99,
         "lowest": {
-          "price": "$999.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/george-t-stagg-bourbon-2024-release"
+          "price": "$1,099.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/george-t-stagg-kentucky-straight-bourbon-whiskey/56c28e19756275139d6a0200?option-id=5516830ddf51a9c6b8643f843ee5ad8ead7bd991721a2e0da0348ce25b3cdc0d"
         }
       },
       {
         "name": "Thomas Handy",
         "msrp": 154.99,
         "lowest": {
-          "price": "$449.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/thomas-h-handy-sazerac-straight-rye-whiskey-2025-release"
+          "price": "$499.99",
+          "store": "Bonding Over Bourbon",
+          "url": "https://bondingbottle.shop/products/thomas-h-handy-sazerac-straight-rye-whiskey-750-ml"
         }
       },
       {
         "name": "Sazerac 18 Year",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1499.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/sazerac-rye-18-year-old-kentucky-rye-whiskey-2025-release"
-        }
+        "lowest": null
       },
       {
         "name": "Rock Hill Farms",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$249.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/rock-hill-farms-bourbon-single-barrel-kentucky-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Taylor Single Barrel",
@@ -282,11 +252,7 @@
       {
         "name": "Jack Daniel's 14 Year",
         "msrp": 149.99,
-        "lowest": {
-          "price": "$499.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/jack-daniel-s-14-year-old-tennessee-whiskey-batch-2-700ml"
-        }
+        "lowest": null
       },
       {
         "name": "Redwood Empire Hyperion",
