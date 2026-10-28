@@ -1,16 +1,6 @@
 {
-  "updated": "2026-10-28T19:30:49Z",
+  "updated": "2026-10-28T20:00:55Z",
   "items": [
-    {
-      "name": "Black Saddle 12 Year Old Bourbon",
-      "bottle": "Black Saddle 12 Year | Black Saddle 12 Yr | Black Saddle 12",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/black-saddle-12-year-old-bourbon",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/black-saddle-12-year-old-bourbon-568246.jpg?v=1707633511",
-      "price": "$58.99",
-      "size": "",
-      "since": "2026-10-28T14:30:44Z"
-    },
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
       "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
@@ -92,26 +82,6 @@
       "since": "2026-09-29T20:30:40Z"
     },
     {
-      "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
-      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/remus-repeal-reserve-series-ix-straight-bourbon-whiskey",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/RemusRepealReserveSeriesIX.webp?v=1779126681",
-      "price": "$64.99",
-      "size": "",
-      "since": "2026-10-28T14:30:44Z"
-    },
-    {
-      "name": "Remus Repeal Reserve VIII",
-      "bottle": "Remus Repeal Reserve VIII | Remus Repeal Reserve 8",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/remus-repeal-reserve-viii",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/remus-repeal-reserve-viii-856118.jpg?v=1733728963",
-      "price": "$83.99",
-      "size": "",
-      "since": "2026-10-28T14:30:44Z"
-    },
-    {
       "name": "Ry3 Cigar Series Cask Strength",
       "bottle": "Ry3 Cigar",
       "store": "Rockton Spirits",
@@ -140,6 +110,16 @@
       "price": "$129.99",
       "size": "750 mL",
       "since": "2026-10-01T00:00:44Z"
+    },
+    {
+      "name": "Ry3 Tokaji Cask Single Barrel Rye Whiskey",
+      "bottle": "Ry3 Tokaji",
+      "store": "Malloy's Finest",
+      "url": "https://malloysfinest.com/shop/product/ry3-tokaji-cask-single-barrel-rye-whiskey/6ab423c6a699da7aeaeaf3ed?option-id=52e57874bac45a0f54fb2cbd2af326fcf38297ce1167add8d16ab17ce8cfb37c",
+      "image": "https://malloysfinest.com/shop?ch-query=Ry3+Tokaji",
+      "price": "$94.99",
+      "size": "750 mL",
+      "since": "2026-10-28T20:00:55Z"
     },
     {
       "name": "SHORTBARREL BOURBON CIGAR BLEND RELEASE KENTUCKY 750ML",
@@ -180,16 +160,6 @@
       "price": "$149.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
-    },
-    {
-      "name": "Starlight Sakura Reserve Bourbon Batch",
-      "bottle": "Starlight Sakura",
-      "store": "Malloy's Finest",
-      "url": "https://malloysfinest.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1",
-      "image": "https://malloysfinest.com/shop?ch-query=Starlight+Sakura",
-      "price": "$139.99",
-      "size": "750 mL",
-      "since": "2026-10-28T19:30:49Z"
     }
   ],
   "watch": {
@@ -207,64 +177,52 @@
         "name": "Weller CYPB",
         "msrp": 69.99,
         "lowest": {
-          "price": "$349.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/w-l-weller-c-y-p-b-bourbon"
+          "price": "$989.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3"
         }
       },
       {
         "name": "William Larue Weller",
         "msrp": 154.99,
         "lowest": {
-          "price": "$1399.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/william-larue-weller-kentucky-straight-bourbon-whiskey-2025-release"
+          "price": "$1499.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/william-larue-weller-bourbon-kentucky-2023-edition-750ml"
         }
       },
       {
         "name": "Eagle Rare 12",
         "msrp": 49.99,
-        "lowest": {
-          "price": "$159.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/eagle-rare-12-year-bourbon"
-        }
+        "lowest": null
       },
       {
         "name": "Eagle Rare 17",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1699.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/eagle-rare-17-year-old-bourbon-whiskey-2025-release"
-        }
+        "lowest": null
       },
       {
         "name": "George Stagg",
         "msrp": 154.99,
         "lowest": {
-          "price": "$999.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/george-t-stagg-bourbon-2024-release"
+          "price": "$1,099.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/george-t-stagg-kentucky-straight-bourbon-whiskey/56c28e19756275139d6a0200?option-id=5516830ddf51a9c6b8643f843ee5ad8ead7bd991721a2e0da0348ce25b3cdc0d"
         }
       },
       {
         "name": "Thomas Handy",
         "msrp": 154.99,
         "lowest": {
-          "price": "$449.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/thomas-h-handy-sazerac-straight-rye-whiskey-2025-release"
+          "price": "$499.99",
+          "store": "Bonding Over Bourbon",
+          "url": "https://bondingbottle.shop/products/thomas-h-handy-sazerac-straight-rye-whiskey-750-ml"
         }
       },
       {
         "name": "Sazerac 18 Year",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1499.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/sazerac-rye-18-year-old-kentucky-rye-whiskey-2025-release"
-        }
+        "lowest": null
       },
       {
         "name": "Rock Hill Farms",
@@ -292,11 +250,7 @@
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$349.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/jack-daniels-10-year-old-limited-release"
-        }
+        "lowest": null
       },
       {
         "name": "Jack Daniel's 12 Year",
@@ -306,11 +260,7 @@
       {
         "name": "Jack Daniel's 14 Year",
         "msrp": 149.99,
-        "lowest": {
-          "price": "$499.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/jack-daniel-s-14-year-old-tennessee-whiskey-batch-2-700ml"
-        }
+        "lowest": null
       },
       {
         "name": "Redwood Empire Hyperion",
@@ -354,7 +304,11 @@
       {
         "name": "Ry3 Tokaji",
         "msrp": 89.99,
-        "lowest": null
+        "lowest": {
+          "price": "$94.99",
+          "store": "Malloy's Finest",
+          "url": "https://malloysfinest.com/shop/product/ry3-tokaji-cask-single-barrel-rye-whiskey/6ab423c6a699da7aeaeaf3ed?option-id=52e57874bac45a0f54fb2cbd2af326fcf38297ce1167add8d16ab17ce8cfb37c"
+        }
       },
       {
         "name": "Shortbarrel Cigar",
@@ -368,19 +322,15 @@
       {
         "name": "Remus Repeal Reserve VII",
         "msrp": 99.99,
-        "lowest": {
-          "price": "$199.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/george-remus-repeal-reserve-vii"
-        }
+        "lowest": null
       },
       {
         "name": "Remus Repeal Reserve VIII",
         "msrp": 99.99,
         "lowest": {
-          "price": "$83.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/remus-repeal-reserve-viii"
+          "price": "$114.99",
+          "store": "Rockton Spirits",
+          "url": "https://rocktonspirits.com/shop/product/george-remus-repeal-reserve-bourbon-viii/6712728e67111622228c1db9?option-id=0e1dd3aed0ab83cb04e9f78f29f710392b254c7b3a324240b13ee9e31a59cdd9"
         }
       },
       {
@@ -415,9 +365,9 @@
         "name": "Starlight Sakura",
         "msrp": 150.0,
         "lowest": {
-          "price": "$139.99",
-          "store": "Malloy's Finest",
-          "url": "https://malloysfinest.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1"
+          "price": "$149.99",
+          "store": "Joe's Beverage Warehouse",
+          "url": "https://joesbev.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1"
         }
       },
       {
@@ -441,11 +391,7 @@
       {
         "name": "Black Saddle 12 Year",
         "msrp": 54.99,
-        "lowest": {
-          "price": "$58.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/black-saddle-12-year-old-bourbon"
-        }
+        "lowest": null
       },
       {
         "name": "Brewer's Coalition Black Tuesday",
