@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T23:30:40Z",
+  "updated": "2026-10-28T00:00:47Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -204,7 +204,11 @@
       {
         "name": "Eagle Rare 12",
         "msrp": 49.99,
-        "lowest": null
+        "lowest": {
+          "price": "$159.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/eagle-rare-12-year-bourbon"
+        }
       },
       {
         "name": "Eagle Rare 17",
@@ -219,9 +223,9 @@
         "name": "George Stagg",
         "msrp": 154.99,
         "lowest": {
-          "price": "$1,099.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/george-t-stagg-kentucky-straight-bourbon-whiskey/56c28e19756275139d6a0200?option-id=5516830ddf51a9c6b8643f843ee5ad8ead7bd991721a2e0da0348ce25b3cdc0d"
+          "price": "$999.99",
+          "store": "Dram Fellows",
+          "url": "https://dramfellows.com/products/george-t-stagg-bourbon-2024-release"
         }
       },
       {
