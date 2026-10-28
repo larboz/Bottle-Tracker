@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T13:30:40Z",
+  "updated": "2026-10-28T14:00:51Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -74,22 +74,22 @@
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
+      "store": "Garfield's Beverage",
+      "url": "https://garfieldsbeverage.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=351292a2f4732e006390b54b1fdfaa4f9ae743d957e3b00c4afad885e15ec157",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$79.99",
+      "size": "750 mL",
+      "since": "2026-10-28T14:00:51Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
       "store": "Joe's Beverage Warehouse",
       "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
       "price": "$79.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Series IX Straight Bourbon Whiskey",
-      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
-      "store": "Dram Fellows",
-      "url": "https://dramfellows.com/products/remus-repeal-reserve-series-ix-straight-bourbon-whiskey",
-      "image": "https://cdn.shopify.com/s/files/1/0707/3103/9009/files/RemusRepealReserveSeriesIX.webp?v=1779126681",
-      "price": "$64.99",
-      "size": "",
-      "since": "2026-10-28T12:00:43Z"
     },
     {
       "name": "Ry3 Cigar Series Cask Strength",
@@ -196,9 +196,9 @@
         "name": "William Larue Weller",
         "msrp": 154.99,
         "lowest": {
-          "price": "$1399.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/william-larue-weller-kentucky-straight-bourbon-whiskey-2025-release"
+          "price": "$1499.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/william-larue-weller-bourbon-kentucky-2023-edition-750ml"
         }
       },
       {
@@ -209,11 +209,7 @@
       {
         "name": "Eagle Rare 17",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1699.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/eagle-rare-17-year-old-bourbon-whiskey-2025-release"
-        }
+        "lowest": null
       },
       {
         "name": "George Stagg",
@@ -228,19 +224,15 @@
         "name": "Thomas Handy",
         "msrp": 154.99,
         "lowest": {
-          "price": "$449.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/thomas-h-handy-sazerac-straight-rye-whiskey-2025-release"
+          "price": "$499.99",
+          "store": "Bonding Over Bourbon",
+          "url": "https://bondingbottle.shop/products/thomas-h-handy-sazerac-straight-rye-whiskey-750-ml"
         }
       },
       {
         "name": "Sazerac 18 Year",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1499.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/sazerac-rye-18-year-old-kentucky-rye-whiskey-2025-release"
-        }
+        "lowest": null
       },
       {
         "name": "Rock Hill Farms",
@@ -278,11 +270,7 @@
       {
         "name": "Jack Daniel's 14 Year",
         "msrp": 149.99,
-        "lowest": {
-          "price": "$499.99",
-          "store": "Dram Fellows",
-          "url": "https://dramfellows.com/products/jack-daniel-s-14-year-old-tennessee-whiskey-batch-2-700ml"
-        }
+        "lowest": null
       },
       {
         "name": "Redwood Empire Hyperion",
