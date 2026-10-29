@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T17:00:41Z",
+  "updated": "2026-10-29T17:30:33Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -74,16 +74,6 @@
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
-      "store": "Garfield's Beverage",
-      "url": "https://garfieldsbeverage.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=351292a2f4732e006390b54b1fdfaa4f9ae743d957e3b00c4afad885e15ec157",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$79.99",
-      "size": "750 mL",
-      "since": "2026-10-29T17:00:41Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
       "store": "Joe's Beverage Warehouse",
       "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
@@ -120,16 +110,6 @@
       "price": "$129.99",
       "size": "750 mL",
       "since": "2026-10-01T00:00:44Z"
-    },
-    {
-      "name": "Ry3 Tokaji Cask Single Barrel Rye Whiskey",
-      "bottle": "Ry3 Tokaji",
-      "store": "Malloy's Finest",
-      "url": "https://malloysfinest.com/shop/product/ry3-tokaji-cask-single-barrel-rye-whiskey/6ab423c6a699da7aeaeaf3ed?option-id=52e57874bac45a0f54fb2cbd2af326fcf38297ce1167add8d16ab17ce8cfb37c",
-      "image": "https://malloysfinest.com/shop?ch-query=Ry3+Tokaji",
-      "price": "$94.99",
-      "size": "750 mL",
-      "since": "2026-10-29T17:00:41Z"
     },
     {
       "name": "SHORTBARREL BOURBON CIGAR BLEND RELEASE KENTUCKY 750ML",
@@ -170,6 +150,16 @@
       "price": "$149.99",
       "size": "750 mL",
       "since": "2026-09-29T20:30:40Z"
+    },
+    {
+      "name": "Starlight Sakura Reserve Bourbon Batch",
+      "bottle": "Starlight Sakura",
+      "store": "Malloy's Finest",
+      "url": "https://malloysfinest.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1",
+      "image": "https://malloysfinest.com/shop?ch-query=Starlight+Sakura",
+      "price": "$139.99",
+      "size": "750 mL",
+      "since": "2026-10-29T17:30:33Z"
     }
   ],
   "watch": {
@@ -314,11 +304,7 @@
       {
         "name": "Ry3 Tokaji",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$94.99",
-          "store": "Malloy's Finest",
-          "url": "https://malloysfinest.com/shop/product/ry3-tokaji-cask-single-barrel-rye-whiskey/6ab423c6a699da7aeaeaf3ed?option-id=52e57874bac45a0f54fb2cbd2af326fcf38297ce1167add8d16ab17ce8cfb37c"
-        }
+        "lowest": null
       },
       {
         "name": "Shortbarrel Cigar",
@@ -375,9 +361,9 @@
         "name": "Starlight Sakura",
         "msrp": 150.0,
         "lowest": {
-          "price": "$149.99",
-          "store": "Joe's Beverage Warehouse",
-          "url": "https://joesbev.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1"
+          "price": "$139.99",
+          "store": "Malloy's Finest",
+          "url": "https://malloysfinest.com/shop/product/starlight-sakura-reserve-bourbon-batch/6a62c2907189af0d0f8c5730?option-id=ca8f01484950d0325fa451276560a595bf0250e8963b91831baa268ae51bf9a1"
         }
       },
       {
