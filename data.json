@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T21:00:43Z",
+  "updated": "2026-10-29T21:12:57Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -30,6 +30,66 @@
       "price": "$46.99",
       "size": "750ml",
       "since": "2026-10-19T20:00:48Z"
+    },
+    {
+      "name": "High Wire Jimmy Red Bottled In Bond",
+      "bottle": "Jimmy Red Bottled in Bond",
+      "store": "Rockton Spirits",
+      "url": "https://rocktonspirits.com/shop/product/high-wire-jimmy-red-bottled-in-bond/6605e8abe2f61c2247ffa862?option-id=1a7a425a973218f6b15e72d29c21cc2461c85e2e3f5130fadb0709cdac11c919",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
+      "price": "$72.99",
+      "size": "",
+      "since": "2026-10-29T21:12:57Z"
+    },
+    {
+      "name": "High Wire Jimmy Red Bottled In Bond",
+      "bottle": "Jimmy Red Bottled in Bond",
+      "store": "DD Smoke Spirits",
+      "url": "https://ddsmokespirits.com/shop/product/high-wire-jimmy-red-bottled-in-bond/6605e8abe2f61c2247ffa862?option-id=7a5f5c8b52c35873244b6e0c520a884082c93e3b6237a9a2199c65d711578f41",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
+      "price": "$84.99",
+      "size": "750 mL",
+      "since": "2026-10-29T21:12:57Z"
+    },
+    {
+      "name": "High Wire Jimmy Red Bottled In Bond",
+      "bottle": "Jimmy Red Bottled in Bond",
+      "store": "Royal Food & Liquor",
+      "url": "https://royalfoodliquor.com/shop/product/high-wire-jimmy-red-bottled-in-bond/6605e8abe2f61c2247ffa862?option-id=5fc19ae440ffbc9c256464e926a2e0833e24a257e841ac0d0efc73615d18bb9f",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
+      "price": "$76.99",
+      "size": "750 mL",
+      "since": "2026-10-29T21:12:57Z"
+    },
+    {
+      "name": "High Wire Jimmy Red Bottled In Bond",
+      "bottle": "Jimmy Red Bottled in Bond",
+      "store": "Joe's Beverage Warehouse",
+      "url": "https://joesbev.com/shop/product/high-wire-jimmy-red-bottled-in-bond/6605e8abe2f61c2247ffa862?option-id=7a5f5c8b52c35873244b6e0c520a884082c93e3b6237a9a2199c65d711578f41",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
+      "price": "$74.99",
+      "size": "750 mL",
+      "since": "2026-10-29T21:12:57Z"
+    },
+    {
+      "name": "Highwire Distilling Co Revival Jimmy Red Bottled In Bond Straight Bourbon",
+      "bottle": "Jimmy Red Bottled in Bond",
+      "store": "Gold Eagle",
+      "url": "https://goldeaglewine.com/shop/product/highwire-distilling-co-revival-jimmy-red-bottled-in-bond-straight-bourbon/6605e8abe2f61c2247ffa862?option-id=7a5f5c8b52c35873244b6e0c520a884082c93e3b6237a9a2199c65d711578f41",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
+      "price": "$74.99",
+      "size": "750 mL",
+      "since": "2026-10-29T21:12:57Z"
+    },
+    {
+      "name": "JIMMY RED BOURBON STRAIGHT BOTTLED IN BOND SOUTH CAROLINA 750ML",
+      "bottle": "Jimmy Red Bottled in Bond !farm !anniversary !oaked !bundle | Jimmy Red BIB !farm !anniversary !oaked !bundle | Jimmy Red Bourbon Bottled in Bond !farm !anniversary !oaked !bundle",
+      "store": "Remedy Liquor",
+      "url": "https://www.remedyliquor.com/products/jimmy-red-bourbon-straight-bottled-in-bond-south-carolina-750ml",
+      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/jimmy-red-bourbon-bottled-in-bond.png?v=1745192213",
+      "price": "$67.99",
+      "size": "750ML",
+      "since": "2026-10-29T21:12:57Z"
     },
     {
       "name": "Penelope Cigar Sessions Chapter 02 750ml",
@@ -391,7 +451,12 @@
       },
       {
         "name": "Jimmy Red Bottled in Bond",
-        "msrp": 79.99
+        "msrp": 79.99,
+        "lowest": {
+          "price": "$67.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/jimmy-red-bourbon-straight-bottled-in-bond-south-carolina-750ml"
+        }
       },
       {
         "name": "Brewer's Coalition Black Tuesday",
