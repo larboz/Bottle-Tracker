@@ -39,3 +39,4 @@
 2026-10-28 13:39 CDT | +2 new: Eden Mill Single Malt Scotch Bourbon Cask; Eden Mill Single Malt Scotch Sherry Cask | -2 gone
 2026-10-28 17:56 CDT | +3 new: La Adelita Tequila Blanco; La Adelita Tequila Reposado; Three Floyds Dark Lord 7 Year Malt Whiskey Bottled In Bond | -3 gone
 2026-10-28 21:11 CDT | +1 new: Jim Beam 6 Year Bourbon Freedoms Finest Limited Edition | -1 gone
+2026-10-29 18:05 CDT | +2 new: Duck Club Wetlands Bourbon 1St Edition Ducks Unlimited Collaboration; Duke Tequila Reposado Founders Reserve | -2 gone
