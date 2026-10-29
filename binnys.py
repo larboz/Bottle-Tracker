@@ -6,7 +6,7 @@ with Binny's own "current-store" cookie set the way its store picker does,
 and the page's "IN STOCK @ <store>" line and price are read.
 
 Writes binnys.json for the web page. Emails only for bottles in config.yaml's
-email_below, when a store's price first drops under that amount.
+email_below, once per store, the first time its price is under that amount.
 """
 import datetime
 import json
@@ -96,9 +96,11 @@ def main():
     stores = cfg.get("stores") or {}
     pages = cfg.get("pages") or {}
     try:
-        old = json.loads(OUT_FILE.read_text()).get("bottles", {})
+        old_file = json.loads(OUT_FILE.read_text())
     except (OSError, ValueError):
-        old = {}
+        old_file = {}
+    old = old_file.get("bottles", {})
+    emailed = set(old_file.get("emailed") or [])  # "bottle|store", emailed once ever
 
     results = {b: {} for b in pages}
     blocked = False
@@ -146,14 +148,18 @@ def main():
                     "image": per[s].get("image", "")}
         bottles[bottle] = {"url": url, "best": best, "stores": per}
 
-    # email_below: email once when a store's in-stock price drops under the amount
+    # email_below: email once per bottle per store, the first time it's under the amount
     alerts = []
     for bottle, below in email_below.items():
         for s, r in (bottles.get(bottle) or {}).get("stores", {}).items():
             def under(x):
                 v = price_value((x or {}).get("price"))
                 return bool(x and x.get("in_stock") and v is not None and v < float(below))
-            if under(r) and not under(((old.get(bottle) or {}).get("stores") or {}).get(s)):
+            key = f"{bottle}|{s}"
+            if under(((old.get(bottle) or {}).get("stores") or {}).get(s)):
+                emailed.add(key)  # already under before this change: no email
+            if under(r) and key not in emailed:
+                emailed.add(key)
                 alerts.append({"bottle": f"{bottle} (under ${float(below):,.2f})",
                                "store": f"Binny's {s}" + (f" ({r['shelf']})" if r.get("shelf") else ""),
                                "url": bottles[bottle]["url"], "price": r["price"], "size": "750 ml"})
@@ -163,7 +169,8 @@ def main():
 
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     OUT_FILE.write_text(json.dumps(
-        {"updated": now, "stores": list(stores), "bottles": bottles}, indent=2))
+        {"updated": now, "stores": list(stores), "bottles": bottles,
+         "emailed": sorted(emailed)}, indent=2))
 
 
 if __name__ == "__main__":

@@ -503,22 +503,30 @@ def main():
             print(f"[{name}] {h['title']}: {'IN' if h['in_stock'] else 'out'}")
             bottle = display_name(h["bottle"])
             quiet = bottle in (cfg.get("no_email") or [])
-            if h["in_stock"] and not was and not quiet:
+            # one email per bottle per store, ever (restocks don't email again)
+            skey = f"sent|{name}|{bottle}"
+            if h["in_stock"] and was:  # already emailed under the old rule
+                new[skey] = True
+            if h["in_stock"] and not quiet and not new.get(skey):
+                new[skey] = True
                 alerts.append({
                     "bottle": bottle, "store": name, "url": h["url"],
                     "price": h["price"], "size": h.get("size", ""),
                 })
-            # email_below: email when a listing is in stock under this price, even
-            # for a no_email bottle, and even if it was already in stock at a higher
-            # price (tracked with its own state key, so it emails once per drop)
+            # email_below: email once when a listing is in stock under this price,
+            # even for a no_email bottle or one already emailed at a higher price
             below = (cfg.get("email_below") or {}).get(bottle)
             if below is not None:
                 bkey = f"{key}|below"
                 is_below = h["in_stock"] and p is not None and p < float(below)
                 seen.add(bkey)
                 new[bkey] = is_below
-                if is_below and not old.get(bkey, False) and not any(
+                sbkey = f"{skey}|below"
+                if is_below and old.get(bkey, False):
+                    new[sbkey] = True
+                if is_below and not new.get(sbkey) and not any(
                         x["url"] == h["url"] and x["store"] == name for x in alerts):
+                    new[sbkey] = True
                     alerts.append({
                         "bottle": f"{bottle} (under ${float(below):,.2f})", "store": name,
                         "url": h["url"], "price": h["price"], "size": h.get("size", ""),
