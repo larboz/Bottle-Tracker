@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T21:14:18Z",
+  "updated": "2026-10-29T21:27:05Z",
   "stores": [
     "Orland Park",
     "Joliet",
@@ -99,6 +99,11 @@
     },
     "Jimmy Red Bottled in Bond": {
       "url": "https://www.binnys.com/spirits/whiskey/high-wire-distilling-jimmy-red-bourbon-bottled-in-bond-150779/",
+      "best": null,
+      "stores": {}
+    },
+    "Black Saddle 12 Year": {
+      "url": "https://www.binnys.com/spirits/whiskey/black-saddle-year-old-bourbon-86925/",
       "best": null,
       "stores": {}
     }
