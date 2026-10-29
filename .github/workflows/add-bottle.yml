@@ -64,10 +64,13 @@ jobs:
             4. Add the MSRP under `msrp:`, keyed by the main name exactly as written first on
                the bottle line (without any !words). Keep the existing style and comments.
             5. If the notes say "Email alerts: no", add the main name under `no_email:`.
-               Notes may also include a Binny's
-               link (add under `binnys: pages:`, keyed by the main name; only a single-bottle
-               binnys.com product page), or an "email below $X" amount (add under
-               `email_below:`). Only do these when the notes ask.
+               If the notes include an "email below $X" amount, add it under `email_below:`.
+            5b. Always look for the bottle's Binny's product page: WebSearch for
+               `site:binnys.com "<bottle name>"` (try a couple of spellings). If you find a
+               single-bottle binnys.com product page for this exact bottle (not a pack, mini,
+               gift set or other release), add it under `binnys: pages:`, keyed by the main
+               name. Use a Binny's link from the notes if one is given. Don't load Binny's
+               search pages. If none is found, say so in the summary.
             6. Test with Python before finishing. For example:
                  import yaml, checker
                  cfg = yaml.safe_load(open("config.yaml"))
@@ -78,7 +81,7 @@ jobs:
             7. If the bottle is already on the list, change nothing and say so.
             8. Write a short summary for Larry to add-bottle-summary.md (not inside
                config.yaml): the bottle line you added, MSRP with source links, max price
-               (MSRP + max_over_msrp), and anything you weren't sure about. Plain language,
+               (MSRP + max_over_msrp), the Binny's page (or that none was found), and anything you weren't sure about. Plain language,
                no em dashes.
 
       - name: Check config
