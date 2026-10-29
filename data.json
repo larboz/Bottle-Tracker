@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T13:30:39Z",
+  "updated": "2026-10-29T14:00:38Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -185,11 +185,7 @@
       {
         "name": "William Larue Weller",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1499.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/william-larue-weller-bourbon-kentucky-2023-edition-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Eagle Rare 12",
@@ -227,11 +223,7 @@
       {
         "name": "Rock Hill Farms",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$249.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/rock-hill-farms-bourbon-single-barrel-kentucky-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Taylor Single Barrel",
