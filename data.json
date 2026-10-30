@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T14:30:40Z",
+  "updated": "2026-10-30T15:00:40Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -415,11 +415,7 @@
       {
         "name": "Holladay Ancient Cave",
         "msrp": 45.0,
-        "lowest": {
-          "price": "$99.99",
-          "store": "Rockton Spirits",
-          "url": "https://rocktonspirits.com/shop/product/ancient-cave-collection-straight-bourbon-whiskey/6a46d7df5bd06f972bfea615?option-id=e3f0860789a63708e1fbaab1c58ebb6b5a021a4e4ec35a5c80683ad1e420d187"
-        }
+        "lowest": null
       },
       {
         "name": "Starlight Sakura",
