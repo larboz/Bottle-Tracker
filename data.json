@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T21:30:37Z",
+  "updated": "2026-11-02T22:00:37Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -317,11 +317,7 @@
       {
         "name": "Rock Hill Farms",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$249.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/rock-hill-farms-bourbon-single-barrel-kentucky-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Taylor Single Barrel",
