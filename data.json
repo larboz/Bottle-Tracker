@@ -1,16 +1,6 @@
 {
-  "updated": "2026-11-01T23:30:33Z",
+  "updated": "2026-11-02T00:00:43Z",
   "items": [
-    {
-      "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
-      "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
-      "store": "Remedy Liquor",
-      "url": "https://www.remedyliquor.com/products/george-remus-bourbon-repeal-reserve-ix-series-indiana-750ml",
-      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/Remus-Repeal-IX.png?v=1758774800",
-      "price": "$54.99",
-      "size": "750ML",
-      "since": "2026-10-27T20:30:48Z"
-    },
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
       "bottle": "Remus Repeal Reserve VIII",
@@ -79,16 +69,6 @@
       "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
       "price": "$74.99",
       "size": "750 mL",
-      "since": "2026-10-29T21:12:57Z"
-    },
-    {
-      "name": "JIMMY RED BOURBON STRAIGHT BOTTLED IN BOND SOUTH CAROLINA 750ML",
-      "bottle": "Jimmy Red Bottled in Bond !farm !anniversary !oaked !bundle | Jimmy Red BIB !farm !anniversary !oaked !bundle | Jimmy Red Bourbon Bottled in Bond !farm !anniversary !oaked !bundle",
-      "store": "Remedy Liquor",
-      "url": "https://www.remedyliquor.com/products/jimmy-red-bourbon-straight-bottled-in-bond-south-carolina-750ml",
-      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/jimmy-red-bourbon-bottled-in-bond.png?v=1745192213",
-      "price": "$67.99",
-      "size": "750ML",
       "since": "2026-10-29T21:12:57Z"
     },
     {
@@ -255,11 +235,7 @@
       {
         "name": "William Larue Weller",
         "msrp": 154.99,
-        "lowest": {
-          "price": "$1499.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/william-larue-weller-bourbon-kentucky-2023-edition-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Eagle Rare 12",
@@ -297,11 +273,7 @@
       {
         "name": "Rock Hill Farms",
         "msrp": 89.99,
-        "lowest": {
-          "price": "$249.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/rock-hill-farms-bourbon-single-barrel-kentucky-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Taylor Single Barrel",
@@ -467,9 +439,9 @@
         "name": "Jimmy Red Bottled in Bond",
         "msrp": 79.99,
         "lowest": {
-          "price": "$67.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/jimmy-red-bourbon-straight-bottled-in-bond-south-carolina-750ml"
+          "price": "$72.99",
+          "store": "Rockton Spirits",
+          "url": "https://rocktonspirits.com/shop/product/high-wire-jimmy-red-bottled-in-bond/6605e8abe2f61c2247ffa862?option-id=1a7a425a973218f6b15e72d29c21cc2461c85e2e3f5130fadb0709cdac11c919"
         }
       },
       {
