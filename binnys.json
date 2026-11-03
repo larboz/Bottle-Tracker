@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T15:19:05Z",
+  "updated": "2026-11-03T15:44:52Z",
   "stores": [
     "Orland Park",
     "Joliet",
@@ -56,7 +56,7 @@
       "url": "https://www.binnys.com/spirits/whiskey/bourbon-whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-174779/",
       "best": {
         "store": "Orland Park",
-        "price": "$69.99",
+        "price": "$89.99",
         "status": "In stock",
         "shelf": "Aisle 22 > Bourbon",
         "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 9 2025",
@@ -67,7 +67,7 @@
           "status": "In stock",
           "in_stock": true,
           "shelf": "Aisle 22 > Bourbon",
-          "price": "$69.99",
+          "price": "$89.99",
           "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 9 2025",
           "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/17/1747/174779/174779.jpg?v=639020868680000000"
         },
@@ -75,7 +75,7 @@
           "status": "In stock",
           "in_stock": true,
           "shelf": "Aisle 23 > Bourbon",
-          "price": "$69.99",
+          "price": "$89.99",
           "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 9 2025",
           "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/17/1747/174779/174779.jpg?v=639020868680000000"
         },
@@ -83,7 +83,7 @@
           "status": "In stock",
           "in_stock": true,
           "shelf": "Aisle 10 > Bourbon",
-          "price": "$69.99",
+          "price": "$89.99",
           "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 9 2025",
           "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/17/1747/174779/174779.jpg?v=639020868680000000"
         },
@@ -91,7 +91,7 @@
           "status": "In stock",
           "in_stock": true,
           "shelf": "",
-          "price": "$69.99",
+          "price": "$89.99",
           "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 9 2025",
           "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/17/1747/174779/174779.jpg?v=639020868680000000"
         }
