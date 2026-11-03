@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T15:16:31Z",
+  "updated": "2026-11-03T15:19:05Z",
   "stores": [
     "Orland Park",
     "Joliet",
@@ -8,7 +8,7 @@
   ],
   "bottles": {
     "Remus Repeal Reserve VIII": {
-      "url": "https://www.binnys.com/spirits/whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-159549/",
+      "url": "https://www.binnys.com/spirits/whiskey/bourbon-whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-159549/",
       "best": {
         "store": "Orland Park",
         "price": "$89.99",
@@ -53,12 +53,12 @@
       }
     },
     "Remus Repeal Reserve IX": {
-      "url": "https://www.binnys.com/spirits/whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-174779/",
+      "url": "https://www.binnys.com/spirits/whiskey/bourbon-whiskey/george-remus-repeal-reserve-straight-bourbon-whiskey-174779/",
       "best": {
         "store": "Orland Park",
         "price": "$69.99",
         "status": "In stock",
-        "shelf": "Aisle 24 > Bourbon",
+        "shelf": "Aisle 22 > Bourbon",
         "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 9 2025",
         "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/17/1747/174779/174779.jpg?v=639020868680000000"
       },
@@ -66,7 +66,7 @@
         "Orland Park": {
           "status": "In stock",
           "in_stock": true,
-          "shelf": "Aisle 24 > Bourbon",
+          "shelf": "Aisle 22 > Bourbon",
           "price": "$69.99",
           "name": "George Remus Repeal Reserve Straight Bourbon Whiskey # 9 2025",
           "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/17/1747/174779/174779.jpg?v=639020868680000000"
@@ -98,14 +98,87 @@
       }
     },
     "Jimmy Red Bottled in Bond": {
-      "url": "https://www.binnys.com/spirits/whiskey/high-wire-distilling-jimmy-red-bourbon-bottled-in-bond-150779/",
-      "best": null,
-      "stores": {}
+      "url": "https://www.binnys.com/spirits/whiskey/bourbon-whiskey/high-wire-distilling-jimmy-red-bourbon-bottled-in-bond-150779/",
+      "best": {
+        "store": "Orland Park",
+        "price": "$79.99",
+        "status": "Only 3 left",
+        "shelf": "Aisle 22 > Bourbon",
+        "name": "High Wire Distilling Jimmy Red Bourbon Bottled in Bond",
+        "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/15/1507/150779/150779.jpg?v=638410881620000000"
+      },
+      "stores": {
+        "Orland Park": {
+          "status": "Only 3 left",
+          "in_stock": true,
+          "shelf": "Aisle 22 > Bourbon",
+          "price": "$79.99",
+          "name": "High Wire Distilling Jimmy Red Bourbon Bottled in Bond",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/15/1507/150779/150779.jpg?v=638410881620000000"
+        },
+        "Joliet": {
+          "status": "Only 5 left",
+          "in_stock": true,
+          "shelf": "Aisle 23 > Bourbon",
+          "price": "$79.99",
+          "name": "High Wire Distilling Jimmy Red Bourbon Bottled in Bond",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/15/1507/150779/150779.jpg?v=638410881620000000"
+        },
+        "Mokena": {
+          "status": "Not available",
+          "in_stock": false,
+          "shelf": "",
+          "price": "$79.99",
+          "name": "High Wire Distilling Jimmy Red Bourbon Bottled in Bond",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/15/1507/150779/150779.jpg?v=638410881620000000"
+        },
+        "Ship to Me": {
+          "status": "Only 1 left",
+          "in_stock": true,
+          "shelf": "",
+          "price": "$79.99",
+          "name": "High Wire Distilling Jimmy Red Bourbon Bottled in Bond",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/15/1507/150779/150779.jpg?v=638410881620000000"
+        }
+      }
     },
     "Black Saddle 12 Year": {
-      "url": "https://www.binnys.com/spirits/whiskey/black-saddle-year-old-bourbon-86925/",
+      "url": "https://www.binnys.com/spirits/whiskey/bourbon-whiskey/black-saddle-year-old-bourbon-86925/",
       "best": null,
-      "stores": {}
+      "stores": {
+        "Orland Park": {
+          "status": "Not available",
+          "in_stock": false,
+          "shelf": "",
+          "price": "$49.99",
+          "name": "Black Saddle 12 year old Bourbon",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/86/8692/86925/86925.jpg?v=638278764050000000"
+        },
+        "Joliet": {
+          "status": "Not available",
+          "in_stock": false,
+          "shelf": "",
+          "price": "$49.99",
+          "name": "Black Saddle 12 year old Bourbon",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/86/8692/86925/86925.jpg?v=638278764050000000"
+        },
+        "Mokena": {
+          "status": "Not available",
+          "in_stock": false,
+          "shelf": "",
+          "price": "$49.99",
+          "name": "Black Saddle 12 year old Bourbon",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/86/8692/86925/86925.jpg?v=638278764050000000"
+        },
+        "Ship to Me": {
+          "status": "Not available",
+          "in_stock": false,
+          "shelf": "",
+          "price": "$49.99",
+          "name": "Black Saddle 12 year old Bourbon",
+          "image": "https://www.binnys.com/cdn-cgi/image/width=690,height=690,fit=pad,background=%23fff,format=auto/globalassets/catalogs/binnys/86/8692/86925/86925.jpg?v=638278764050000000"
+        }
+      }
     }
   },
   "emailed": []
