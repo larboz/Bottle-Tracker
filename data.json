@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T21:00:43Z",
+  "updated": "2026-11-03T21:30:55Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -44,6 +44,16 @@
     {
       "name": "High Wire Jimmy Red Bottled In Bond",
       "bottle": "Jimmy Red Bottled in Bond",
+      "store": "DD Smoke Spirits",
+      "url": "https://ddsmokespirits.com/shop/product/high-wire-jimmy-red-bottled-in-bond/6605e8abe2f61c2247ffa862?option-id=7a5f5c8b52c35873244b6e0c520a884082c93e3b6237a9a2199c65d711578f41",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
+      "price": "$84.99",
+      "size": "750 mL",
+      "since": "2026-10-29T21:12:57Z"
+    },
+    {
+      "name": "High Wire Jimmy Red Bottled In Bond",
+      "bottle": "Jimmy Red Bottled in Bond",
       "store": "Royal Food & Liquor",
       "url": "https://royalfoodliquor.com/shop/product/high-wire-jimmy-red-bottled-in-bond/6605e8abe2f61c2247ffa862?option-id=5fc19ae440ffbc9c256464e926a2e0833e24a257e841ac0d0efc73615d18bb9f",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
@@ -58,16 +68,6 @@
       "url": "https://joesbev.com/shop/product/high-wire-jimmy-red-bottled-in-bond/6605e8abe2f61c2247ffa862?option-id=7a5f5c8b52c35873244b6e0c520a884082c93e3b6237a9a2199c65d711578f41",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
       "price": "$74.99",
-      "size": "750 mL",
-      "since": "2026-10-29T21:12:57Z"
-    },
-    {
-      "name": "High Wire Jimmy Red Bottled In Bond",
-      "bottle": "Jimmy Red Bottled in Bond",
-      "store": "DD Smoke Spirits",
-      "url": "https://ddsmokespirits.com/shop/product/high-wire-jimmy-red-bottled-in-bond/6605e8abe2f61c2247ffa862?option-id=7a5f5c8b52c35873244b6e0c520a884082c93e3b6237a9a2199c65d711578f41",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68cf23148c6c444d471c0d93/large.png",
-      "price": "$84.99",
       "size": "750 mL",
       "since": "2026-10-29T21:12:57Z"
     },
@@ -134,22 +134,22 @@
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
       "bottle": "Remus Repeal Reserve IX",
-      "store": "Joe's Beverage Warehouse",
-      "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$79.99",
-      "size": "750 mL",
-      "since": "2026-09-29T20:30:40Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
       "store": "DD Smoke Spirits",
       "url": "https://ddsmokespirits.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
       "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
       "price": "$89.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "Joe's Beverage Warehouse",
+      "url": "https://joesbev.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=d866855edf68e212c349771824ac761d56263897e2770cf0a109c2d7eff45fe3",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$79.99",
+      "size": "750 mL",
+      "since": "2026-09-29T20:30:40Z"
     },
     {
       "name": "Ry3 Cigar Series Cask Strength",
