@@ -31,9 +31,23 @@ def price_value(price):
     return float(digits) if digits else None
 
 
+# Binny's moved whiskey pages into subfolders (e.g. /spirits/whiskey/bourbon-whiskey/);
+# an old-style link that 404s is retried in these.
+SUBFOLDERS = ("bourbon-whiskey", "rye-whiskey", "american-whiskey")
+
+
 def read_page(page, url, store):
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
     page.wait_for_timeout(3000)
+    m = re.match(r"(https://www\.binnys\.com/spirits/whiskey/)([^/]+/)$", url)
+    if m and "404" in page.title():
+        for sub in SUBFOLDERS:
+            alt = f"{m.group(1)}{sub}/{m.group(2)}"
+            page.goto(alt, wait_until="domcontentloaded", timeout=60000)
+            page.wait_for_timeout(3000)
+            if "404" not in page.title():
+                print(f"[Binny's] page moved; update config.yaml to {alt}")
+                break
     text = " ".join(page.inner_text("body").split())
     m = STOCK.search(text)
     if not m:
