@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T22:00:37Z",
+  "updated": "2026-11-04T22:30:54Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -140,16 +140,6 @@
       "price": "$89.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
-    },
-    {
-      "name": "Remus Repeal Reserve Ix Bourbon",
-      "bottle": "Remus Repeal Reserve IX",
-      "store": "Garfield's Beverage",
-      "url": "https://garfieldsbeverage.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=351292a2f4732e006390b54b1fdfaa4f9ae743d957e3b00c4afad885e15ec157",
-      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
-      "price": "$79.99",
-      "size": "750 mL",
-      "since": "2026-11-04T22:00:37Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -439,7 +429,11 @@
       {
         "name": "Holladay Ancient Cave",
         "msrp": 45.0,
-        "lowest": null
+        "lowest": {
+          "price": "$98.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/ancient-cave-collection-straight-bourbon-whiskey/6a46d7df5bd06f972bfea615?option-id=e3f0860789a63708e1fbaab1c58ebb6b5a021a4e4ec35a5c80683ad1e420d187"
+        }
       },
       {
         "name": "Starlight Sakura",
