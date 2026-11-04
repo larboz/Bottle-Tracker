@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T22:30:54Z",
+  "updated": "2026-11-04T23:00:47Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -130,6 +130,16 @@
       "price": "$99.99",
       "size": "",
       "since": "2026-10-26T17:00:40Z"
+    },
+    {
+      "name": "Redwood Empire The Hyperion",
+      "bottle": "Redwood Empire Hyperion",
+      "store": "Royal Food & Liquor",
+      "url": "https://royalfoodliquor.com/shop/product/redwood-empire-the-hyperion/6a975045df76fef8912b35b5?option-id=1a4aa59c23c4fc6747ec3faece96a5afa55d312f7c8f60b47f1927f775de4a9e",
+      "image": "https://royalfoodliquor.com/shop?ch-query=Redwood+Empire+Hyperion",
+      "price": "$109.99",
+      "size": "750 mL",
+      "since": "2026-11-04T23:00:47Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -335,7 +345,11 @@
       {
         "name": "Redwood Empire Hyperion",
         "msrp": 99.0,
-        "lowest": null
+        "lowest": {
+          "price": "$109.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/redwood-empire-the-hyperion/6a975045df76fef8912b35b5?option-id=1a4aa59c23c4fc6747ec3faece96a5afa55d312f7c8f60b47f1927f775de4a9e"
+        }
       },
       {
         "name": "Ten Pin",
