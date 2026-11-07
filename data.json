@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-07T16:30:37Z",
+  "updated": "2026-11-07T17:00:38Z",
   "items": [
+    {
+      "name": "Blade And Bow 12 Years Old",
+      "bottle": "Blade and Bow Solera",
+      "store": "Rockton Spirits",
+      "url": "https://rocktonspirits.com/shop/product/blade-and-bow-12-years-old/5a974249fdc9273015353d1c?option-id=541a4f85b4040593696206a6e207175aed94bc899530774c0d231c10d7189848",
+      "image": "https://cityhive-production-cdn.cityhive.net/product_details/6a91f5494436492764ea457a/primary_image/large.png?sig=a413788906864d20d4556e9dd86c2388d15df6b58813babb6543c12e3eb9fe9b",
+      "price": "$69.99",
+      "size": "",
+      "since": "2026-11-07T17:00:38Z"
+    },
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
       "bottle": "Remus Repeal Reserve IX | Remus Repeal Reserve 9",
@@ -359,7 +369,11 @@
       {
         "name": "Blade and Bow Solera",
         "msrp": 64.99,
-        "lowest": null
+        "lowest": {
+          "price": "$69.99",
+          "store": "Rockton Spirits",
+          "url": "https://rocktonspirits.com/shop/product/blade-and-bow-12-years-old/5a974249fdc9273015353d1c?option-id=541a4f85b4040593696206a6e207175aed94bc899530774c0d231c10d7189848"
+        }
       },
       {
         "name": "Old Grand Dad Single Barrel",
