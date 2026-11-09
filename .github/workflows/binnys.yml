@@ -1,7 +1,8 @@
 name: Binny's check
 on:
-  # Runs right after every Bottle check (which cron-job.org starts), so it
-  # follows the same schedule without a job of its own.
+  # Starts after every Bottle check (which cron-job.org starts), but only does
+  # the check once a day: the first run after 8am Chicago time. Manual runs
+  # (workflow_dispatch) always check.
   workflow_run:
     workflows: ["Bottle check"]
     types: [completed]
@@ -31,17 +32,31 @@ jobs:
           TOKEN: ${{ github.token }}
         run: git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git"
       - run: git pull --ff-only origin main
+      - name: Once a day (manual runs always go)
+        id: gate
+        run: |
+          today=$(TZ=America/Chicago date +%Y-%m-%d)
+          last=$(python3 -c "import json,datetime,zoneinfo; u=json.load(open('binnys.json'))['updated']; print(datetime.datetime.fromisoformat(u.replace('Z','+00:00')).astimezone(zoneinfo.ZoneInfo('America/Chicago')).date())" 2>/dev/null || echo none)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$last" != "$today" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Binny's already checked today ($last); skipping"
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Python packages (kept between runs)
+        if: steps.gate.outputs.run == 'true'
         run: |
           [ -x "$HOME/.bottle-venv/bin/python" ] || python3 -m venv "$HOME/.bottle-venv"
           "$HOME/.bottle-venv/bin/pip" install -q -r requirements.txt
           "$HOME/.bottle-venv/bin/playwright" install chromium
       - run: '"$HOME/.bottle-venv/bin/python" binnys.py'
+        if: steps.gate.outputs.run == 'true'
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           ALERT_TO: ${{ secrets.ALERT_TO }}
       - name: Save results
+        if: steps.gate.outputs.run == 'true'
         run: |
           git config user.name "bottle-bot"
           git config user.email "bot@users.noreply.github.com"
