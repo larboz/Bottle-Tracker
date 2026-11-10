@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T20:00:46Z",
+  "updated": "2026-11-10T20:13:32Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -30,6 +30,16 @@
       "price": "$42.99",
       "size": "750ml",
       "since": "2026-11-02T17:30:50Z"
+    },
+    {
+      "name": "High Wire Distilling Jimmy Red Bottled in Bond Bourbon",
+      "bottle": "Jimmy Red Bottled in Bond !farm !anniversary !oaked !bundle | Jimmy Red BIB !farm !anniversary !oaked !bundle | Jimmy Red Bourbon Bottled in Bond !farm !anniversary !oaked !bundle",
+      "store": "Seelbach's",
+      "url": "https://seelbachs.com/products/high-wire-jimmy-red-bottled-in-bond-bourbon",
+      "image": "https://cdn.shopify.com/s/files/1/1829/2275/files/high-wire-jimmy-red-bottled-in-bond-bourbon-std-8655fcaf22f3-f23c1.jpg?v=1790955705",
+      "price": "$79.99",
+      "size": "",
+      "since": "2026-11-10T20:13:32Z"
     },
     {
       "name": "High Wire Jimmy Red Bottled In Bond",

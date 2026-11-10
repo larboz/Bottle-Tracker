@@ -163,7 +163,7 @@
   "Royal Food & Liquor|https://royalfoodliquor.com/shop/product/thomas-h-handy-straight-rye-whiskey/56dd1c6069702d1873dc0300?option-id=73122d04a6cb1b929a60b8fd6ed6afd9e1cdacc48bea1beb47f2e6598ae74b38": false,
   "Royal Food & Liquor|https://royalfoodliquor.com/shop/product/w-l-weller-c-y-p-b-wheated-bourbon/5b5ba180b57ab1770f949a2d?option-id=0d8de1a52a90fca0298a03c54fd7d36686f17cf3d7b668a8fd83717fe792b2a3": false,
   "Royal Food & Liquor|https://royalfoodliquor.com/shop/product/weller-single-barrel-750-ml/686be72eaaba40466f4b2715?option-id=008071c44cf5f679b21835a056ce2683fe6302ecf415a89629dd970fe60711ea": false,
-  "Seelbach's|https://seelbachs.com/products/high-wire-jimmy-red-bottled-in-bond-bourbon": false,
+  "Seelbach's|https://seelbachs.com/products/high-wire-jimmy-red-bottled-in-bond-bourbon": true,
   "Seelbach's|https://seelbachs.com/products/penelope-rio-bourbon-whiskey": false,
   "Seelbach's|https://seelbachs.com/products/penelope-rio-single-barrel-bourbon-selected-by-bourbon-enthusiast": true,
   "Seelbach's|https://seelbachs.com/products/penelope-rio-single-barrel-bourbon-selected-by-bourbon-thieves": true,
@@ -219,6 +219,7 @@
   "sent|Royal Food & Liquor|Redwood Empire Hyperion": true,
   "sent|Royal Food & Liquor|Ry3 Cigar": true,
   "sent|Royal Food & Liquor|Starlight Sakura": true,
+  "sent|Seelbach's|Jimmy Red Bottled in Bond": true,
   "sent|Seelbach's|Penelope Rio": true,
   "sent|Seelbach's|Starlight Sakura": true
 }
