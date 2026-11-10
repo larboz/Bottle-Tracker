@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T01:33:05Z",
+  "updated": "2026-11-10T04:28:55Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -254,7 +254,11 @@
       {
         "name": "Eagle Rare 12",
         "msrp": 49.99,
-        "lowest": null
+        "lowest": {
+          "price": "$149.99",
+          "store": "Hi Proof",
+          "url": "https://www.hiproof.com/products/eagle-rare-12-years-old-kentucky-straight-bourbon-750ml-spend-140-sazerac-get-it-for-49-99-copy"
+        }
       },
       {
         "name": "Eagle Rare 17",
