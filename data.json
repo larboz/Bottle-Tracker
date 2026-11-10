@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T19:00:42Z",
+  "updated": "2026-11-10T19:30:46Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -228,9 +228,9 @@
         "name": "Weller Single Barrel",
         "msrp": 59.99,
         "lowest": {
-          "price": "$769.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/weller-single-barrel-750-ml/686be72eaaba40466f4b2715?option-id=008071c44cf5f679b21835a056ce2683fe6302ecf415a89629dd970fe60711ea"
+          "price": "$194.99",
+          "store": "Hi Proof",
+          "url": "https://www.hiproof.com/products/weller-antique-107-wheated-bourbon-whiskey-750ml-spend-130-sazerac-get-it-for-59-99-copy"
         }
       },
       {
@@ -287,7 +287,11 @@
       {
         "name": "Rock Hill Farms",
         "msrp": 89.99,
-        "lowest": null
+        "lowest": {
+          "price": "$229.99",
+          "store": "Hi Proof",
+          "url": "https://www.hiproof.com/products/rock-hill-farms-single-barrel-bourbon-750ml"
+        }
       },
       {
         "name": "Taylor Single Barrel",
