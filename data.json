@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T01:52:24Z",
+  "updated": "2026-11-12T09:16:20Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -102,13 +102,13 @@
       "since": "2026-11-02T00:30:38Z"
     },
     {
-      "name": "Penelope Cigar Sessions Chapter 02 750ml",
+      "name": "Penelope Cigar Sessions Chapter 02 American Whiskey 117.4 Proof 750mL",
       "bottle": "Penelope Cigar Sessions Chapter 2 | Penelope Cigar Chapter 2 | Penelope Cigar Chapter 02 | Cigar Session Chapter2",
       "store": "Hi Proof",
       "url": "https://www.hiproof.com/products/penelope-cigar-sessions-chapter-02-750ml-spend-get-it",
       "image": "https://cdn.shopify.com/s/files/1/0851/0272/3373/files/penelope-cigar-sessions-chapter-02-750ml-4460617.jpg?v=1792301647",
-      "price": "$79.99",
-      "size": "750ml",
+      "price": "$74.99",
+      "size": "750mL",
       "since": "2026-10-17T18:30:40Z"
     },
     {
@@ -421,7 +421,7 @@
         "name": "Penelope Cigar Sessions Chapter 2",
         "msrp": 79.99,
         "lowest": {
-          "price": "$79.99",
+          "price": "$74.99",
           "store": "Hi Proof",
           "url": "https://www.hiproof.com/products/penelope-cigar-sessions-chapter-02-750ml-spend-get-it"
         }
