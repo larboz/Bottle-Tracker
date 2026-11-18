@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T18:07:58Z",
+  "updated": "2026-11-18T18:36:36Z",
   "items": [
     {
       "name": "GEORGE REMUS BOURBON REPEAL RESERVE IX SERIES INDIANA 750ML",
@@ -379,7 +379,11 @@
       {
         "name": "Blade and Bow Solera",
         "msrp": 64.99,
-        "lowest": null
+        "lowest": {
+          "price": "$87.99",
+          "store": "Royal Food & Liquor",
+          "url": "https://royalfoodliquor.com/shop/product/blade-and-bow-12-years-old/5a974249fdc9273015353d1c?option-id=8b29fdd0a6d56647dc85c069bb11ed92683b386de8447878a2fd3a93a1958142"
+        }
       },
       {
         "name": "Old Grand Dad Single Barrel",
