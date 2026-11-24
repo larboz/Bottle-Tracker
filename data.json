@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T16:01:19Z",
+  "updated": "2026-11-24T16:30:42Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -112,6 +112,16 @@
       "since": "2026-11-24T16:01:19Z"
     },
     {
+      "name": "OLD GRAND DAD BOURBON SINGLE BARREL KENTUCKY 114PF 7YR 750ML",
+      "bottle": "Old Grand Dad Single Barrel",
+      "store": "Remedy Liquor",
+      "url": "https://www.remedyliquor.com/products/old-grand-dad-bourbon-single-barrel-kentucky-114pf-7yr-750ml",
+      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/Old_Grand_Dad_Single_Barrel_114PF_7YR.jpg?v=1775715143",
+      "price": "$49.99",
+      "size": "750ML",
+      "since": "2026-11-24T16:30:42Z"
+    },
+    {
       "name": "Penelope Cigar Sessions Chapter 02 American Whiskey 117.4 Proof 750mL",
       "bottle": "Penelope Cigar Sessions Chapter 2 | Penelope Cigar Chapter 2 | Penelope Cigar Chapter 02 | Cigar Session Chapter2",
       "store": "Hi Proof",
@@ -140,6 +150,16 @@
       "price": "$89.99",
       "size": "750 mL",
       "since": "2026-09-28T19:41:18Z"
+    },
+    {
+      "name": "Remus Repeal Reserve Ix Bourbon",
+      "bottle": "Remus Repeal Reserve IX",
+      "store": "Garfield's Beverage",
+      "url": "https://garfieldsbeverage.com/shop/product/remus-repeal-reserve-ix-bourbon/6893d3e438d34f10b62aff46?option-id=351292a2f4732e006390b54b1fdfaa4f9ae743d957e3b00c4afad885e15ec157",
+      "image": "https://cityhive-production-cdn.cityhive.net/products/68fbb1279074c43e2a26661e/large.png",
+      "price": "$79.99",
+      "size": "750 mL",
+      "since": "2026-11-24T16:30:42Z"
     },
     {
       "name": "Remus Repeal Reserve Ix Bourbon",
@@ -368,7 +388,11 @@
       {
         "name": "Old Grand Dad Single Barrel",
         "msrp": 49.99,
-        "lowest": null
+        "lowest": {
+          "price": "$49.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/old-grand-dad-bourbon-single-barrel-kentucky-114pf-7yr-750ml"
+        }
       },
       {
         "name": "Ry3 Cigar",
