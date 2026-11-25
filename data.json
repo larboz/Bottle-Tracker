@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T00:31:13Z",
+  "updated": "2026-11-25T01:01:21Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -120,16 +120,6 @@
       "price": "$74.99",
       "size": "750 mL",
       "since": "2026-11-25T00:00:44Z"
-    },
-    {
-      "name": "OLD GRAND DAD BOURBON SINGLE BARREL KENTUCKY 114PF 7YR 750ML",
-      "bottle": "Old Grand Dad Single Barrel",
-      "store": "Remedy Liquor",
-      "url": "https://www.remedyliquor.com/products/old-grand-dad-bourbon-single-barrel-kentucky-114pf-7yr-750ml",
-      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/Old_Grand_Dad_Single_Barrel_114PF_7YR.jpg?v=1775715143",
-      "price": "$49.99",
-      "size": "750ML",
-      "since": "2026-11-24T21:30:47Z"
     },
     {
       "name": "Penelope Cigar Sessions Chapter 02 American Whiskey 117.4 Proof 750mL",
@@ -388,11 +378,7 @@
       {
         "name": "Old Grand Dad Single Barrel",
         "msrp": 49.99,
-        "lowest": {
-          "price": "$49.99",
-          "store": "Remedy Liquor",
-          "url": "https://www.remedyliquor.com/products/old-grand-dad-bourbon-single-barrel-kentucky-114pf-7yr-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Ry3 Cigar",
