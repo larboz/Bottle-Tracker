@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T21:01:09Z",
+  "updated": "2026-11-27T21:30:53Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -120,6 +120,16 @@
       "price": "$74.99",
       "size": "750 mL",
       "since": "2026-11-27T19:31:11Z"
+    },
+    {
+      "name": "OLD GRAND DAD BOURBON SINGLE BARREL KENTUCKY 114PF 7YR 750ML",
+      "bottle": "Old Grand Dad Single Barrel",
+      "store": "Remedy Liquor",
+      "url": "https://www.remedyliquor.com/products/old-grand-dad-bourbon-single-barrel-kentucky-114pf-7yr-750ml",
+      "image": "https://cdn.shopify.com/s/files/1/0647/0644/5540/files/Old_Grand_Dad_Single_Barrel_114PF_7YR.jpg?v=1775715143",
+      "price": "$49.99",
+      "size": "750ML",
+      "since": "2026-11-27T21:30:53Z"
     },
     {
       "name": "Penelope Cigar Sessions Chapter 02 American Whiskey 117.4 Proof 750mL",
@@ -326,12 +336,20 @@
       {
         "name": "Jack Daniel's 10 Year",
         "msrp": 89.99,
-        "lowest": null
+        "lowest": {
+          "price": "$139.99",
+          "store": "Hi Proof",
+          "url": "https://www.hiproof.com/products/jack-daniel-s-10-year-old-tennessee-whiskey-batch-5-750ml-limit-1-copy"
+        }
       },
       {
         "name": "Jack Daniel's 12 Year",
         "msrp": 99.99,
-        "lowest": null
+        "lowest": {
+          "price": "$219.99",
+          "store": "Hi Proof",
+          "url": "https://www.hiproof.com/products/jack-daniel-s-12-year-old-tennessee-whiskey-batch-4-750ml-limit-1"
+        }
       },
       {
         "name": "Jack Daniel's 14 Year",
@@ -374,7 +392,11 @@
       {
         "name": "Old Grand Dad Single Barrel",
         "msrp": 49.99,
-        "lowest": null
+        "lowest": {
+          "price": "$49.99",
+          "store": "Remedy Liquor",
+          "url": "https://www.remedyliquor.com/products/old-grand-dad-bourbon-single-barrel-kentucky-114pf-7yr-750ml"
+        }
       },
       {
         "name": "Ry3 Cigar",
