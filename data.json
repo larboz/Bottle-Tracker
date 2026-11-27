@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T17:30:50Z",
+  "updated": "2026-11-27T18:31:15Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -341,11 +341,7 @@
       {
         "name": "Redwood Empire Hyperion",
         "msrp": 99.0,
-        "lowest": {
-          "price": "$142.99",
-          "store": "Royal Food & Liquor",
-          "url": "https://royalfoodliquor.com/shop/product/redwood-empire-the-hyperion/6a975045df76fef8912b35b5?option-id=1a4aa59c23c4fc6747ec3faece96a5afa55d312f7c8f60b47f1927f775de4a9e"
-        }
+        "lowest": null
       },
       {
         "name": "Ten Pin",
