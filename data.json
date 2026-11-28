@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-28T00:00:41Z",
+  "updated": "2026-11-28T00:30:54Z",
   "items": [
     {
       "name": "George Remus Repeal Reserve Bourbon Viii",
@@ -326,11 +326,7 @@
       {
         "name": "Jack Daniel's 14 Year",
         "msrp": 149.99,
-        "lowest": {
-          "price": "$449.99",
-          "store": "Hi Proof",
-          "url": "https://www.hiproof.com/products/jack-daniel-s-14-year-old-tennessee-whiskey-batch-2-750ml"
-        }
+        "lowest": null
       },
       {
         "name": "Redwood Empire Hyperion",
